@@ -28,7 +28,7 @@ wheels/
 
 ## Application 
 *.csv
-data/
+#data/
 #data-VM/
 .aws-sam/
 
