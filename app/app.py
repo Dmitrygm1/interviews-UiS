@@ -12,7 +12,6 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=False)
-app.error_handler_spec[None] = decorators.wrap_flask_errors()
 app.add_url_rule('/healthcheck', 'healthcheck', lambda: ('', 200))
 
 @app.route('/', methods=['GET', 'POST', 'OPTIONS'])
