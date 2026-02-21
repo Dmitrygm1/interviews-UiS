@@ -1,0 +1,82 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_2dWtYwtOjxsOaq8.json
+User ID: R_2dWtYwtOjxsOaq8
+Session ID: R_2dWtYwtOjxsOaq8
+Conversation Start: 2026-02-10 11:00:05
+Conversation End: 2026-02-10 11:25:27
+Interview Duration: 00:25:22
+Total Messages: 15
+Questions: 8
+Answers: 7
+Flagged Messages: 0
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-02-10 11:00:05)
+Can you describe the main types of tasks you do in your job?
+
+Answer #2 (2026-02-10 11:01:15)
+I mainly attend lectures, prepare for exams, work on project and group assignments and use different
+platforms to manage my academic activities
+
+Question #3 (2026-02-10 11:01:17)
+When you’re working on project and group assignments, if at all, how do you use generative AI (or
+choose not to), and can you walk me through one specific recent example?
+
+Answer #4 (2026-02-10 11:05:10)
+When working on projects and group assignments, I use generative AI mainly to search for information
+and support the writing process. In my most recent group project, we created a report using only AI
+to find information and write the content. I choose to use only AI when the information provided
+seems reliable and consistent
+
+Question #5 (2026-02-10 11:05:12)
+When you say you used “only AI” and relied on it when the information seemed “reliable and
+consistent,” how did you decide it was reliable—what checks, if any, did you do before putting it in
+the report?
+
+Answer #6 (2026-02-10 11:08:49)
+I base my decision on information I already know and trust. If the AI provides details that differ
+from or contradict that knowledge, I don't use them in the report
+
+Question #7 (2026-02-10 11:08:56)
+When you’re using AI to find information and help write for a group report, what’s it like to
+actually work with it day to day—how easy or tricky does it feel to get it to do what you want?
+
+Answer #8 (2026-02-10 11:18:46)
+Day to day, it's quite easy to use, especially for finding information and drafting text. The tricky
+part is being very clear with prompts and checking the output, because the answers are not always
+correct or fully focused on the question
+
+Question #9 (2026-02-10 11:18:49)
+Can you walk me through a recent time when you had to be “very clear with prompts”—what did your
+first prompt look like, what came back that wasn’t focused, and how did you change it to get what
+you needed?
+
+Answer #10 (2026-02-10 11:22:07)
+In a recent group project, my first prompt was too generale and the answer was unfocused. I then
+rewrote it in a more specific way, clearly explaining what we needed, and the response became much
+more relevant
+
+Question #11 (2026-02-10 11:22:15)
+When you have to rewrite your prompt to get a more relevant answer, how does that process usually
+make you feel in the moment?
+
+Answer #12 (2026-02-10 11:23:50)
+I didn't have any problems with it rewriting the prompt felt natural and didn't cause any difficult
+
+Question #13 (2026-02-10 11:23:51)
+Can you tell me about a time when the AI gave you an answer that turned out wrong or misleading—how
+did that make you feel, and did it change how much you trusted it afterward?
+
+Answer #14 (2026-02-10 11:25:18)
+I felt annoyed because I realized it was giving me incorrect information, so I stopped using it for
+similar research tasks
+
+Question #15 (2026-02-10 11:25:27)
+When you think back to that time it gave you incorrect information and you stopped using it for
+similar research, what does that tell you about what kinds of tasks you feel you can rely on AI for
+versus not?

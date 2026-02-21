@@ -1,0 +1,27 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: test-2912-1623.json
+User ID: test-2912-1623
+Session ID: test-2912-1623
+Conversation Start: 2025-12-29 15:24:18
+Conversation End: 2025-12-29 15:24:39
+Interview Duration: 00:00:20
+Total Messages: 3
+Questions: 2
+Answers: 1
+Flagged Messages: 0
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2025-12-29 15:24:18)
+Can you describe the main types of tasks you do in your job?
+
+Answer #2 (2025-12-29 15:24:36)
+Many tasks, mostly related to my e-commerce business
+
+Question #3 (2025-12-29 15:24:39)
+How do you use generative AI in managing your e-commerce business tasks, and can you share a
+specific instance where it made a noticeable impact on your workflow or productivity?

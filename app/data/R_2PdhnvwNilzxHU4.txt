@@ -1,0 +1,27 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_2PdhnvwNilzxHU4.json
+User ID: R_2PdhnvwNilzxHU4
+Session ID: R_2PdhnvwNilzxHU4
+Conversation Start: 2026-02-05 19:50:39
+Conversation End: 2026-02-05 19:51:16
+Interview Duration: 00:00:36
+Total Messages: 3
+Questions: 2
+Answers: 1
+Flagged Messages: 0
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-02-05 19:50:39)
+Can you describe the main types of tasks you do in your job?
+
+Answer #2 (2026-02-05 19:51:15)
+I am a heart surgeon, so patient consultation, analysis and operations.
+
+Question #3 (2026-02-05 19:51:16)
+In your day-to-day work as a heart surgeon—like patient consultations, analysis, or
+operations—where, if at all, do you currently use generative AI?

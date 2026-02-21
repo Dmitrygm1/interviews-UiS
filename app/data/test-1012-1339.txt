@@ -1,0 +1,27 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: test-1012-1339.json
+User ID: test-1012-1339
+Session ID: test-1012-1339
+Conversation Start: 2025-12-30 22:46:47
+Conversation End: 2025-12-30 22:47:06
+Interview Duration: 00:00:19
+Total Messages: 3
+Questions: 2
+Answers: 1
+Flagged Messages: 0
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2025-12-30 22:46:47)
+Can you describe the main types of tasks you do in your job?
+
+Answer #2 (2025-12-30 22:47:03)
+I work in ecommerce
+
+Question #3 (2025-12-30 22:47:06)
+What’s a recent ecommerce task where you used generative AI as part of your work, and how did it fit
+into your workflow?

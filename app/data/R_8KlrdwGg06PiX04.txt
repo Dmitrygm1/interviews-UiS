@@ -1,0 +1,133 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_8KlrdwGg06PiX04.json
+User ID: R_8KlrdwGg06PiX04
+Session ID: R_8KlrdwGg06PiX04
+Conversation Start: 2026-02-06 11:07:24
+Conversation End: 2026-02-06 11:28:29
+Interview Duration: 00:21:05
+Total Messages: 30
+Questions: 15
+Answers: 15
+Flagged Messages: 0
+Terminated: True
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-02-06 11:07:24)
+Can you describe the main types of tasks you do in your job?
+
+Answer #2 (2026-02-06 11:11:46)
+I am currently focused on writing my master thesis. I  my previous role, I communicated extansively
+with developers, created user instructions and worked closely with end users
+
+Question #3 (2026-02-06 11:11:47)
+When you’re working on writing your master thesis, what role—if any—does generative AI play in your
+day-to-day workflow?
+
+Answer #4 (2026-02-06 11:12:33)
+Text correction, finding relevant literaure, shorten text and so on
+
+Question #5 (2026-02-06 11:12:34)
+Can you walk me through one concrete moment where you used GenAI for text correction in your
+thesis—what you gave it, what it returned, and what you ended up changing or keeping?
+
+Answer #6 (2026-02-06 11:14:12)
+I gave to him my bad english text with a lot of mistakes. He returned to me good organised text with
+no mistakes. And after some iteration I can just copy past this text to thesis
+
+Question #7 (2026-02-06 11:14:18)
+When you’re using GenAI to turn your “bad English text with a lot of mistakes” into something you
+can copy‑paste into your thesis, what feels easy or smooth about that process, and what feels tricky
+or takes extra effort?
+
+Answer #8 (2026-02-06 11:16:08)
+It is much easier than correct this text by myself. Sometime I need a lot of iteration beciause he
+can also change text or add smth which I dont need- But if write very clear that he should write in
+my style . it works well. Also I alwasy put commnets frm my proffesor, which I dont understand very
+often and he explains it to me in simple words and write what I should correct
+
+Question #9 (2026-02-06 11:16:10)
+When you say you have to be “very clear” so it writes in your style, what does a clear instruction
+look like for you in practice?
+
+Answer #10 (2026-02-06 11:21:27)
+Very clear for me, that I write direct what I want to do with text. Ask I just about checking, or
+extending. And saving my style, or change it for more academic
+
+Question #11 (2026-02-06 11:21:36)
+When you’re doing those iterations to keep it “in my style” and using it to explain your professor’s
+comments in simple words, how does that usually make you feel while you’re working?
+
+Answer #12 (2026-02-06 11:22:20)
+Very postive and supporting. He can explain and make it simole with good and clear examples
+
+Question #13 (2026-02-06 11:22:22)
+Can you tell me about a specific moment when it *didn’t* feel “very positive and supporting” to use
+it—what happened, and what did you feel in that moment?
+
+Answer #14 (2026-02-06 11:23:09)
+I have just exparinece with crrating picture for my project. And he saif that he will do it, but
+finally said that he cant
+
+Question #15 (2026-02-06 11:23:18)
+When you use it for things like correcting your text, explaining your professor’s comments, or
+creating a picture, what makes it feel reliable to you—or not reliable?
+
+Answer #16 (2026-02-06 11:24:00)
+If he provide refernces and after reading it looks good I can trust. Also if I see that I can write
+the same but spend x100 times
+
+Question #17 (2026-02-06 11:24:01)
+When it gives you references, what do you look for in those references to decide they’re trustworthy
+enough to use?
+
+Answer #18 (2026-02-06 11:24:28)
+I checked the refernces at google and undrestand relevance
+
+Question #19 (2026-02-06 11:24:38)
+When you’re checking references on Google and deciding whether to trust what it wrote, how do you
+think about the AI itself—more like a tool that just follows instructions, or more like something
+with its own “tendencies” that shape the answer?
+
+Answer #20 (2026-02-06 11:24:55)
+own tendencies
+
+Question #21 (2026-02-06 11:24:57)
+What are the “own tendencies” you’ve noticed—can you describe one specific moment in your thesis
+work where it responded in a way that felt like a consistent pattern, even when you were being very
+clear in your instructions?
+
+Answer #22 (2026-02-06 11:25:48)
+Sometimes he wrote some text which I asked him not to do or style, byt he forgot it and we should
+returen and I should explain again
+
+Question #23 (2026-02-06 11:25:59)
+When it has these “own tendencies” and sometimes forgets your instructions, what risks or worries
+does that create for you about using it more in your thesis work?
+
+Answer #24 (2026-02-06 11:26:30)
+That if I will not read after him, my proffesor will ask me to rewrite it
+
+Question #25 (2026-02-06 11:26:31)
+What kinds of changes does it sometimes make that would lead your professor to ask you to rewrite
+it?
+
+Answer #26 (2026-02-06 11:26:56)
+Ai style, not logical and not connected text
+
+Question #27 (2026-02-06 11:26:56)
+Looking ahead, what would help you feel more confident about when and how to use GenAI in your work?
+
+Answer #28 (2026-02-06 11:28:13)
+Just that proffesor will accept finally that it is very stupid not to use ai during thesis work, And
+that if I will write it by myseld I will spend much more time and result will be not good. And why I
+cant use Ai with checking. Provlem is not with ai. problen is with proffesors
+
+Question #29 (2026-02-06 11:28:13)
+Is there anything else about your experiences or expectations with GenAI that we haven't covered?
+
+Answer #30 (2026-02-06 11:28:29)
+No

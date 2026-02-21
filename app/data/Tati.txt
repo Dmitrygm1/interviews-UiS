@@ -1,0 +1,61 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: Tati.json
+User ID: Tati
+Session ID: Tati
+Conversation Start: 2025-12-10 11:31:06
+Conversation End: 2025-12-10 11:36:21
+Interview Duration: 00:05:14
+Total Messages: 11
+Questions: 6
+Answers: 5
+Flagged Messages: 0
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2025-12-10 11:31:06)
+What do your day-to-day work tasks usually look like?
+
+Answer #2 (2025-12-10 11:31:46)
+i am enganed in academic reserach, in tehcing stduents, in writing appliactions fo rmonay fo
+rreerahc or educational problems
+
+Question #3 (2025-12-10 11:31:48)
+How do you incorporate generative AI into your work in academic research, teaching, or writing
+applications for funding, and how has it impacted those tasks?
+
+Answer #4 (2025-12-10 11:32:55)
+i do use ai in refining topcis of my reserahc and calrfing reserahc questions, in funding aplication
+it helps to make text on inputa and outputs and refine aoals, in teatching not use dtaht much
+
+Question #5 (2025-12-10 11:32:56)
+Can you share a specific example where using generative AI in your research or funding applications
+significantly enhanced your work, and perhaps another instance where it didn't meet your
+expectations?
+
+Answer #6 (2025-12-10 11:33:33)
+it helpsed me o get a betterstategy for a meeting, whie it faile dto hel ime in luteartrue reviwer
+and made hallusinations
+
+Question #7 (2025-12-10 11:33:36)
+How have you found the process of learning to use and integrating generative AI into your existing
+workflows, particularly compared to other digital tools you are familiar with, and what aspects have
+made this process either smooth or challenging for you?
+
+Answer #8 (2025-12-10 11:35:16)
+it is more challanging comaired to zoom orsharepoint beacus it changes so often
+
+Question #9 (2025-12-10 11:35:17)
+How do you navigate the frequent changes in generative AI tools, and what specific challenges or
+adaptations have you encountered because of these updates?
+
+Answer #10 (2025-12-10 11:36:17)
+i am behind in lerning how to appaly the new tools and noldu at my work teahces me about that
+
+Question #11 (2025-12-10 11:36:21)
+Considering your experiences with generative AI in your work, could you share how these interactions
+have influenced your feelings towards the technology, such as moments of pride or frustration, and
+how they impact your confidence and motivation in using these tools?

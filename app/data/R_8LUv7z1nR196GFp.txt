@@ -1,0 +1,131 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_8LUv7z1nR196GFp.json
+User ID: R_8LUv7z1nR196GFp
+Session ID: R_8LUv7z1nR196GFp
+Conversation Start: 2026-02-15 21:24:17
+Conversation End: 2026-02-15 21:57:52
+Interview Duration: 00:33:34
+Total Messages: 30
+Questions: 15
+Answers: 15
+Flagged Messages: 0
+Terminated: True
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-02-15 21:24:17)
+Can you describe the main types of tasks you do in your job?
+
+Answer #2 (2026-02-15 21:27:04)
+System administrator of a financial disclosure software. Financial consolidation.
+
+Question #3 (2026-02-15 21:27:07)
+In your day-to-day work as a system administrator for the financial disclosure and consolidation
+software, where—if at all—do you use generative AI, and can you walk me through one recent example?
+
+Answer #4 (2026-02-15 21:29:19)
+The financial disclosure system has an inbuilt generative AI tool, which I use when I have questions
+about the system’s usage.
+
+Question #5 (2026-02-15 21:29:21)
+When you use the system’s inbuilt generative AI to answer questions about usage, can you walk me
+through the last time you used it—what you asked, what it answered, and whether it actually helped
+you solve the issue?
+
+Answer #6 (2026-02-15 21:34:13)
+Last time I asked the generative AI on how I can migrate files between different workspaces within
+this system. The answer I have got from the AI tool was wrong, stating that I had to export the
+files to I local drive and import them in the next step to another workspace. I was suspicious that
+this info was not correct and searched the support documentation directly. And it was possible to
+migrate the files directly between to workspaces. Do the inbuilt generative AI have me wrong info.
+
+Question #7 (2026-02-15 21:34:20)
+When you’re using that inbuilt AI—like when it gave you the wrong steps for migrating files—what’s
+the experience like for you in terms of how easy or effortful it is to get a reliable answer?
+
+Answer #8 (2026-02-15 21:37:00)
+I don’t understand this question
+
+Question #9 (2026-02-15 21:37:02)
+When you ask the inbuilt AI a “how do I…” question, what makes it feel easy versus frustrating for
+you—can you walk me through one recent time it went smoothly?
+
+Answer #10 (2026-02-15 21:39:24)
+Once I asked this AI about how do I edit something in a document. The answer I got was correct and
+it went smoothly
+
+Question #11 (2026-02-15 21:39:30)
+When you got that correct answer about editing a document, how did using the AI make you feel in
+that moment?
+
+Answer #12 (2026-02-15 21:42:17)
+I expected to get the correct answer since I used to use other AIs, mainly ChatGPT, in connection
+with different desktop automation tasks, excel, or text improving.
+
+Question #13 (2026-02-15 21:42:18)
+When the AI gives you an answer you *don’t* expect to be correct—like that workspace migration
+one—what do you feel in that moment, and how does it change what you do next?
+
+Answer #14 (2026-02-15 21:43:21)
+I felt that this inbuilt generative AI was stupid, especially in comparison with ChatGPT
+
+Question #15 (2026-02-15 21:43:29)
+Compared to ChatGPT, how would you describe what this inbuilt AI is like to work with over time—does
+it seem to get better or adjust to what you need, or does it stay pretty much the same?
+
+Answer #16 (2026-02-15 21:45:06)
+As I said this is much worser than ChatGPT
+
+Question #17 (2026-02-15 21:45:07)
+What specifically makes it “much worser” for you—are you seeing it be less accurate, less
+consistent, or just not able to handle the kinds of “how do I…” tasks you need?
+
+Answer #18 (2026-02-15 21:49:24)
+While this one is inbuilt in the system I have to specify to it that my question relates to this
+system if I ask this AI about something. If I don’t specify it gives general answers related to
+different software. And it is not proactive at all: it does not try to see i am warming with in the
+system and don’t make suggestions where I could get help from this AI.
+
+Question #19 (2026-02-15 21:49:32)
+When you’re using it and it gives those generic answers unless you spell out the context, what kind
+of “personality” or tendencies does it feel like it has to you?
+
+Answer #20 (2026-02-15 21:50:39)
+Please reformulate this question
+
+Question #21 (2026-02-15 21:50:41)
+When it gives a generic or wrong answer, does it feel to you like it’s “choosing” to respond that
+way (like it has a tendency), or more like a simple tool just failing to understand the context? ?
+
+Answer #22 (2026-02-15 21:51:25)
+Like a simple tool
+
+Question #23 (2026-02-15 21:51:35)
+Given it feels like a simple tool that often misses context, what’s the main thing that holds you
+back from using it more in your day-to-day work?
+
+Answer #24 (2026-02-15 21:52:57)
+Can say it in Russian?
+
+Question #25 (2026-02-15 21:52:59)
+Да, конечно — на русском: что именно вас больше всего останавливает использовать этот AI чаще в
+повседневной работе — риск ошибок, вопросы безопасности/конфиденциальности, или что-то другое?
+
+Answer #26 (2026-02-15 21:53:52)
+Risk of mistakes
+
+Question #27 (2026-02-15 21:53:52)
+Looking ahead, what would help you feel more confident about when and how to use GenAI in your work?
+
+Answer #28 (2026-02-15 21:57:04)
+I would prefer this software starts to use ChatGPT model as their inbuilt AI, not developing their
+own, since their own AI is not good enough
+
+Question #29 (2026-02-15 21:57:04)
+Is there anything else about your experiences or expectations with GenAI that we haven't covered?
+
+Answer #30 (2026-02-15 21:57:52)
+No, I feel it was too many questions and I was not informed about progress of this survey.

@@ -1,0 +1,34 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_2NssNrnrqC9IxPD.json
+User ID: R_2NssNrnrqC9IxPD
+Session ID: R_2NssNrnrqC9IxPD
+Conversation Start: 2026-02-05 20:05:58
+Conversation End: 2026-02-05 20:06:53
+Interview Duration: 00:00:54
+Total Messages: 5
+Questions: 3
+Answers: 2
+Flagged Messages: 0
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-02-05 20:05:58)
+Can you describe the main types of tasks you do in your job?
+
+Answer #2 (2026-02-05 20:06:26)
+I work in different professions, so depends on which.
+
+Question #3 (2026-02-05 20:06:28)
+When you think about the different professions you work in, what does a typical day look like in one
+of them, and where (if anywhere) does generative AI fit into those tasks?
+
+Answer #4 (2026-02-05 20:06:52)
+I am an artist, a performance artist.
+
+Question #5 (2026-02-05 20:06:53)
+In your work as a performance artist, what’s one specific part of your process where you’ve tried
+using generative AI, and what happened when you did?

@@ -1,0 +1,136 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_2IoWgMA9hA0rPU4.json
+User ID: R_2IoWgMA9hA0rPU4
+Session ID: R_2IoWgMA9hA0rPU4
+Conversation Start: 2026-02-07 22:27:34
+Conversation End: 2026-02-07 23:06:50
+Interview Duration: 00:39:15
+Total Messages: 30
+Questions: 15
+Answers: 15
+Flagged Messages: 0
+Terminated: True
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-02-07 22:27:34)
+Can you describe the main types of tasks you do in your job?
+
+Answer #2 (2026-02-07 22:34:54)
+My main tasks involve -
+Mentoring students, guiding them through projects and entrepreneurial ideas.
+Conducting research in areas related to business and technology
+Developing my own start-ups
+
+Question #3 (2026-02-07 22:34:56)
+In your day-to-day work mentoring students, doing research, and developing your start-ups, where (if
+anywhere) are you actually using generative AI right now, and can you walk me through one recent
+example from start to finish?
+
+Answer #4 (2026-02-07 22:37:31)
+I am using Claude mostly for research purposes. Recently, I was working on my start-up and had to do
+some deep analysis on the usability of the platform.
+
+Question #5 (2026-02-07 22:37:32)
+When you say you used Claude for “deep analysis” on the platform’s usability, what exactly did you
+ask it to do, and what did you end up changing (or deciding) based on its output?
+
+Answer #6 (2026-02-07 22:43:57)
+I asked - at what stages founders struggle the most, and how a digital interconnected platform can
+help them. I did not get any super-surprising result. However, a few interesting insights came up
+that kind of forced me to think differently.
+
+Question #7 (2026-02-07 22:44:04)
+When you’re using Claude for that kind of usability analysis on your start-up, what’s it like to
+actually work with day to day—how easy or hard does it feel to get it to do what you need?
+
+Answer #8 (2026-02-07 22:46:05)
+The problem with Claude is that sometimes it would give you very extensive and detailed output. For
+deep research, it is fine, but when it comes to getting straight answers, that is when you struggle
+a bit.
+
+Question #9 (2026-02-07 22:46:07)
+Can you walk me through a recent moment when you needed a “straight answer” and Claude gave you
+something too extensive—what did you ask, and what part of the output made it hard to use?
+
+Answer #10 (2026-02-07 22:50:53)
+Regarding the following question of platform usability, I asked what percentage of early-stage
+founders in Europe are struggling with finding the right skill match. It gave me very detailed
+answers, especially as it was also adding up the other problems.
+
+Question #11 (2026-02-07 22:51:00)
+When Claude gives you that long, detailed answer instead of the percentage you’re looking for, how
+does that usually make you feel in the moment?
+
+Answer #12 (2026-02-07 22:52:04)
+At one point, it feels very overwhelming.
+
+Question #13 (2026-02-07 22:52:06)
+When it feels “very overwhelming,” what do you usually do next—do you keep working with Claude, or
+do you switch to another way of getting the answer?
+
+Answer #14 (2026-02-07 22:54:55)
+Then I try to write a more direct prompt. i.e., give me the percentage of struggling founders who
+are finding it difficult to get the right skill match. I need a very precise and to-the-point
+answer.
+
+Question #15 (2026-02-07 22:55:01)
+When you rewrite your prompt to get that precise number, how confident do you feel that Claude’s
+answer is actually accurate and reliable?
+
+Answer #16 (2026-02-07 22:57:08)
+In this case, I always double-check with other sources. Because no AI model is 100% accurate so far.
+
+Question #17 (2026-02-07 22:57:09)
+When you “double-check with other sources,” what kinds of sources do you trust most, and what makes
+you decide Claude is reliable enough to use versus not?
+
+Answer #18 (2026-02-07 22:57:22)
+Google
+
+Question #19 (2026-02-07 22:57:29)
+When you’re using Claude and then sanity-checking it with Google, what kind of “personality” or bias
+do you feel Claude brings to its answers, if any?
+
+Answer #20 (2026-02-07 22:59:17)
+Google can lead to many related articles or sources from which I can cross-check. I still weigh
+Google more than any other generative AI model so far, particularly in these cases.
+
+Question #21 (2026-02-07 22:59:18)
+When you say you “weigh Google more” than Claude, is that because Claude feels like it has its own
+tendencies or “opinions” in how it answers, and if so what’s one tendency you’ve noticed?
+
+Answer #22 (2026-02-07 23:00:29)
+Sometimes, yes, if you do not write the prompt in a very professional way.
+
+Question #23 (2026-02-07 23:00:38)
+When you think about using Claude more in your mentoring, research, or start-up work, what’s the
+biggest thing that would hold you back from relying on it more day to day?
+
+Answer #24 (2026-02-07 23:02:28)
+Authenticity of the output.
+
+Question #25 (2026-02-07 23:02:29)
+When you say “authenticity of the output,” what would make an answer feel inauthentic to you in your
+work—can you share a specific moment where Claude’s response raised that concern?
+
+Answer #26 (2026-02-07 23:03:45)
+In many cases, it happens with the research work. Sometimes it will generate literature by itself,
+just to match the research topic you are searching for.
+
+Question #27 (2026-02-07 23:03:45)
+Looking ahead, what would help you feel more confident about when and how to use GenAI in your work?
+
+Answer #28 (2026-02-07 23:05:33)
+The moment when GenAI will stop producing hallucinating results and provide more evidence-based
+output.
+
+Question #29 (2026-02-07 23:05:33)
+Is there anything else about your experiences or expectations with GenAI that we haven't covered?
+
+Answer #30 (2026-02-07 23:06:50)
+No, but I think whenever GenAI is producing the evidence-based result, it should instantly provide
+the source as well.

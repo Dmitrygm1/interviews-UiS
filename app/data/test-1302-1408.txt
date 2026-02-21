@@ -1,0 +1,27 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: test-1302-1408.json
+User ID: test-1302-1408
+Session ID: test-1302-1408
+Conversation Start: 2026-02-13 13:08:56
+Conversation End: 2026-02-13 13:09:24
+Interview Duration: 00:00:28
+Total Messages: 3
+Questions: 2
+Answers: 1
+Flagged Messages: 0
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-02-13 13:08:56)
+Can you describe the main types of tasks you do in your job?
+
+Answer #2 (2026-02-13 13:09:22)
+Sure, I'm a quant at a massive company, so yeah, I earn a lot of money, I guess. That's my job.
+
+Question #3 (2026-02-13 13:09:24)
+In your day-to-day as a quant, what’s one concrete task where you’ve tried using generative AI, and
+how did it actually change your workflow or output?

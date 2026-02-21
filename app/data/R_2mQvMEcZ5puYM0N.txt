@@ -1,0 +1,26 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_2mQvMEcZ5puYM0N.json
+User ID: R_2mQvMEcZ5puYM0N
+Session ID: R_2mQvMEcZ5puYM0N
+Conversation Start: 2026-02-05 19:53:59
+Conversation End: 2026-02-05 19:54:41
+Interview Duration: 00:00:42
+Total Messages: 3
+Questions: 2
+Answers: 1
+Flagged Messages: 0
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-02-05 19:53:59)
+Can you describe the main types of tasks you do in your job?
+
+Answer #2 (2026-02-05 19:54:41)
+hmm
+
+Question #3 (2026-02-05 19:54:41)
+What are the main work tasks you spend most of your time on in a typical week?

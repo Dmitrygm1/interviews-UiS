@@ -1,0 +1,22 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: test123.json
+User ID: test123
+Session ID: test123
+Conversation Start: 2025-11-04 19:06:57
+Conversation End: 2025-11-04 19:06:57
+Interview Duration: 00:00:00
+Total Messages: 1
+Questions: 1
+Answers: 0
+Flagged Messages: 0
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2025-11-04 19:06:57)
+I am interested in learning more about why you currently do not own any stocks or stock mutual
+funds. Can you help me understand the main factors or reasons why you are not participating in the
+stock market?

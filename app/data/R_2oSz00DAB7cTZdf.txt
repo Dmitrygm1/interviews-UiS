@@ -1,0 +1,87 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_2oSz00DAB7cTZdf.json
+User ID: R_2oSz00DAB7cTZdf
+Session ID: R_2oSz00DAB7cTZdf
+Conversation Start: 2026-02-06 08:41:10
+Conversation End: 2026-02-12 16:34:57
+Interview Duration: 151:53:46
+Total Messages: 15
+Questions: 8
+Answers: 7
+Flagged Messages: 4
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-02-06 08:41:10)
+Can you describe the main types of tasks you do in your job?
+
+Answer #2 (2026-02-06 08:41:35)
+I do research and teaching mainly, so research like writing, research article and teaching like
+teaching students.
+
+Question #3 (2026-02-06 08:41:36)
+In your research writing—like when you’re working on a research article—what role, if any, does
+generative AI play in your workflow?
+
+Answer #4 (2026-02-06 08:42:13)
+In research writing, it actually plays a great role because it helps me to formulate research
+questions. I use it to decide on the literature, to do literature review. I use it to polish my
+arguments. I haven't yet used it for the analysis, but I intend to.
+
+Question #5 (2026-02-06 08:42:14)
+Can you walk me through a specific time when you used generative AI to formulate a research
+question, and how that changed what you ended up studying?
+
+Answer #6 (2026-02-12 16:27:29)
+Hello. Yes, I'm using AI for research and teaching purposes.
+
+Question #7 (2026-02-12 16:27:35)
+When you’re using AI to help with things like shaping research questions or polishing your
+arguments, what’s it like to fit it into your usual workflow?
+
+Answer #8 (2026-02-12 16:28:19)
+Well, it fits actually quite naturally because in all this I would just try to formulate a few
+research questions and here I kind of can get help with it in no time and I can also get some
+additional ideas from this, so it's actually very helpful.
+
+Question #9 (2026-02-12 16:28:21)
+When you say it helps “in no time,” what’s the easiest part of that interaction for you—and what, if
+anything, still takes effort or a few tries to get right?
+
+Answer #10 (2026-02-12 16:31:06)
+Okay, so you asked what works well and what doesn't work as well, and I should say that what works
+well that it is generating a few, five more maybe, research questions with different focuses, so
+it's easy for me to see how I can actually pivot the research question, which is good. The bad part
+is that sometimes it doesn't get what I'm trying to achieve, and then that means that I have not
+prompted it properly, so I need to go back and prompt it once again.
+
+Question #11 (2026-02-12 16:31:12)
+When it gives you those five alternative research questions quickly versus when you have to re-
+prompt because it misses what you mean, how does that make you feel in the moment?
+
+Answer #12 (2026-02-12 16:32:57)
+Well, when everything works smoothly, I'm really speeding up the process, I'm enlightened and it
+just boosts my creativity and ability to work. When I get the program misunderstand me, then it's
+really annoying. And sometimes I think that when I feel that the problem is on my side, it's okay,
+then I can kind of try to explain. But sometimes the tool is just not working properly and it's
+really irritating.
+
+Question #13 (2026-02-12 16:32:59)
+Can you walk me through a specific time when it was “really irritating” because the tool wasn’t
+working properly—what happened, and how did that affect how much you trusted it right after?
+
+Answer #14 (2026-02-12 16:34:46)
+Well, I noticed that I use ChatGPT and it's the US-based tool and I noticed that it doesn't work
+good when US customers wake up. So in Norwegian time that would be maybe after two o'clock of the
+daytime and then suddenly you know it starts being so stupid and it doesn't understand me anymore.
+It provides a quick answers and it's kind of not very well formulated or thought and then I actually
+I try to avoid to use it if I don't need to at that time because I noticed there is a significant
+drop in quality of what I get.
+
+Question #15 (2026-02-12 16:34:57)
+When you’ve noticed that quality dip in the afternoons, what patterns have you picked up about when
+ChatGPT is reliable for your work and when it isn’t?

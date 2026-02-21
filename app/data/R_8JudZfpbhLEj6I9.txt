@@ -1,0 +1,28 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_8JudZfpbhLEj6I9.json
+User ID: R_8JudZfpbhLEj6I9
+Session ID: R_8JudZfpbhLEj6I9
+Conversation Start: 2025-12-09 23:10:59
+Conversation End: 2025-12-09 23:11:25
+Interview Duration: 00:00:26
+Total Messages: 3
+Questions: 2
+Answers: 1
+Flagged Messages: 1
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2025-12-09 23:10:59)
+To start us off, how are you currently using or choosing not to use generative AI in your day-to-day
+work?
+
+Answer #2 (2025-12-09 23:11:18)
+I am choosing to use it carefully
+
+Question #3 (2025-12-09 23:11:25)
+What specific tasks or projects do you find generative AI most useful for in your work, and can you
+share an example of a successful experience you've had with it?

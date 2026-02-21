@@ -1,0 +1,128 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_2JIcmU8zjI9hRsG.json
+User ID: R_2JIcmU8zjI9hRsG
+Session ID: R_2JIcmU8zjI9hRsG
+Conversation Start: 2026-02-15 21:38:52
+Conversation End: 2026-02-15 21:51:14
+Interview Duration: 00:12:21
+Total Messages: 30
+Questions: 15
+Answers: 15
+Flagged Messages: 0
+Terminated: True
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-02-15 21:38:52)
+Can you describe the main types of tasks you do in your job?
+
+Answer #2 (2026-02-15 21:39:31)
+I am communicating with customers regardingvpurshases they done
+
+Question #3 (2026-02-15 21:39:33)
+When you’re communicating with customers about the purchases they’ve done, do you ever use
+generative AI to help (like drafting replies or explaining issues), and can you walk me through one
+recent example?
+
+Answer #4 (2026-02-15 21:39:55)
+Yes K fobodtrn draft mh letters with chat gpt
+
+Question #5 (2026-02-15 21:39:56)
+When you use ChatGPT to draft your letters to customers, what do you usually change or double-check
+before you send them?
+
+Answer #6 (2026-02-15 21:40:30)
+I make s core nessage and let chat makd ut polite and smooth
+
+Question #7 (2026-02-15 21:40:35)
+When you start from your core message and use ChatGPT to make it more polite and smooth, how easy or
+tricky is it to get the tone and wording the way you want?
+
+Answer #8 (2026-02-15 21:40:58)
+It udxquute easy
+
+Question #9 (2026-02-15 21:41:01)
+What makes it “quite easy” for you—are there certain prompts or steps you use that help ChatGPT nail
+the polite, smooth tone quickly?
+
+Answer #10 (2026-02-15 21:41:49)
+I created s project in which I promted what I need and fifcthe lodt U use this project
+
+Question #11 (2026-02-15 21:41:55)
+When you use that saved project prompt to polish your customer messages, how does it usually make
+you feel while you’re working—like more confident and in control, or something else?
+
+Answer #12 (2026-02-15 21:42:37)
+Yes igjen makes mf definitly feel more congidentvto know that I communicate professionally
+
+Question #13 (2026-02-15 21:42:38)
+Can you think of a specific time when ChatGPT helped you communicate “professionally” in a way that
+really stood out, and what did you feel afterward?
+
+Answer #14 (2026-02-15 21:44:24)
+Sometimes I fo mog know customers well, thrn it chooses nritral tone. Other times they are old
+customers and I need perdinilize thf nail, Ivslways thrn promtbit to bf more cuusal and frinfly. But
+sometimes it dies not work
+
+Question #15 (2026-02-15 21:44:31)
+When you notice it doesn’t quite nail the tone—like when you want it more casual and friendly—what
+patterns have you started to see in when it works well versus when it doesn’t?
+
+Answer #16 (2026-02-15 21:45:48)
+Sometimes og use wirds of ohrases that I nfcef use, and thrnvthf message fies kog dound like "me".
+Then U tell it sustvtp correcg doellkng
+
+Question #17 (2026-02-15 21:45:50)
+When it uses words or phrases you’d never use and the message doesn’t sound like “you,” how
+consistent is that—does it happen with certain types of customer emails or prompts more than others?
+
+Answer #18 (2026-02-15 21:47:00)
+I would sayvthat generally chat ggpt witk eirse after 2 pm. Ivhhikk because us market us up anx lorf
+prople are usunc it
+
+Question #19 (2026-02-15 21:47:08)
+When ChatGPT starts sounding “less like you” or feels a bit off—especially later in the day—what
+does it make you think is going on on its side?
+
+Answer #20 (2026-02-15 21:48:02)
+It makes mf quite irritating. In fsct uc I hsve complicated tasks yo do I rcfn podtpone thrm ( if I
+need its help)
+
+Question #21 (2026-02-15 21:48:04)
+When you say it gets “quite irritating” and you sometimes postpone tasks if you need its help, do
+you feel like ChatGPT is “choosing” to be unhelpful at those times, or more like it’s just a tool
+that’s struggling—and why?
+
+Answer #22 (2026-02-15 21:49:06)
+I make mh huess aboug us market and increased number if userers. I think maybe they switch ut to
+another model
+
+Question #23 (2026-02-15 21:49:15)
+Thinking about those moments when you feel you have to postpone work because ChatGPT isn’t reliable,
+what’s the biggest thing that makes you hesitate to use it more widely in your day-to-day tasks?
+
+Answer #24 (2026-02-15 21:49:59)
+Not really. K woulx likf to use it fof more tasks but U do not know how
+
+Question #25 (2026-02-15 21:50:00)
+When you say you’d like to use it for more tasks but you “don’t know how,” what’s the main thing
+you’re missing—ideas for what to use it on, or knowing how to prompt it safely and correctly for
+your work?
+
+Answer #26 (2026-02-15 21:50:19)
+Both
+
+Question #27 (2026-02-15 21:50:19)
+Looking ahead, what would help you feel more confident about when and how to use GenAI in your work?
+
+Answer #28 (2026-02-15 21:50:39)
+Exsamoles from collgues or fitmal learning
+
+Question #29 (2026-02-15 21:50:39)
+Is there anything else about your experiences or expectations with GenAI that we haven't covered?
+
+Answer #30 (2026-02-15 21:51:14)
+Well if it is going to substitute my work in thf furure

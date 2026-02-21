@@ -1,0 +1,20 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: Ute.json
+User ID: Ute
+Session ID: Ute
+Conversation Start: 2025-12-11 21:31:12
+Conversation End: 2025-12-11 21:31:12
+Interview Duration: 00:00:00
+Total Messages: 1
+Questions: 1
+Answers: 0
+Flagged Messages: 0
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2025-12-11 21:31:12)
+Can you describe the main types of tasks you do in your job?

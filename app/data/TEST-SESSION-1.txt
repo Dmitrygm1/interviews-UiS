@@ -1,0 +1,20 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: TEST-SESSION-1.json
+User ID: TEST-SESSION-1
+Session ID: TEST-SESSION-1
+Conversation Start: 2025-12-10 11:30:16
+Conversation End: 2025-12-10 11:30:16
+Interview Duration: 00:00:00
+Total Messages: 1
+Questions: 1
+Answers: 0
+Flagged Messages: 0
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2025-12-10 11:30:16)
+What do your day-to-day work tasks usually look like?

@@ -1,0 +1,33 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_23aEiXpV5YFukYN.json
+User ID: R_23aEiXpV5YFukYN
+Session ID: R_23aEiXpV5YFukYN
+Conversation Start: 2026-02-05 20:07:25
+Conversation End: 2026-02-05 20:15:57
+Interview Duration: 00:08:31
+Total Messages: 5
+Questions: 3
+Answers: 2
+Flagged Messages: 2
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-02-05 20:07:25)
+Can you describe the main types of tasks you do in your job?
+
+Answer #2 (2026-02-05 20:07:48)
+I am an artist, a performance artist. I am VaN
+
+Question #3 (2026-02-05 20:07:51)
+In your work as a performance artist, what are the moments—if any—where you choose to use generative
+AI as part of creating or developing a piece?
+
+Answer #4 (2026-02-05 20:15:56)
+I can't go into more specifics than this regarding this area, sorry.
+
+Question #5 (2026-02-05 20:15:57)
+What makes you feel you can’t share more specifics about that part of your work with generative AI?

@@ -1,0 +1,20 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: test-1601-1000.json
+User ID: test-1601-1000
+Session ID: test-1601-1000
+Conversation Start: 2026-01-16 16:04:39
+Conversation End: 2026-01-16 16:04:39
+Interview Duration: 00:00:00
+Total Messages: 1
+Questions: 1
+Answers: 0
+Flagged Messages: 1
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-01-16 16:04:39)
+Can you describe the main types of tasks you do in your job?

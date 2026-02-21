@@ -1,0 +1,27 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_2GiFzQxw4ugUrSi.json
+User ID: R_2GiFzQxw4ugUrSi
+Session ID: R_2GiFzQxw4ugUrSi
+Conversation Start: 2026-02-05 20:02:31
+Conversation End: 2026-02-05 20:03:10
+Interview Duration: 00:00:38
+Total Messages: 3
+Questions: 2
+Answers: 1
+Flagged Messages: 1
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-02-05 20:02:31)
+Can you describe the main types of tasks you do in your job?
+
+Answer #2 (2026-02-05 20:03:08)
+Yes, technician, I do several tasks, including repairing mobile devices.
+
+Question #3 (2026-02-05 20:03:10)
+When you’re repairing mobile devices as a technician, what are the situations where you use
+generative AI as part of the job?

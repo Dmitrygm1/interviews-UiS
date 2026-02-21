@@ -1,0 +1,21 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: T.json
+User ID: T
+Session ID: T
+Conversation Start: 2025-12-09 23:15:17
+Conversation End: 2025-12-09 23:15:17
+Interview Duration: 00:00:00
+Total Messages: 1
+Questions: 1
+Answers: 0
+Flagged Messages: 0
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2025-12-09 23:15:17)
+To start us off, how are you currently using or choosing not to use generative AI in your day-to-day
+work?
