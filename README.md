@@ -216,16 +216,16 @@ The file `app/app.py` includes a detailed documentation of the API and how to ac
 python3 json_to_txt.py
 ```
 
-OpenAI token usage for future conversations is logged per session in `app/data/usage`. To summarize token consumption for one session, run:
+OpenAI token usage for future conversations is logged per session in `app/data/usage`. To summarize token consumption and automatically estimate cost for known models such as `gpt-5.5` and `gpt-5.4-mini`, run:
 
 ```bash
 python3 scripts/usage_report.py SESSION_ID
 ```
 
-To include an estimated cost, pass the current model prices per 1M tokens:
+For unknown models, pass fallback prices per 1M tokens:
 
 ```bash
-python3 scripts/usage_report.py SESSION_ID --input-price-per-1m INPUT_PRICE --output-price-per-1m OUTPUT_PRICE
+python3 scripts/usage_report.py SESSION_ID --fallback-input-price-per-1m INPUT_PRICE --fallback-output-price-per-1m OUTPUT_PRICE
 ```
 
 Each JSON file corresponds to an interview and is identified by its `session_id`.

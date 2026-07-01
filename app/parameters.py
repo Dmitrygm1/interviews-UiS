@@ -209,7 +209,7 @@ INTERVIEW_PARAMETERS = {
 				YOUR RESPONSE: Your summary should be a succinct yet comprehensive account of the full interview, allowing other interviewers to continue the conversation.
 			""",
 			"max_tokens": 1000,
-			"model": "gpt-5.5"
+			"model": "gpt-5.4-mini"
 		},
 		"transition": { # for the transition agent
 			"prompt": """
@@ -355,7 +355,7 @@ INTERVIEW_PARAMETERS = {
 				SVAR: Gi en kortfattet, men dekkende oppsummering av intervjuet så langt på norsk.
 			""",
 			"max_tokens": 1000,
-			"model": "gpt-5.5"
+			"model": "gpt-5.4-mini"
 		},
 		"transition": {
 			"prompt": """
@@ -505,7 +505,7 @@ INTERVIEW_PARAMETERS = {
 				YOUR RESPONSE: Provide a succinct, comprehensive summary of the interview so far.
 			""",
 			"max_tokens": 1000,
-			"model": "gpt-5.5"
+			"model": "gpt-5.4-mini"
 		},
 		"transition": {
 			"prompt": """
@@ -625,7 +625,7 @@ INTERVIEW_PARAMETERS = {
 		"summary": {
 			"prompt": """your_prompt_here""",
 			"max_tokens": 1000,
-			"model": "gpt-5.5"
+			"model": "gpt-5.4-mini"
 		},
 		"transition": {
 			"prompt": """your_prompt_here""",
