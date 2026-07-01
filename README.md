@@ -216,6 +216,18 @@ The file `app/app.py` includes a detailed documentation of the API and how to ac
 python3 json_to_txt.py
 ```
 
+OpenAI token usage for future conversations is logged per session in `app/data/usage`. To summarize token consumption for one session, run:
+
+```bash
+python3 scripts/usage_report.py SESSION_ID
+```
+
+To include an estimated cost, pass the current model prices per 1M tokens:
+
+```bash
+python3 scripts/usage_report.py SESSION_ID --input-price-per-1m INPUT_PRICE --output-price-per-1m OUTPUT_PRICE
+```
+
 Each JSON file corresponds to an interview and is identified by its `session_id`.
 
 **Flask app**: If you deploy as a Flask app, interview JSON files are also stored in `app/data/json`. You can retrieve them from your server by using the `/retrieve` endpoint of the app. Run:

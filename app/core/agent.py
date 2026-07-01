@@ -31,6 +31,14 @@ class LLMAgent(object):
         """ Load interview guidelines for prompt construction. """
         self.parameters = parameters
 
+    def _usage_context(self, history:list) -> dict:
+        """Return metadata stored with usage logs for downstream reporting."""
+        state = history[-1] if history else {}
+        return {
+            "session_id": state.get("session_id"),
+            "interview_id": self.parameters.get("_name"),
+        }
+
     def transcribe(self, audio) -> str:
         """ Transcribe audio file. """
         audio_file = BytesIO(b64decode(audio))
@@ -88,7 +96,8 @@ class LLMAgent(object):
         """ Moderate answers: Are they on topic? """
         response = execute_queries(
             self.client.chat.completions.create,
-            self.construct_query(['moderator'], history, message)
+            self.construct_query(['moderator'], history, message),
+            usage_context=self._usage_context(history),
         )
         return "yes" in response["moderator"].lower()
 
@@ -104,7 +113,8 @@ class LLMAgent(object):
         """ Return next 'within-topic' probing question. """
         response = execute_queries(
             self.client.chat.completions.create,
-            self.construct_query(['probe'], history)
+            self.construct_query(['probe'], history),
+            usage_context=self._usage_context(history),
         )
         return response['probe']
 
@@ -118,6 +128,7 @@ class LLMAgent(object):
         tasks = ['summary','transition'] if summarize else ['transition']
         response = execute_queries(
             self.client.chat.completions.create,
-            self.construct_query(tasks, history)
+            self.construct_query(tasks, history),
+            usage_context=self._usage_context(history),
         )
         return response['transition'], response.get('summary', '')

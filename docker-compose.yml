@@ -10,5 +10,6 @@ services:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - LOG_LEVEL=${LOG_LEVEL:-ERROR}   # Defaults to minimum logging at ERROR level
       - DATA_DIR=/app/data/json         # Save interview JSON files under data/json
+      - USAGE_DIR=/app/data/usage       # Save OpenAI token usage logs under data/usage
     volumes:
       - ./app:/app 
