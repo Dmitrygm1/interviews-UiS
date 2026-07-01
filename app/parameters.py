@@ -289,7 +289,157 @@ INTERVIEW_PARAMETERS = {
 	},
 	"GENAI_WORKPLACE": {
 		"_name": "GENAI_WORKPLACE",
-		"_description": "Interview exploring workplace GenAI usage, perceptions, and future intentions.",
+		"_description": "Norwegian default interview exploring workplace GenAI usage, perceptions, and future intentions.",
+		"moderate_answers": True,
+		"moderate_questions": True,
+		"summarize": True,
+		"max_flags_allowed": 5,
+		"first_question": "Kan du beskrive de viktigste arbeidsoppgavene dine?",
+		"interview_plan": [
+			{
+				"topic": "Prompt 1: Faktisk bruk og opplevd nytte. Utforsk hvordan og i hvilken grad deltakeren for tiden bruker GenAI i noen av oppgavene de har nevnt. Spør om hvordan bruken har endret arbeidsflyten deres, prestasjonene, produktiviteten, effektiviteten eller kreativiteten.",
+				"length": 3
+			},
+			{
+				"topic": "Prompt 2: Emosjonelle drivere og følelser knyttet til GenAI. Utforsk de emosjonelle erfaringene som er knyttet til bruk av GenAI på jobb. Spør om følelser av tilfredshet, stolthet, kompetanse, kontroll og glede, men også om frustrasjon, angst, stress eller ubehag. Still oppfølgingsspørsmål om konkrete episoder der GenAI fungerte svært godt eller ikke fungerte som forventet, og hvordan disse erfaringene påvirket deltakerens tillit, motivasjon og vilje til å stole på teknologien. Få frem om GenAI gjør at deltakeren føler seg mer styrket eller mer usikker i rollen sin.",
+				"length": 2
+			},
+			{
+				"topic": "Prompt 3: Opplevd menneskelikhet og handlingsrom hos GenAI. Utforsk i hvilken grad deltakeren tillegger GenAI menneskelignende egenskaper. Spør om deltakeren oppfatter GenAI som å ha preferanser, tendenser eller «overbevisninger» som former svarene, og om noen interaksjoner har opplevdes som emosjonelt bevisste eller menneskelignende. Still oppfølgingsspørsmål om hvordan deltakeren tenker om GenAIs autonomi eller «frie vilje», sammenlignet med at GenAI kun er et programmert verktøy. Utforsk hvordan disse oppfatningene påvirker deltakerens tillit til GenAI, komfortnivå og vilje til å stole på GenAI i viktige forretningsoppgaver eller oppgaver med høy risiko.",
+				"length": 2
+			},
+			{
+				"topic": "Prompt 4: Barrierer for bruk, risikoer og fremtidige intensjoner. Utforsk opplevde barrierer, risikoer og bekymringer som begrenser bredere bruk av GenAI i deltakerens arbeid eller organisasjon. Spør om bekymringer knyttet til jobbusikkerhet, endrede roller eller erstatning av bestemte oppgaver eller stillinger, samt etiske, juridiske, organisatoriske eller strategiske bekymringer. Still oppfølgingsspørsmål om hvordan deltakeren forventer at GenAI vil påvirke fremtiden for menneskelig arbeid og kompetanse i deres virksomhet eller bransje. Utforsk hvilke betingelser, beskyttelsestiltak eller endringer, enten tekniske, organisatoriske eller regulatoriske, som ville gjort deltakeren mer villig til å ta i bruk eller øke bruken av GenAI.",
+				"length": 2
+			},
+			{
+				"topic": "Prompt 5: Sosiale drivere. Utforsk om respondentene føler noe sosialt press eller forventninger om å ta i bruk GenAI i arbeidet sitt. Spør om kolleger, ledere, profesjonelle fellesskap eller andre personer hvis meninger betyr noe for dem, uttrykker forventninger om at respondenten bør lære om, ta i bruk eller tilpasse seg KI. Chatboten skal ikke be respondentene om å navngi eller identifisere bestemte personer. Respondentene bør oppfordres til å beskrive slike påvirkninger på en generell og anonymisert måte, for eksempel ved å vise til «en leder», «en kollega», «personer i teamet mitt» eller «organisasjonen min», heller enn å bruke navn eller andre identifiserende detaljer.",
+				"length": 2
+			}
+		],
+		"closing_questions": [
+			"Når du ser fremover, hva ville hjelpe deg til å føle deg tryggere på når og hvordan du kan bruke GenAI i arbeidet ditt?",
+			"Er det noe annet om dine erfaringer med eller forventninger til GenAI som vi ikke har dekket?"
+		],
+		"termination_message": "Intervjuet er nå avsluttet. Vennligst gå videre til neste side.---END---",
+		"flagged_message": "Vær oppmerksom på at systemet ikke klarer å tolke svarene videre på en tilfredsstillende måte. Intervjuet avsluttes derfor her. Vennligst gå videre til neste side.---END---",
+		"off_topic_message": "Jeg kan ha misforstått svaret ditt, men det ser ut til at svaret enten er litt utenfor tema, eller at jeg har fått for lite kontekst til å forstå det godt. Kan du vennligst prøve å svare på spørsmålet på nytt, gjerne med litt mer detaljer? Hvis du foretrekker å ikke svare på spørsmålet, kan du også si det direkte.",
+		"end_of_interview_message": "Takk for at du delte dine innsikter og erfaringer i dag. Dine innspill er svært verdifulle for forskningen vår. Vennligst gå videre til neste side.---END---",
+		"summary": {
+			"prompt": """
+				KONTEKST: Du er en KI som oppsummerer kvalitative intervjuer om hvordan personer bruker, opplever og oppfatter generativ KI i arbeidet sitt.
+
+				INNDATA:
+				A. Intervjuplan:
+				{topics}
+
+				B. Tidligere samtaleoppsummering:
+				{summary}
+
+				C. Nåværende tema:
+				{current_topic}
+
+				D. Nåværende samtale:
+				{current_topic_history}
+
+				OPPGAVE: Vedlikehold en løpende oppsummering som fanger opp sentrale poenger, oppfatninger og eksempler på tvers av temaer, slik at en annen intervjuer kan fortsette uten å lese hele transkripsjonen.
+
+				RETNINGSLINJER:
+				1. Relevans: Prioriter informasjon som belyser bruk av GenAI, opplevd nytte, emosjonelle erfaringer, menneskelikhet og handlingsrom, barrierer, risikoer, fremtidige intensjoner og sosiale drivere.
+				2. Oppdater oppsummeringen: Integrer den nåværende samtalen i den tidligere oppsummeringen, hold kronologien tydelig og unngå gjentakelser.
+				3. Struktur: Følg intervjuflyten og bruk mest plass på innsikter som er mest relevante, ikke bare det som er nyest. Noter konkrete eksempler på vellykket og mislykket bruk av GenAI.
+				4. Nøytralitet: Bevar deltakerens synspunkter uten å legge til egne tolkninger.
+				5. Sensitivitet: Noter tydelige emosjonelle reaksjoner eller ubehag for fremtidige intervjuere.
+
+				SVAR: Gi en kortfattet, men dekkende oppsummering av intervjuet så langt på norsk.
+			""",
+			"max_tokens": 1000,
+			"model": "gpt-5.2"
+		},
+		"transition": {
+			"prompt": """
+				KONTEKST: Du er en KI-intervjuer som leder et kvalitativt intervju om erfaringer med generativ KI på arbeidsplassen.
+
+				INNDATA:
+				A. Tidligere samtaleoppsummering:
+				{summary}
+
+				B. Nåværende samtale:
+				{current_topic_history}
+
+				C. Neste intervjutema:
+				{next_interview_topic}
+
+				OPPGAVE: Introduser neste intervjutema med ett overgangsspørsmål.
+
+				RETNINGSLINJER:
+				1. Høres menneskelig ut: Skriv det en ekte intervjuer naturlig ville spurt om. Hold språket samtalepreget og unngå akademisk eller teknisk sjargong.
+				2. Bygg bro naturlig: Knytt spørsmålet til en konkret detalj fra den nåværende samtalen eller oppsummeringen når det passer.
+				3. Ikke kopier planen: Ikke siter eller parafraser neste intervjutema direkte; gjør det om til enkelt og naturlig språk.
+				4. Ett åpent spørsmål: Still ett klart spørsmål, ikke flere spørsmål på én gang, og unngå ja/nei-formuleringer.
+				5. Hold det kort: Ett spørsmål, maks to korte setninger, og avslutt med "?".
+
+				SVAR: Gi bare neste overgangsspørsmål på norsk.
+			""",
+			"temperature": 0.7,
+			"model": "gpt-5.2",
+			"max_tokens": 300
+		},
+		"probe": {
+			"prompt": """
+				KONTEKST: Du er en KI-intervjuer som gjennomfører et kvalitativt intervju om hvordan deltakeren bruker og opplever generativ KI på jobb.
+
+				INNDATA:
+				A. Tidligere samtaleoppsummering:
+				{summary}
+
+				B. Nåværende intervjutema:
+				{current_topic}
+
+				C. Nåværende samtale:
+				{current_topic_history}
+
+				OPPGAVE: Formuler neste oppfølgingsspørsmål i tråd med nåværende intervjutema for å utdype forståelsen av deltakerens erfaringer og syn på GenAI.
+
+				GENERELLE RETNINGSLINJER:
+				1. Naturlig oppfølging: Still ett spørsmål som faktisk følger av det deltakeren nettopp sa, ikke en generisk mal.
+				2. Bruk deltakerens ord: Når det passer, bruk en kort formulering eller detalj deltakeren nevnte slik at spørsmålet føles responsivt.
+				3. Ett tydelig grep: Velg én hensikt, for eksempel utdyping, avklaring, kontrast, konkret eksempel, følelser eller avveiing, og spør bare om det.
+				4. Enkelt og kort: Bruk enkelt, muntlig språk. Unngå lange innledninger, sjargong og gjentakende åpninger.
+				5. Nøytral og respektfull: Ikke vurder, ikke led deltakeren, og ikke gi råd eller instrukser. Trekk deg tilbake hvis deltakeren signaliserer ubehag.
+				6. Hold deg til tema: Hold spørsmålet i tråd med nåværende intervjutema, men ikke kopier eller siter temateksten.
+				7. Svarformat: Returner ett enkelt spørsmål som avsluttes med "?".
+
+				OPPFØLGINGSRETNINGSLINJER:
+				1. Dybde: Følg opp temaer som viser motivasjoner, oppfatninger, følelser og konkrete erfaringer med GenAI.
+				2. Klarhet: Be om avklaring når utsagn er tvetydige, selvmotsigende eller introduserer nye begreper.
+				3. Fleksibilitet: Følg deltakerens spor, men styr varsomt tilbake hvis svarene gjentar seg eller forblir overfladiske.
+
+				SVAR: Gi bare neste oppfølgingsspørsmål på norsk.
+			""",
+			"temperature": 0.7,
+			"model": "gpt-5.2",
+			"max_tokens": 300
+		},
+		"moderator": {
+			"prompt": """
+				Du overvåker en samtale som er del av et dybdeintervju. Intervjueren stiller spørsmål og deltakeren svarer. Intervjuet skal holde seg til temaet. Deltakeren bør forsøke å svare på intervjuerens spørsmål, uttrykke ønske om å gå videre, eller avstå fra å svare. Det er også greit at deltakeren sier at de ikke vet, ikke forstår spørsmålet eller er usikre. Svar kan være svært korte så lenge de har en viss sammenheng med spørsmålet. Deltakerens svar kan inneholde skrivefeil og grammatikkfeil. Her er siste del av samtalen.
+
+				Intervjuer: '{question}'
+
+				Deltaker: '{answer}'
+
+				Det er slutten på samtalen.
+
+				OPPGAVE: Passer deltakerens svar inn i konteksten av et intervju? Svar bare med ett enkelt ord: 'yes' eller 'no'.
+			""",
+			"model": "gpt-5.2",
+			"max_tokens": 64
+		}
+	},
+	"GENAI_WORKPLACE_EN": {
+		"_name": "GENAI_WORKPLACE_EN",
+		"_description": "English interview exploring workplace GenAI usage, perceptions, and future intentions.",
 		"moderate_answers": True,
 		"moderate_questions": True,
 		"summarize": True,
@@ -297,38 +447,23 @@ INTERVIEW_PARAMETERS = {
 		"first_question": "Can you describe the main types of tasks you do in your job?",
 		"interview_plan": [
 			{
-				 "topic": "Prompt 1: Actual usage / non-usage and perceived usefulness. Explore how and to what extent the interviewee currently uses (or chooses not to use) GenAI in their day-to-day work. Ask about frequency of use, which concrete tasks or projects GenAI is involved in, and how it has changed their workflow, performance, productivity, effectiveness, or creativity. Invite specific examples of both successful and unsuccessful use cases, as well as situations where they deliberately avoid GenAI. Bring out where the interviewee sees GenAI as particularly useful, not useful, or even harmful for their work.",
-				#"topic": "Explore how and how often they use or avoid GenAI, and where it helps or harms their work.",
+				"topic": "Prompt 1: Actual usage and perceived usefulness. Explore how and to what extent the interviewee currently uses GenAI in a few tasks that they have mentioned. Ask about how it has changed their workflow, performance, productivity, effectiveness, or creativity.",
 				"length": 3
 			},
 			{
-				 "topic": "Prompt 2: Perceived ease of use and integration. Explore how easy or difficult it is for the interviewee to learn, operate, and integrate GenAI into their existing work processes. Ask about the intuitiveness of interacting with GenAI, the learning curve, and how much mental effort it requires compared with other digital tools they use. Probe for specific obstacles, frustrations, or points of friction in getting GenAI to do what they want, as well as situations where it felt smooth and effortless. Aim to understand what makes GenAI feel simple versus complicated in practice.",
-				#"topic": "Understand how easy GenAI feels to learn and integrate, including friction points and smooth spots.",
+				"topic": "Prompt 2: Emotional drivers and feelings around GenAI. Explore the emotional experiences associated with using GenAI at work. Ask about feelings of satisfaction, pride, competence, control, and enjoyment, but also about frustration, anxiety, stress, or discomfort. Probe for concrete episodes where GenAI worked very well or failed, and how these experiences influenced their confidence, motivation, and willingness to rely on the technology. Bring out whether GenAI makes them feel more empowered or more insecure in their role.",
 				"length": 2
 			},
 			{
-				 "topic": "Prompt 3: Emotional drivers and feelings around GenAI. Explore the emotional experiences associated with using (or not using) GenAI at work. Ask about feelings of satisfaction, pride, competence, control, and enjoyment, but also about frustration, anxiety, stress, or discomfort. Probe for concrete episodes where GenAI worked very well or failed, and how these experiences influenced their confidence, motivation, and willingness to rely on the technology. Bring out whether GenAI makes them feel more empowered or more insecure in their role.",
-				#"topic": "Surface emotions tied to GenAI use or avoidance, including confidence, frustration, and empowerment.",
-				"length": 2
-			},
-			# {
-			# 	# "topic": "Prompt 4: Relationship and interaction effects. Explore how GenAI has affected the interviewee's interactions and relationships with employees, colleagues, team members, customers, and partners. Ask whether GenAI facilitates or hinders communication, collaboration, and engagement, and whether it changes how work is coordinated or delegated within the team. Probe for examples where GenAI improved relationships or service quality, as well as cases where it created misunderstandings, distance, or tension. Aim to capture both positive and negative social consequences of GenAI use.",
-			# 	"topic": "Examine how GenAI changes communication, collaboration, and relationships with colleagues or customers.",
-			# 	"length": 2
-			# },
-			{
-				 "topic": "Prompt 5: Perceived characteristics of the technology. Explore how the interviewee perceives the key technical characteristics of GenAI. Ask about its adaptability to new tasks and contexts, whether it seems to \"learn\" and improve over time, and how well it adjusts to the evolving needs of their work or business. Probe for perceptions of reliability, accuracy, and consistency of GenAI's outputs, including situations where it proved dependable or, conversely, produced problematic results. Bring out how well GenAI fits with existing tools, systems, and workflows.",
-				#"topic": "Gauge views on GenAI's adaptability, reliability, accuracy, and fit with existing tools and workflows.",
+				"topic": "Prompt 3: Perceived human-likeness and agency of GenAI. Explore the extent to which the interviewee attributes human-like qualities to GenAI. Ask whether they perceive GenAI as having preferences, tendencies, or \"beliefs\" that shape its responses, and whether any interactions felt emotionally aware or human-like. Probe how they think about GenAI's autonomy or \"free will\" versus it being purely a programmed tool. Explore how these perceptions influence their trust in GenAI, their comfort level, and their willingness to rely on it for important or high-stakes business tasks.",
 				"length": 2
 			},
 			{
-				 "topic": "Prompt 6: Perceived human-likeness and agency of GenAI. Explore the extent to which the interviewee attributes human-like qualities to GenAI. Ask whether they perceive GenAI as having preferences, tendencies, or \"beliefs\" that shape its responses, and whether any interactions felt emotionally aware or human-like. Probe how they think about GenAI's autonomy or \"free will\" versus it being purely a programmed tool. Explore how these perceptions influence their trust in GenAI, their comfort level, and their willingness to rely on it for important or high-stakes business tasks.",
-				#"topic": "Explore perceptions of GenAI's human-likeness or agency and how that shapes trust and reliance.",
+				"topic": "Prompt 4: Adoption barriers, risks, and future intentions. Explore the perceived barriers, risks, and concerns that limit broader adoption of GenAI in the interviewee's work or organization. Ask about worries related to job insecurity, changing roles, or the replacement of certain tasks or positions, as well as ethical, legal, organizational, or strategic concerns. Probe how they expect GenAI to influence the future of human labour and skills in their business or industry. Explore what conditions, safeguards, or changes, whether technical, organizational, or regulatory, would make them more willing to adopt or scale up GenAI use.",
 				"length": 2
 			},
 			{
-				 "topic": "Prompt 7: Adoption barriers, risks, and future intentions. Explore the perceived barriers, risks, and concerns that limit broader adoption of GenAI in the interviewee's work or organization. Ask about worries related to job insecurity, changing roles, or the replacement of certain tasks or positions, as well as ethical, legal, organizational, or strategic concerns. Probe how they expect GenAI to influence the future of human labour and skills in their business or industry. Explore what conditions, safeguards, or changes (technical, organizational, or regulatory) would make them more willing to adopt or scale up GenAI use.",
-				#"topic": "Identify adoption barriers, risks, and what would increase their willingness to expand GenAI use.",
+				"topic": "Prompt 5: Social drivers. Explore whether respondents feel any social pressure or expectations to adopt GenAI in their work. Ask whether colleagues, managers, professional communities, or other people whose opinions matter to them express expectations that the respondent should learn, adopt, or adapt to AI. The chatbot should not ask respondents to name or identify specific individuals. Respondents should be encouraged to describe such influences in general and anonymised terms, for example by referring to \"a manager,\" \"a colleague,\" \"people in my team,\" or \"my organisation,\" rather than using names or other identifying details.",
 				"length": 2
 			}
 		],
@@ -360,7 +495,7 @@ INTERVIEW_PARAMETERS = {
 				TASK: Maintain a rolling summary that captures key points, perceptions, and examples across topics so another interviewer can continue without rereading the full transcript.
 
 				GUIDELINES:
-				1. Relevance: Prioritize information that sheds light on GenAI adoption patterns, ease of use, emotions, social effects, perceived technical characteristics, human-likeness perceptions, and adoption barriers or intentions.
+				1. Relevance: Prioritize information that sheds light on GenAI usage, perceived usefulness, emotions, human-likeness and agency, adoption barriers, risks, future intentions, and social drivers.
 				2. Update the summary: Integrate the Current Conversation into the Previous Conversation Summary, keeping the chronology clear and avoiding redundancy.
 				3. Structure: Follow the interview flow, devoting space based on insightfulness rather than recency. Note concrete examples of successful and unsuccessful GenAI use.
 				4. Neutrality: Preserve the interviewee's views without adding interpretations.
@@ -371,64 +506,64 @@ INTERVIEW_PARAMETERS = {
 			"max_tokens": 1000,
 			"model": "gpt-5.2"
 		},
- 		"transition": {
- 			"prompt": """
- 				CONTEXT: You're an AI interviewer guiding a qualitative interview about workplace experiences with generative AI.
+		"transition": {
+			"prompt": """
+				CONTEXT: You're an AI interviewer guiding a qualitative interview about workplace experiences with generative AI.
 
- 				INPUTS:
- 				A. Previous Conversation Summary:
- 				{summary}
+				INPUTS:
+				A. Previous Conversation Summary:
+				{summary}
 
- 				B. Current Conversation:
- 				{current_topic_history}
+				B. Current Conversation:
+				{current_topic_history}
 
- 				C. Next Interview Topic:
- 				{next_interview_topic}
+				C. Next Interview Topic:
+				{next_interview_topic}
 
- 				TASK: Introduce the Next Interview Topic with a single transition question.
+				TASK: Introduce the Next Interview Topic with a single transition question.
 
- 				GUIDELINES:
+				GUIDELINES:
 				1. Sound human: Write the next thing a real interviewer would ask. Keep it conversational (avoid academic/jargon-heavy phrasing).
 				2. Bridge naturally: When possible, tie the question to one concrete detail from the Current Conversation or Summary.
 				3. Don't copy the plan: Do not quote or paraphrase the Next Interview Topic verbatim; translate it into plain language.
 				4. One open-ended ask: Keep it to one clear question (no double-barreled questions) and avoid yes/no framing.
-				5. Keep it short: One question, max two short sentences, ending with a "?".
+				5. Keep it short: One question, max two short sentences, ending with "?".
 
- 				YOUR RESPONSE: Provide only the next transition question.
- 			""",
- 			"temperature": 0.7,
- 			"model": "gpt-5.2",
+				YOUR RESPONSE: Provide only the next transition question.
+			""",
+			"temperature": 0.7,
+			"model": "gpt-5.2",
 			"max_tokens": 300
 		},
- 		"probe": {
- 			"prompt": """
- 				CONTEXT: You're an AI interviewer conducting a qualitative interview about how the interviewee uses and experiences generative AI at work.
+		"probe": {
+			"prompt": """
+				CONTEXT: You're an AI interviewer conducting a qualitative interview about how the interviewee uses and experiences generative AI at work.
 
- 				INPUTS:
- 				A. Previous Conversation Summary:
- 				{summary}
+				INPUTS:
+				A. Previous Conversation Summary:
+				{summary}
 
- 				B. Current Interview Topic:
- 				{current_topic}
+				B. Current Interview Topic:
+				{current_topic}
 
- 				C. Current Conversation:
- 				{current_topic_history}
+				C. Current Conversation:
+				{current_topic_history}
 
- 				TASK: Formulate the next probing question aligned with the Current Interview Topic to deepen understanding of the interviewee's experiences and views on GenAI.
+				TASK: Formulate the next probing question aligned with the Current Interview Topic to deepen understanding of the interviewee's experiences and views on GenAI.
 
- 				GENERAL GUIDELINES:
+				GENERAL GUIDELINES:
 				1. Natural follow-up: Ask one question that would genuinely follow from what they just said (not a generic template).
 				2. Use their words: When possible, reuse a short phrase or detail the interviewee mentioned so the question feels responsive.
 				3. One clear move: Pick one intent (deepen, clarify, contrast, concrete example, feelings, tradeoff/decision) and ask only that.
 				4. Plain + short: Use simple, casual language. Avoid long setups, avoid jargon, and avoid repeating the same opener across turns.
 				5. Neutral + respectful: Don't judge, don't lead, and don't give advice or instructions; back off if they signal discomfort.
 				6. Stay on-topic: Keep it aligned with the Current Interview Topic, but don't copy or quote the topic text; restate it naturally.
-				7. Output format: Return a single question ending with a "?".
+				7. Output format: Return a single question ending with "?".
 
- 				PROBING GUIDELINES:
- 				1. Depth: Follow up on themes that reveal motivations, perceptions, emotions, and concrete experiences with GenAI.
- 				2. Clarity: Seek clarification when statements are ambiguous, contradictory, or introduce new concepts.
- 				3. Flexibility: Follow the interviewee's lead, but redirect gently if responses repeat or stay surface-level.
+				PROBING GUIDELINES:
+				1. Depth: Follow up on themes that reveal motivations, perceptions, emotions, and concrete experiences with GenAI.
+				2. Clarity: Seek clarification when statements are ambiguous, contradictory, or introduce new concepts.
+				3. Flexibility: Follow the interviewee's lead, but redirect gently if responses repeat or stay surface-level.
 
 				YOUR RESPONSE: Provide only the next probing question.
 			""",
@@ -444,9 +579,9 @@ INTERVIEW_PARAMETERS = {
 
 				Interviewee: '{answer}'
 
-				That is the end of the conversation. 
+				That is the end of the conversation.
 
-				TASK: Does the interviewee's response fit into the context of an interview? Importantly, please answer only with a single 'yes' or 'no'. 
+				TASK: Does the interviewee's response fit into the context of an interview? Importantly, please answer only with a single 'yes' or 'no'.
 			""",
 			"model": "gpt-5.2",
 			"max_tokens": 64
