@@ -1,0 +1,96 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_27B5oILvw7vJ3sD.json
+User ID: R_27B5oILvw7vJ3sD
+Session ID: R_27B5oILvw7vJ3sD
+Conversation Start: 2026-02-26 14:35:58
+Conversation End: 2026-02-26 15:09:11
+Interview Duration: 00:33:13
+Total Messages: 17
+Questions: 9
+Answers: 8
+Flagged Messages: 0
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-02-26 14:35:58)
+Can you describe the main types of tasks you do in your job?
+
+Answer #2 (2026-02-26 14:52:59)
+At my job I do a lot of administrative tasks such as answering emails, responding to phone calls
+with different enquiries. I also fill out transport documents and work with logistics.
+
+Question #3 (2026-02-26 14:53:01)
+Do you use any generative AI tools when you’re answering emails, handling enquiries, or filling out
+transport documents—and if so, can you walk me through one recent time it helped (or didn’t)?
+
+Answer #4 (2026-02-26 14:54:35)
+I use generative AI tools for writing emails to correct language and give the most proffesional
+answer back to clients.
+
+Question #5 (2026-02-26 14:54:38)
+When you use it to “correct language” and make emails “more professional,” what do you usually
+change in the AI’s draft before you send it?
+
+Answer #6 (2026-02-26 14:56:00)
+I usually change some things that make it obvious it is AI, such as M dashes and language that
+sounds too analytical where it sounds like a robot. I also always add more "human" touches such as
+emojis or some sayings that are not entirely "proffesional" but are warm and human-like
+
+Question #7 (2026-02-26 14:56:06)
+When you’re using AI to polish those client emails and then tweaking things like the M dashes or
+“robotic” phrasing, what’s that process like for you from start to finish?
+
+Answer #8 (2026-02-26 14:56:33)
+Well I usually read the AI output and then adjust the places where it does not read well for me
+
+Question #9 (2026-02-26 14:56:35)
+When you say you adjust the parts that “do not read well” for you, what are the main things you’re
+looking for or fixing each time (like tone, length, wording), and which of those takes the most
+effort?
+
+Answer #10 (2026-02-26 15:00:56)
+At my job, I would focus mostly on improving clarity and alignment to what I actually wanted to say.
+Adjusting the tone used by AI is usually what takes the most effort and time. AI responses can often
+include vague working, which needs some specifics.
+
+Question #11 (2026-02-26 15:01:02)
+When you’re spending that extra time tweaking the AI’s tone and making it more specific, how does
+using it in that moment make you feel?
+
+Answer #12 (2026-02-26 15:04:28)
+I would say that it makes me feel appreciative as it was helpful to set a solid starting point with
+the right context and structure of what I am trying to say. So it saves me spending time writing it
+all out myself and then taking a lot of time adjusting it so it sounds correct.
+At the same time it is a little annoying as reworking the tone and making it more specific takes
+time aswell, and sometimes the extremely generic responses feel like a waste of time. Overall, I
+still find it positive and useful.
+
+Question #13 (2026-02-26 15:04:29)
+Can you think of a recent time when the AI’s response felt “extremely generic” and like a waste of
+time—what happened, and how did it affect your confidence in using it for the next email?
+
+Answer #14 (2026-02-26 15:08:07)
+Recently, I had used AI to generate a response to a customer that was unhappy about an invoice. The
+generated response sounded polite but extremely vague and generic, not addressing specific concerns
+of the customer. It included a lot of vague phrases that are typical "corporate" responses, however,
+made it sound like an automatic response sent to every customer. This made me have to rewrite the
+whole email anyways, to make sure that the clients issues were addressed and the customer felt like
+they were talking to a human rather than an automatically generated AI-response.
+It made me more cautious of using AI for emails and made me write prompts that were a lot more
+detailed, which felt like more work that writing the email out myself.
+
+Question #15 (2026-02-26 15:08:17)
+When you use AI for different kinds of emails—like that invoice complaint—how predictable does it
+feel in terms of giving you something you can actually use without a full rewrite?
+
+Answer #16 (2026-02-26 15:09:10)
+It feels like I can never send it out without having a lot of adjustments. So I would say that for
+me it is quite unpredictable.
+
+Question #17 (2026-02-26 15:09:11)
+What tends to make it feel “quite unpredictable” for you—are there certain email types, topics, or
+details where the AI is usually reliable versus ones where it almost always needs a full rewrite?

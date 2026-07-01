@@ -1,0 +1,20 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_8nxbVsEbzKW0E3n.json
+User ID: R_8nxbVsEbzKW0E3n
+Session ID: R_8nxbVsEbzKW0E3n
+Conversation Start: 2026-05-08 07:14:37
+Conversation End: 2026-05-08 07:14:37
+Interview Duration: 00:00:00
+Total Messages: 1
+Questions: 1
+Answers: 0
+Flagged Messages: 0
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-05-08 07:14:37)
+Can you describe the main types of tasks you do in your job?

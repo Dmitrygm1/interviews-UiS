@@ -3,8 +3,8 @@ import os
 import json
 from datetime import datetime
 
-# By default, will save interview data to app/data
-DATA_DIR = os.getenv("DATA_DIR", "./app/data")
+# By default, save interview JSON data under app/data/json.
+DATA_DIR = os.getenv("DATA_DIR", "./app/data/json")
 
 class FileWriter(object):
     def __init__(self) :

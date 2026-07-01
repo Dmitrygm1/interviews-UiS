@@ -1,3 +1,4 @@
+import inspect
 import logging
 from core.auxiliary import (
     execute_queries, 
@@ -8,12 +9,23 @@ from io import BytesIO
 from base64 import b64decode
 from openai import OpenAI
 
+DEFAULT_MODEL = "gpt-5.5"
+DEFAULT_REASONING_EFFORT = "none"
+
 
 class LLMAgent(object):
     """ Class to manage LLM-based agents. """
     def __init__(self, api_key, timeout:int=30, max_retries:int=3):
         self.client = OpenAI(api_key=api_key, timeout=timeout, max_retries=max_retries)
+        self._chat_create_supports_reasoning_effort = self._supports_chat_create_parameter("reasoning_effort")
         logging.info("OpenAI client instantiated. Should happen only once!")
+
+    def _supports_chat_create_parameter(self, parameter:str) -> bool:
+        """Return whether the installed SDK exposes a Chat Completions parameter."""
+        try:
+            return parameter in inspect.signature(self.client.chat.completions.create).parameters
+        except (TypeError, ValueError):
+            return False
 
     def load_parameters(self, parameters:dict):
         """ Load interview guidelines for prompt construction. """
@@ -34,29 +46,43 @@ class LLMAgent(object):
     def construct_query(self, tasks:list, history:list, user_message:str=None) -> dict:
         """ 
         Construct OpenAI API completions query, 
-        defaults to `gpt-5.2` model, 300 token answer limit, and temperature of 0. 
-        For details see https://platform.openai.com/docs/api-reference/completions.
+        defaults to `gpt-5.5` model, `none` reasoning effort, 300 token answer limit,
+        and temperature of 0.
+        For details see https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create.
         """
-        return {
-            task: {
+        queries = {}
+        for task in tasks:
+            task_parameters = self.parameters[task]
+            reasoning_effort = task_parameters.get("reasoning_effort", DEFAULT_REASONING_EFFORT)
+            query = {
                 "messages": [{
                     "role":"user", 
                     "content": fill_prompt_with_interview(
-                        self.parameters[task]['prompt'], 
+                        task_parameters['prompt'], 
                         self.parameters['interview_plan'],
                         history,
                         user_message=user_message
                     )
                 }],
-                "model": self.parameters[task].get('model', 'gpt-5.2'),
+                "model": task_parameters.get('model', DEFAULT_MODEL),
                 # Some models reject `max_tokens`; `max_completion_tokens` is the supported replacement.
-                "max_completion_tokens": self.parameters[task].get(
+                "max_completion_tokens": task_parameters.get(
                     "max_completion_tokens",
-                    self.parameters[task].get("max_tokens", 300),
+                    task_parameters.get("max_tokens", 300),
                 ),
-                "temperature": self.parameters[task].get('temperature', 0)
-            } for task in tasks
-        }
+                "temperature": task_parameters.get('temperature', 0)
+            }
+
+            if self._chat_create_supports_reasoning_effort:
+                query["reasoning_effort"] = reasoning_effort
+            else:
+                extra_body = dict(task_parameters.get("extra_body", {}))
+                extra_body["reasoning_effort"] = reasoning_effort
+                query["extra_body"] = extra_body
+
+            queries[task] = query
+
+        return queries
 
     def review_answer(self, message:str, history:list) -> bool:
         """ Moderate answers: Are they on topic? """

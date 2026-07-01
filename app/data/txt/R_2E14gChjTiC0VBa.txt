@@ -1,0 +1,134 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_2E14gChjTiC0VBa.json
+User ID: R_2E14gChjTiC0VBa
+Session ID: R_2E14gChjTiC0VBa
+Conversation Start: 2026-02-16 08:21:02
+Conversation End: 2026-02-16 08:38:43
+Interview Duration: 00:17:40
+Total Messages: 30
+Questions: 15
+Answers: 15
+Flagged Messages: 0
+Terminated: True
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-02-16 08:21:02)
+Can you describe the main types of tasks you do in your job?
+
+Answer #2 (2026-02-16 08:22:00)
+- Help researchers to apply for external funding
+- Manage international collaborative projects
+- Establish links with external stakeholders
+
+Question #3 (2026-02-16 08:22:02)
+In your work helping researchers apply for external funding, where—if anywhere—do you use generative
+AI in the process (and can you walk me through a recent example)?
+
+Answer #4 (2026-02-16 08:23:35)
+I use gen AI
+- To help me identify relevant funding opportunities in line with the researchers' field and
+interest.
+
+Question #5 (2026-02-16 08:23:37)
+Can you walk me through a specific recent time you used GenAI to identify relevant funding
+opportunities—what you asked it, what it returned, and how you decided which opportunities were
+actually a good fit?
+
+Answer #6 (2026-02-16 08:26:10)
+- Uploaded the work programmes of Horizon Europe.
+- Asked to search for several "keywords"
+- Asked to list all the call that contain the keywords with short information
+The results were to the point, it missed a couple of remotely related calls though.
+I went and examined the full call texts and decided which ones match the best.
+
+Question #7 (2026-02-16 08:26:17)
+When you’re doing that workflow—uploading the Horizon Europe work programmes and asking for keyword-
+based call lists—what parts feel straightforward to you, and where do you tend to hit friction?
+
+Answer #8 (2026-02-16 08:26:56)
+It was all OK
+
+Question #9 (2026-02-16 08:26:58)
+When you say it was “all OK,” what’s the one step in that process that takes you the most mental
+effort or trial-and-error to get right?
+
+Answer #10 (2026-02-16 08:27:42)
+Giving the right command by using the right wording in the prompt
+
+Question #11 (2026-02-16 08:27:52)
+When you’re trying to find the right wording for the prompt, how does that usually make you feel in
+the moment?
+
+Answer #12 (2026-02-16 08:30:09)
+Creative
+
+Question #13 (2026-02-16 08:30:10)
+Can you tell me about a specific time when prompting felt “creative” for you—what were you trying,
+and what was satisfying about it?
+
+Answer #14 (2026-02-16 08:31:14)
+I tried to be creative in order to find exactly what I am looking for help from AI. I wrote a couple
+of synonyms of the word
+
+Question #15 (2026-02-16 08:31:20)
+When you use synonyms and tweak the wording like that, how predictable is the tool in giving you the
+kind of funding calls you’re looking for?
+
+Answer #16 (2026-02-16 08:32:19)
+It is much predictable since it takes what you write as the lookout
+
+Question #17 (2026-02-16 08:32:20)
+When it “takes what you write as the lookout,” can you think of a time it still gave you the wrong
+or incomplete set of calls—what was missing or off, and how did you notice?
+
+Answer #18 (2026-02-16 08:33:17)
+Yes, it misses some of the information, doesn't take into account "and", "or" type of small words,
+omits some keywords from the search
+
+Question #19 (2026-02-16 08:33:27)
+When it skips things like “and/or” or drops keywords, do you start to feel like it has its own “way
+of thinking” or tendencies in how it searches and responds?
+
+Answer #20 (2026-02-16 08:34:17)
+Yes exactly
+
+Question #21 (2026-02-16 08:34:19)
+What is that “way of thinking” like to you—if you had to describe its tendency in a sentence (e.g.,
+does it feel literal, shortcut-y, overly keyword-focused, something else)?
+
+Answer #22 (2026-02-16 08:34:57)
+It takes it all literally, uses the words that it has been trained on
+
+Question #23 (2026-02-16 08:35:07)
+Given that it tends to take things very literally, what’s the main thing that would need to change
+for you to feel comfortable using it more broadly in your work?
+
+Answer #24 (2026-02-16 08:36:03)
+Consider more attention to the prompts, giving a couple of alternatives to better understand the
+task written on the prompt
+
+Question #25 (2026-02-16 08:36:05)
+When you say “giving a couple of alternatives,” what kind of alternatives would make you trust the
+output more—different interpretations of your prompt, different keyword sets, or different lists of
+calls—and why?
+
+Answer #26 (2026-02-16 08:37:11)
+I mean different interpretations of the prompt so that it doesn't use energy to come up with results
+that are no benefit
+
+Question #27 (2026-02-16 08:37:11)
+Looking ahead, what would help you feel more confident about when and how to use GenAI in your work?
+
+Answer #28 (2026-02-16 08:38:36)
+It needs to use more updated and recent language models. Then, it would help me to feel more
+confident
+
+Question #29 (2026-02-16 08:38:36)
+Is there anything else about your experiences or expectations with GenAI that we haven't covered?
+
+Answer #30 (2026-02-16 08:38:43)
+No thanks

@@ -71,7 +71,7 @@ To build and then run a container in the background you can add the `--detach` f
 
 ```bash
 docker build --tag interviews .
-docker run --detach --publish 8000:80 --volume $(pwd)/app:/app --env DATA_DIR=/app/data --name app interviews
+docker run --detach --publish 8000:80 --volume $(pwd)/app:/app --env DATA_DIR=/app/data/json --name app interviews
 ```
 
 Or, alternatively, build and run using the template `docker-compose` YAML by simply running:
@@ -210,9 +210,15 @@ The file `app/app.py` includes a detailed documentation of the API and how to ac
 
 ##  Retrieving stored interviews
 
-**Local testing**: By default, interviews are stored as individual files in `app/data`. Each file corresponds to an interview and is identified by its `session_id`.
+**Local testing**: By default, interview JSON files are stored in `app/data/json`. Readable transcript files belong in `app/data/txt` and can be generated with:
 
-**Flask app**: If you deploy as a Flask app, interviews are also stored in `app/data`. You can retrieve them from your server by using the `/retrieve` endpoint of the app. Run:
+```bash
+python3 json_to_txt.py
+```
+
+Each JSON file corresponds to an interview and is identified by its `session_id`.
+
+**Flask app**: If you deploy as a Flask app, interview JSON files are also stored in `app/data/json`. You can retrieve them from your server by using the `/retrieve` endpoint of the app. Run:
 
 ```bash
 curl -X POST -d '{"route":"retrieve", "payload": {"sessions": ["session-id-1", "session-id-2"]}}' http://127.0.0.1:8000/retrieve
@@ -230,4 +236,3 @@ If no specific `session_id`'s are provided, the endpoint will return all intervi
 ```bash
 python aws_retrieve.py --table_name=interview-sessions --output_path=DESIRED_PATH_TO_DATA.csv
 ```
-

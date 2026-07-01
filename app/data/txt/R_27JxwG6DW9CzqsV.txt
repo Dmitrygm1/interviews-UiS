@@ -1,0 +1,20 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_27JxwG6DW9CzqsV.json
+User ID: R_27JxwG6DW9CzqsV
+Session ID: R_27JxwG6DW9CzqsV
+Conversation Start: 2026-07-01 11:52:35
+Conversation End: 2026-07-01 11:52:35
+Interview Duration: 00:00:00
+Total Messages: 1
+Questions: 1
+Answers: 0
+Flagged Messages: 1
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-07-01 11:52:35)
+Kan du beskrive de viktigste arbeidsoppgavene dine?

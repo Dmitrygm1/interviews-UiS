@@ -1,0 +1,141 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: test-123.json
+User ID: test-123
+Session ID: test-123
+Conversation Start: 2026-07-01 14:59:42
+Conversation End: 2026-07-01 15:17:38
+Interview Duration: 00:17:55
+Total Messages: 26
+Questions: 13
+Answers: 13
+Flagged Messages: 0
+Terminated: True
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-07-01 14:59:42)
+Kan du beskrive de viktigste arbeidsoppgavene dine?
+
+Answer #2 (2026-07-01 15:09:01)
+Jeg bruker generativ KI mest i administrasjon/koordinering og undervisning. For eksempel bruker jeg
+det til å forbedre e-poster, lage utkast til tekster og strukturere undervisningsmateriell. Det gjør
+arbeidsflyten raskere, fordi jeg kan få et førsteutkast eller en bedre formulering raskt og deretter
+kvalitetssikre selv.
+
+Question #3 (2026-07-01 15:09:03)
+Når du sier at arbeidsflyten blir raskere med et førsteutkast fra KI, kan du gå gjennom et konkret
+eksempel fra en typisk e-post eller undervisningsøkt – hva gjorde du før, hva gjør KI, og hva gjør
+du selv etterpå?
+
+Answer #4 (2026-07-01 15:09:26)
+Tidligere skrev jeg alt fra bunnen av. Nå gir jeg KI noen stikkord eller et utkast, og den lager en
+første versjon. Deretter går jeg gjennom teksten, retter innhold, tilpasser språk og kontrollerer at
+alt er riktig før jeg sender den eller bruker den i undervisningen.
+
+Question #5 (2026-07-01 15:09:28)
+Når du sier at du «kvalitetssikrer selv» etterpå, hva er det du oftest må rette eller dobbeltsjekke
+i KI-utkastene før du kan bruke dem?
+
+Answer #6 (2026-07-01 15:09:47)
+Jeg kontrollerer først og fremst at innholdet er korrekt og at teksten passer til mottakeren og
+situasjonen. Ofte justerer jeg formuleringer, legger til detaljer eller fjerner ting som er
+unøyaktige eller for generelle. Til slutt sikrer jeg at teksten gjenspeiler min egen stil og faglige
+vurdering.
+
+Question #7 (2026-07-01 15:09:53)
+Når du bruker KI til å lage førsteutkast og så må kvalitetssikre og tilpasse selv, hvordan oppleves
+det for deg i praksis?
+
+Answer #8 (2026-07-01 15:11:00)
+Det oppleves som en god støtte. Jeg sparer tid på å komme i gang, samtidig som jeg fortsatt har full
+kontroll over det endelige resultatet. Kvalitetssikringen er en naturlig del av arbeidsprosessen, så
+jeg ser på KI som et hjelpemiddel, ikke en erstatning.
+
+Question #9 (2026-07-01 15:11:23)
+Kan du beskrive en konkret situasjon der KI-en ikke ga deg den «gode støtten» du forventet, og
+hvordan føltes det og påvirket tilliten din til å bruke den videre?
+
+Answer #10 (2026-07-01 15:11:42)
+Ja, det har skjedd at KI har formulert seg veldig overbevisende, men samtidig inkludert feil eller
+oppdiktede referanser. Da måtte jeg bruke ekstra tid på å kontrollere alt, og noe av tidsgevinsten
+forsvant. Det gjorde meg mer bevisst på at jeg ikke kan stole blindt på resultatene, spesielt i
+faglig arbeid, og at alt må kvalitetssikres før det brukes.
+
+Question #11 (2026-07-01 15:11:51)
+Når du sier at KI kan høres veldig overbevisende ut selv når den tar feil, hvordan vil du beskrive
+«personligheten» eller tendensene du opplever at den har når den svarer deg?
+
+Answer #12 (2026-07-01 15:13:25)
+Jeg opplever at KI ofte er svært selvsikker og hjelpsom i tonen, selv når den er usikker. Den prøver
+gjerne å gi et fullstendig svar i stedet for å si at den ikke vet. Derfor kan svarene virke mer
+pålitelige enn de faktisk er, og det gjør at jeg er ekstra nøye med å kontrollere fakta og kilder.
+
+Question #13 (2026-07-01 15:13:27)
+Når KI «prøver å gi et fullstendig svar» i stedet for å si at den ikke vet, opplever du det som et
+bevisst valg fra KI sin side, eller mer som en programmert tendens – og hvorfor?
+
+Answer #14 (2026-07-01 15:14:15)
+Jeg oppfatter det som en programmert tendens, ikke et bevisst valg. KI har ikke egne intensjoner
+eller vurderinger, men er trent til å generere det mest sannsynlige og nyttige svaret ut fra det den
+har lært. Derfor kan den noen ganger fremstå som veldig sikker, selv når informasjonen er usikker
+eller feil.
+
+Question #15 (2026-07-01 15:14:28)
+Når du vet at KI kan høres veldig sikker ut selv når den tar feil, hva er det som gjør at du likevel
+holder igjen eller blir mer forsiktig med å bruke den i jobbsammenheng?
+
+Answer #16 (2026-07-01 15:14:47)
+Det handler først og fremst om ansvar. Jeg er ansvarlig for at informasjonen jeg bruker og deler er
+korrekt, særlig i forskning og undervisning. Hvis KI gir feil eller misvisende informasjon, er det
+jeg som må stå for konsekvensene. Derfor bruker jeg den som et hjelpemiddel, men ikke som en kilde
+jeg stoler på uten videre.
+
+Question #17 (2026-07-01 15:14:48)
+Hva slags rutiner eller “sikkerhetsnett” må være på plass for at du skal føle at du kan bruke KI
+mer, uten at du tar på deg for mye ansvar hvis noe blir feil?
+
+Answer #18 (2026-07-01 15:15:05)
+Jeg må kunne kontrollere informasjonen mot pålitelige kilder, og det bør være tydelig når KI er
+usikker eller bygger på antakelser. I tillegg ønsker jeg god databeskyttelse og klare retningslinjer
+for hva som kan deles med KI. Da blir det lettere å bruke verktøyet på en trygg og ansvarlig måte.
+
+Question #19 (2026-07-01 15:15:48)
+Når du tenker på dette med ansvar og behovet for klare rammer, hvordan opplever du at miljøet rundt
+deg på jobb påvirker hvor mye du bruker KI i praksis?
+
+Answer #20 (2026-07-01 15:16:17)
+Miljøet har en viss betydning. Når kolleger deler erfaringer og gode eksempler, blir det lettere å
+ta i bruk KI på en trygg måte. Samtidig påvirker også retningslinjer fra institusjonen hvor
+komfortabel jeg er med å bruke KI, særlig i oppgaver som involverer studenter, forskning eller
+sensitiv informasjon.
+
+Question #21 (2026-07-01 15:16:18)
+Kan du beskrive en konkret situasjon der kolleger delte erfaringer eller «gode eksempler» som gjorde
+at du endret hvordan eller hvor mye du brukte KI?
+
+Answer #22 (2026-07-01 15:17:05)
+Et eksempel var da en kollega viste hvordan hun brukte KI til å forbedre språk og struktur i
+e-poster og undervisningsmateriell, i stedet for å la den skrive alt fra bunnen av. Det gjorde meg
+mer bevisst på at KI fungerer best som en støtte i arbeidsprosessen. Etter det begynte jeg selv å
+bruke den mer til førsteutkast og språkvask, samtidig som jeg beholdt ansvaret for innholdet.
+
+Question #23 (2026-07-01 15:17:05)
+Når du ser fremover, hva ville hjelpe deg til å føle deg tryggere på når og hvordan du kan bruke
+GenAI i arbeidet ditt?
+
+Answer #24 (2026-07-01 15:17:21)
+Det ville hjelpe med tydelige retningslinjer, gode eksempler fra egen institusjon og enkel opplæring
+i hva KI egner seg til og ikke. Jeg ville også følt meg tryggere hvis det var klart hvordan data
+håndteres, og hvilke typer oppgaver som er greit å bruke KI til.
+
+Question #25 (2026-07-01 15:17:21)
+Er det noe annet om dine erfaringer med eller forventninger til GenAI som vi ikke har dekket?
+
+Answer #26 (2026-07-01 15:17:38)
+Jeg tror bruken av generativ KI kommer til å øke betydelig de neste årene, og derfor er det viktig å
+utvikle både teknologien og kompetansen til å bruke den på en ansvarlig måte. For meg handler det om
+å finne en god balanse der KI effektiviserer arbeidet uten at det går på bekostning av kvalitet,
+faglig vurdering eller kritisk tenkning.

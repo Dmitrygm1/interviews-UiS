@@ -1,0 +1,20 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_2ATmdGeLGDPMme5.json
+User ID: R_2ATmdGeLGDPMme5
+Session ID: R_2ATmdGeLGDPMme5
+Conversation Start: 2026-07-01 12:32:51
+Conversation End: 2026-07-01 12:32:51
+Interview Duration: 00:00:00
+Total Messages: 1
+Questions: 1
+Answers: 0
+Flagged Messages: 1
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-07-01 12:32:51)
+Kan du beskrive de viktigste arbeidsoppgavene dine?

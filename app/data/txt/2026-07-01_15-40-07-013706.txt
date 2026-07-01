@@ -1,0 +1,132 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: 2026-07-01_15-40-07-013706.json
+User ID: R_87pdED2BAYBzzjP
+Session ID: R_87pdED2BAYBzzjP
+Conversation Start: 2026-07-01 15:40:07
+Conversation End: 2026-07-01 15:44:30
+Interview Duration: 00:04:23
+Total Messages: 26
+Questions: 13
+Answers: 13
+Flagged Messages: 0
+Terminated: True
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-07-01 15:40:07)
+Kan du beskrive de viktigste arbeidsoppgavene dine?
+
+Answer #2 (2026-07-01 15:40:19)
+Mine viktigste arbeidsoppgaver er undervisning, veiledning og forskning. Jeg utvikler og
+gjennomfører kurs, følger opp studenter og veileder bachelor-, master- og ph.d.-studenter. I tillegg
+arbeider jeg med forskningsprosjekter, publisering, søknader og samarbeid med eksterne aktører. En
+viktig del av jobben er også administrasjon og koordinering, for eksempel planlegging av kurs, møter
+og faglige aktiviteter.
+
+Question #3 (2026-07-01 15:40:21)
+Bruker du generativ KI i noen av disse oppgavene, som undervisning, veiledning, forskning eller
+administrasjon, og i så fall hvordan?
+
+Answer #4 (2026-07-01 15:40:50)
+Ja, i alle disse oppgavene. Jeg bruker generativ KI blant annet til idéutvikling, tekstutkast,
+oppsummeringer, språkvask, analyse, programmering og som støtte i planlegging og administrasjon.
+
+Question #5 (2026-07-01 15:40:52)
+Kan du gi et konkret eksempel på en arbeidsoppgave der generativ KI har endret måten du jobber på?
+
+Answer #6 (2026-07-01 15:41:06)
+Et godt eksempel er skriving av forskningsartikler. Jeg bruker generativ KI til å diskutere ideer,
+forbedre formuleringer, oppsummere litteratur og få tilbakemeldinger på utkast. Det gjør
+skriveprosessen raskere og mer iterativ enn tidligere.
+
+Question #7 (2026-07-01 15:41:12)
+Når du bruker generativ KI i skriveprosessen slik du beskriver, hva gjør det med opplevelsen din av
+arbeidet?
+
+Answer #8 (2026-07-01 15:41:22)
+Det gjør arbeidet mer effektivt og mindre tidkrevende. Samtidig opplever jeg at jeg kan utforske
+flere ideer og få rask tilbakemelding, noe som gjør skriveprosessen mer kreativ og motiverende.
+
+Question #9 (2026-07-01 15:41:25)
+Kan du beskrive en konkret gang der KI-en gjorde skriveprosessen mer kreativ eller motiverende for
+deg?
+
+Answer #10 (2026-07-01 15:41:38)
+Da jeg jobbet med en forskningsartikkel og sto fast, brukte jeg KI til å foreslå alternative
+vinklinger og struktur på argumentasjonen. Det ga meg nye ideer og gjorde det lettere å komme videre
+med skrivingen.
+
+Question #11 (2026-07-01 15:41:50)
+Når KI-en foreslår nye vinklinger og hjelper deg videre når du står fast, hvordan opplever du
+egentlig “rollen” den får i skriveprosessen din?
+
+Answer #12 (2026-07-01 15:42:05)
+Jeg opplever den som en sparringspartner. Den kommer med forslag og utfordrer tankene mine, men det
+er fortsatt jeg som vurderer ideene og tar de faglige beslutningene.
+
+Question #13 (2026-07-01 15:42:07)
+Når du beskriver den som en «sparringspartner», opplever du noen gang at den har egne tendenser
+eller preferanser som påvirker forslagene den gir?
+
+Answer #14 (2026-07-01 15:42:19)
+Ja, den har tydelige tendenser. Den foreslår ofte løsninger som er generelle, velstrukturerte og
+konsensuspregede. Derfor må jeg være kritisk og aktivt vurdere forslagene, slik at de passer til
+konteksten og tilfører noe nytt.
+
+Question #15 (2026-07-01 15:42:29)
+Du sier at du må være kritisk fordi KI-en ofte gir ganske generelle og konsensuspregede forslag; hva
+er det som gjør at du holder igjen eller blir forsiktig med å bruke den mer i arbeidet ditt?
+
+Answer #16 (2026-07-01 15:42:46)
+Den kan være overbevisende selv når den tar feil eller mangler nyanser. Derfor stoler jeg ikke
+blindt på svarene, men bruker den som et støtteverktøy og kvalitetssikrer alltid innholdet mot egne
+vurderinger og relevante kilder.
+
+Question #17 (2026-07-01 15:42:47)
+Hvilke typer feil eller manglende nyanser ville du vært mest bekymret for at KI-en gjør i ditt
+arbeid?
+
+Answer #18 (2026-07-01 15:42:58)
+Jeg er mest bekymret for faktiske feil, oppdiktede referanser, feilaktige tolkninger av forskning og
+at komplekse problemstillinger blir forenklet. I akademisk arbeid kan slike feil få store
+konsekvenser dersom de ikke blir oppdaget.
+
+Question #19 (2026-07-01 15:43:12)
+Du nevner at du alltid kvalitetssikrer KI-svarene selv; hvordan opplever du at miljøet rundt deg
+påvirker måten du bruker eller forventes å bruke KI på i arbeidet?
+
+Answer #20 (2026-07-01 15:43:26)
+Miljøet påvirker meg både gjennom forventninger og normer. Det er en økende aksept for å bruke KI
+som et støtteverktøy, men samtidig er det en klar forventning om at man er åpen om bruken og tar
+fullt ansvar for kvaliteten og det faglige innholdet.
+
+Question #21 (2026-07-01 15:43:28)
+Kan du beskrive et konkret eksempel på hvordan slike forventninger om åpenhet og ansvar har påvirket
+måten du bruker KI på?
+
+Answer #22 (2026-07-01 15:43:50)
+Et konkret eksempel er når jeg bruker KI til å forbedre tekst eller utvikle ideer til en
+forskningsartikkel. Jeg lar aldri KI skrive eller vurdere det endelige faglige innholdet alene, og
+jeg er bevisst på å kunne redegjøre for hva som er mitt eget arbeid. Dette gjør at jeg bruker KI som
+et hjelpemiddel i prosessen, ikke som en erstatning for egen faglig vurdering.
+
+Question #23 (2026-07-01 15:43:50)
+Når du ser fremover, hva ville hjelpe deg til å føle deg tryggere på når og hvordan du kan bruke
+GenAI i arbeidet ditt?
+
+Answer #24 (2026-07-01 15:44:15)
+Klare retningslinjer for hva som er akseptabel bruk, mer kunnskap om modellenes begrensninger og
+bedre åpenhet om hvordan de fungerer. I tillegg ville verktøy med mer pålitelige kilder og bedre
+dokumentasjon gjort det lettere å bruke KI med større trygghet.
+
+Question #25 (2026-07-01 15:44:15)
+Er det noe annet om dine erfaringer med eller forventninger til GenAI som vi ikke har dekket?
+
+Answer #26 (2026-07-01 15:44:30)
+Jeg tror bruken av generativ KI kommer til å bli en naturlig del av de fleste kunnskapsyrker. Den
+største utfordringen blir derfor ikke om vi skal bruke den, men hvordan vi bruker den på en faglig,
+etisk og kritisk måte. Evnen til å stille gode spørsmål og vurdere kvaliteten på svarene blir stadig
+viktigere.

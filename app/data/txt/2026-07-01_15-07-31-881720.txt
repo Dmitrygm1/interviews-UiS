@@ -1,0 +1,32 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: 2026-07-01_15-07-31-881720.json
+User ID: R_8fJdO1wZOhaJ7Dd
+Session ID: R_8fJdO1wZOhaJ7Dd
+Conversation Start: 2026-07-01 15:07:31
+Conversation End: 2026-07-01 15:08:25
+Interview Duration: 00:00:53
+Total Messages: 3
+Questions: 2
+Answers: 1
+Flagged Messages: 0
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-07-01 15:07:31)
+Kan du beskrive de viktigste arbeidsoppgavene dine?
+
+Answer #2 (2026-07-01 15:08:20)
+Mine viktigste arbeidsoppgaver er undervisning, veiledning og forskning. Jeg utvikler og
+gjennomfører kurs, følger opp studenter og veileder bachelor-, master- og ph.d.-studenter. I tillegg
+arbeider jeg med forskningsprosjekter, publisering, søknader og samarbeid med eksterne aktører. En
+viktig del av jobben er også administrasjon og koordinering, for eksempel planlegging av kurs, møter
+og faglige aktiviteter.
+
+Question #3 (2026-07-01 15:08:25)
+I hvilke av oppgavene du nevnte – undervisning, veiledning, forskning eller
+administrasjon/koordinering – bruker du generativ KI mest i dag, og kan du gi et konkret eksempel på
+hvordan det har endret arbeidsflyten din?

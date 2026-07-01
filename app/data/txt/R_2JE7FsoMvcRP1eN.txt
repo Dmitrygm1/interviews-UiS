@@ -1,0 +1,20 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_2JE7FsoMvcRP1eN.json
+User ID: R_2JE7FsoMvcRP1eN
+Session ID: R_2JE7FsoMvcRP1eN
+Conversation Start: 2026-07-01 11:49:05
+Conversation End: 2026-07-01 11:49:05
+Interview Duration: 00:00:00
+Total Messages: 1
+Questions: 1
+Answers: 0
+Flagged Messages: 0
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-07-01 11:49:05)
+Kan du beskrive de viktigste arbeidsoppgavene dine?

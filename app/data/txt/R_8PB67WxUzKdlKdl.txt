@@ -1,0 +1,140 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_8PB67WxUzKdlKdl.json
+User ID: R_8PB67WxUzKdlKdl
+Session ID: R_8PB67WxUzKdlKdl
+Conversation Start: 2026-02-20 09:20:05
+Conversation End: 2026-02-20 09:44:40
+Interview Duration: 00:24:34
+Total Messages: 30
+Questions: 15
+Answers: 15
+Flagged Messages: 0
+Terminated: True
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-02-20 09:20:05)
+Can you describe the main types of tasks you do in your job?
+
+Answer #2 (2026-02-20 09:23:30)
+I’m a researcher so I mainly do research, write papers, conduct some lectures and contribute in
+presentations and seminars to disseminate knowledge.
+
+Question #3 (2026-02-20 09:23:33)
+In your research and paper-writing work, where—if anywhere—have you actually used generative AI
+recently, and can you walk me through one specific time it helped or didn’t help?
+
+Answer #4 (2026-02-20 09:29:44)
+When I was trying to find relevant literature or relevant theories to my research idea, I used it a
+lot and it helped me in understanding what theories are relevant to my idea and could be the
+underpinning theories of my research. I used it for English proof reading as well and it helped me a
+lot. However when it comes to finding peer-reviewed articles and scientific literature it cannot be
+helpful
+
+Question #5 (2026-02-20 09:29:45)
+When you say it “cannot be helpful” for finding peer‑reviewed articles, what exactly goes wrong for
+you—can you describe a recent time you tried and why you decided not to rely on it?
+
+Answer #6 (2026-02-20 09:30:56)
+First of all, it cannot show me the right references and it attached wrong references to its
+suggested topics and also it's not reliable in terms of finding most relevant and novel research
+papers.
+
+Question #7 (2026-02-20 09:31:03)
+When you’re using it for things like exploring theories or proofreading, what’s it like to work with
+day to day—how easy is it to fit into your usual research and writing workflow?
+
+Answer #8 (2026-02-20 09:33:00)
+It's very easy to use it, you just need to write the question and whatever you want to do and it
+will do it correctly without any problem and then I can work on that generated text.
+
+Question #9 (2026-02-20 09:33:02)
+When it doesn’t “do it correctly without any problem,” what’s a recent moment where you had to
+rephrase your question or go back and forth a few times to get what you wanted?
+
+Answer #10 (2026-02-20 09:35:08)
+It happens for me when I wanted to find the right theory for my article and when I asked my question
+it introduced wrong theories to me and also it was difficult for me to make it convince what I want.
+
+Question #11 (2026-02-20 09:35:17)
+When it suggests the wrong theories and you have to push back and rephrase, how does that experience
+usually make you feel in the moment?
+
+Answer #12 (2026-02-20 09:36:01)
+It's frustrating because I wanted to provide the right answer however I feel that it doesn't
+understand what I'm talking about and I feel sometimes exhausted.
+
+Question #13 (2026-02-20 09:36:05)
+Can you walk me through a recent moment when you felt “exhausted” using it—what were you trying to
+do, and what part of the back-and-forth wore you down the most?
+
+Answer #14 (2026-02-20 09:37:11)
+Once, I was trying to find a multidisciplinary theory and approach to merge both information and
+psychology ideas into one integrated perspective and it didn't help.
+
+Question #15 (2026-02-20 09:37:20)
+When you’re trying to combine fields like information and psychology, what helps you decide whether
+the AI’s suggestions are something you can trust and build on or something you need to disregard?
+
+Answer #16 (2026-02-20 09:38:17)
+I rely on other resources like published articles, published peer-reviewed research from top-tier
+journals that has similar approaches.
+
+Question #17 (2026-02-20 09:38:19)
+When you check the AI’s suggestions against those top-tier peer‑reviewed articles, what kinds of
+things make you decide the AI output is reliable enough to keep versus something you throw out?
+
+Answer #18 (2026-02-20 09:38:48)
+If I see the idea is creative and makes sense, then I will rely on that.
+
+Question #19 (2026-02-20 09:38:57)
+When you’re judging whether an AI idea is “creative and makes sense,” do you ever get the feeling it
+has a particular style or bias in how it responds?
+
+Answer #20 (2026-02-20 09:40:10)
+Yes, I feel that sometimes the AI wants me to be satisfied, so it generates information that I
+talked about. It's most relevant to my ideas. So when I see that there is no creativity and it's
+just repeating my idea and repeating my words, I understand that it's not the knowl That I can rely
+on.
+
+Question #21 (2026-02-20 09:40:12)
+Can you walk me through a specific time when it felt like the AI “wants you to be satisfied” and
+just repeated your ideas—what did it say, and did it feel like a choice it was making or just a tool
+following your prompt?
+
+Answer #22 (2026-02-20 09:41:21)
+Yeah, the AI wanted to provide confirmation of my idea and say yes this is a creative idea, it's
+good to do that, it's good to be like this, however it didn't provide any additional information.
+
+Question #23 (2026-02-20 09:41:35)
+Given those moments where it just confirms your idea without adding anything new, what are the main
+things that would make you hesitant to use AI more widely in your research work?
+
+Answer #24 (2026-02-20 09:42:25)
+The validity of the information that it provides is very important for me.
+
+Question #25 (2026-02-20 09:42:27)
+When you say “validity of the information,” what would you need to see from the AI (or in your
+workflow) to feel confident it’s valid enough to use in your research?
+
+Answer #26 (2026-02-20 09:43:00)
+In my work, providing the right references, it's very important. And when I see that the references
+that it provides doesn't exist in the real world, I don't use it.
+
+Question #27 (2026-02-20 09:43:00)
+Looking ahead, what would help you feel more confident about when and how to use GenAI in your work?
+
+Answer #28 (2026-02-20 09:43:40)
+But I see that the information is reliable, valid, and is relevant to real world, and it's not
+something that is being generated based on the previous information that I provided. So I mean the
+answers are based on facts.
+
+Question #29 (2026-02-20 09:43:40)
+Is there anything else about your experiences or expectations with GenAI that we haven't covered?
+
+Answer #30 (2026-02-20 09:44:40)
+When I talk to AI, I expect it to be straightforward and not just be like a kind person that wants
+me to be satisfied or just confirming my idea. I want AI to be helpful and critical.

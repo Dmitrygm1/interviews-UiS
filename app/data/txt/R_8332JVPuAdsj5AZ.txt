@@ -1,0 +1,28 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_8332JVPuAdsj5AZ.json
+User ID: R_8332JVPuAdsj5AZ
+Session ID: R_8332JVPuAdsj5AZ
+Conversation Start: 2026-07-01 13:10:11
+Conversation End: 2026-07-01 13:10:45
+Interview Duration: 00:00:33
+Total Messages: 3
+Questions: 2
+Answers: 1
+Flagged Messages: 1
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-07-01 13:10:11)
+Kan du beskrive de viktigste arbeidsoppgavene dine?
+
+Answer #2 (2026-07-01 13:10:42)
+beklager. Som salgsassistent bruker jeg KI mye i arbeidet
+
+Question #3 (2026-07-01 13:10:45)
+Når du sier at du som salgsassistent bruker KI mye i arbeidet, kan du gi et konkret eksempel på en
+oppgave der du bruker generativ KI, og hva som blir annerledes i arbeidsflyten din når du bruker
+den?

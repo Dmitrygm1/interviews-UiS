@@ -7,7 +7,8 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any
 
-DEFAULT_INPUT_DIR = Path("app/data")
+DEFAULT_INPUT_DIR = Path("app/data/json")
+DEFAULT_OUTPUT_DIR = Path("app/data/txt")
 HEADER_SEPARATOR = "=" * 80
 SECTION_SEPARATOR = "-" * 80
 
@@ -184,20 +185,20 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description=(
             "Convert interview JSON files to readable TXT transcripts. "
-            "By default scans app/data and skips JSON files already converted to TXT."
+            "By default scans app/data/json and writes TXT files to app/data/txt."
         )
     )
     parser.add_argument(
         "--input-dir",
         type=Path,
         default=DEFAULT_INPUT_DIR,
-        help="Directory containing JSON files (default: app/data).",
+        help="Directory containing JSON files (default: app/data/json).",
     )
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=None,
-        help="Directory to write TXT files (default: same as input-dir).",
+        default=DEFAULT_OUTPUT_DIR,
+        help="Directory to write TXT files (default: app/data/txt).",
     )
     parser.add_argument(
         "--overwrite",
@@ -212,7 +213,7 @@ def main() -> None:
     args = parser.parse_args()
 
     input_dir = args.input_dir.resolve()
-    output_dir = args.output_dir.resolve() if args.output_dir else input_dir
+    output_dir = args.output_dir.resolve()
 
     if not input_dir.exists():
         raise SystemExit(f"Input directory does not exist: {input_dir}")

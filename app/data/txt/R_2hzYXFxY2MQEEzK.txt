@@ -1,0 +1,105 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_2hzYXFxY2MQEEzK.json
+User ID: R_2hzYXFxY2MQEEzK
+Session ID: R_2hzYXFxY2MQEEzK
+Conversation Start: 2026-02-17 09:04:40
+Conversation End: 2026-02-17 09:15:53
+Interview Duration: 00:11:13
+Total Messages: 23
+Questions: 12
+Answers: 11
+Flagged Messages: 1
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-02-17 09:04:40)
+Can you describe the main types of tasks you do in your job?
+
+Answer #2 (2026-02-17 09:05:06)
+Research, teaching and organising seminars and network events.
+
+Question #3 (2026-02-17 09:05:08)
+In your research, teaching, or organising seminars and network events, where do you actually use
+generative AI today—can you walk me through one recent example of how it fit into the workflow?
+
+Answer #4 (2026-02-17 09:06:57)
+I have, together with my son, made an app which relies on an API for OpenAI Chat GPT, which allows
+students to react to a Youtube-video, record discussions and respond with written answers to
+questions and receiving AI-feedback which they finally react to.
+
+Question #5 (2026-02-17 09:07:00)
+When students use the app and get the AI-feedback, what have you noticed it changes in their
+discussions or written answers compared with when they don’t get that feedback?
+
+Answer #6 (2026-02-17 09:07:46)
+This is to early to tell. Only a very restricted pilot use has yet been done.
+
+Question #7 (2026-02-17 09:07:52)
+When you and your son built and piloted the ChatGPT-based app, what parts of getting it working and
+using it in practice felt straightforward, and what parts were harder than you expected?
+
+Answer #8 (2026-02-17 09:08:57)
+The API-payment was a bit trickey to make sure that we did not risk over-use of this. The layout and
+programming is a never-ending- back-and-forth work.
+
+Question #9 (2026-02-17 09:08:58)
+On the “API-payment” being tricky and avoiding “over-use,” what did you actually have to set up or
+change (like limits, monitoring, or user rules) to feel safe using it?
+
+Answer #10 (2026-02-17 09:10:08)
+We needed a password function. And the price per token is very low, so the risks are small and it is
+transparent. It turned out to be no problem.
+
+Question #11 (2026-02-17 09:10:14)
+When you were building the app and setting things up—like adding the password and watching the token
+costs—what kinds of feelings did you notice in yourself as you worked with the ChatGPT part?
+
+Answer #12 (2026-02-17 09:11:10)
+This did not trigger such kinds of feelings. The focus was to build something that did engage the
+human brain, not substitute cognitive efforts.
+
+Question #13 (2026-02-17 09:11:11)
+When you say you wanted it to “engage the human brain, not substitute cognitive efforts,” can you
+describe a moment in the pilot where you felt the AI was crossing that line a bit—and how that made
+you feel about using it?
+
+Answer #14 (2026-02-17 09:12:27)
+This is on the side of what we did. At no point we felt that AI challenged our human role as
+managers of our own work.
+
+Question #15 (2026-02-17 09:12:37)
+As you’ve been using the app to give students AI feedback, what have you noticed about how
+consistent and trustworthy the feedback feels from one student or session to the next?
+
+Answer #16 (2026-02-17 09:13:32)
+It is too early to tell. And I have no more time to be in this interview! Okey?
+
+Question #17 (2026-02-17 09:13:34)
+Before you go, what’s one quick check you use to decide whether the AI feedback is “good enough” to
+share with students versus something you’d edit or discard?
+
+Answer #18 (2026-02-17 09:14:20)
+We tested the app several times with realistic exchanges.
+
+Question #19 (2026-02-17 09:14:30)
+When you were testing the app with those realistic exchanges, did the AI ever come across to you as
+having a particular “personality” or way of thinking that shaped the feedback?
+
+Answer #20 (2026-02-17 09:14:46)
+No, and bye for now!
+
+Question #21 (2026-02-17 09:14:48)
+Before you go—when you say “no,” do you mainly see it as just a programmed tool, or do you think it
+has any tendencies or “defaults” that shape what kind of feedback it gives?
+
+Answer #22 (2026-02-17 09:15:42)
+I have no time, you have to analyse what you got! - Bye!
+
+Question #23 (2026-02-17 09:15:53)
+Thinking about the app you built and the “human brain first” boundary you mentioned, what would have
+to be in place for you to feel comfortable scaling it up or using GenAI more broadly in your
+teaching and seminar work?

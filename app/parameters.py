@@ -81,7 +81,8 @@ Each of the above dictionaries should specify the following set of parameters:
 	- prompt (str): the prompt that describes the task and desired behavior of the agent (feel free to modify according to your needs)
 	- max_tokens (int): the maximum number of completion tokens the agent can generate in its response (default: 1000)
 	- temperature (float): the temperature parameter for the LLM (default: 0.9)
-	- model (str): the model to use for the agent (default: gpt-5.2)
+	- model (str): the model to use for the agent (default: gpt-5.5)
+	- reasoning_effort (str): the reasoning effort for reasoning models (default: none)
 
 3. DETAILS ABOUT THE PROMPTS:
 The prompts for the AI agent include placeholder variables that are programmatically replaced based on the current state of the interview.
@@ -208,7 +209,7 @@ INTERVIEW_PARAMETERS = {
 				YOUR RESPONSE: Your summary should be a succinct yet comprehensive account of the full interview, allowing other interviewers to continue the conversation.
 			""",
 			"max_tokens": 1000,
-			"model": "gpt-5.2"
+			"model": "gpt-5.5"
 		},
 		"transition": { # for the transition agent
 			"prompt": """
@@ -234,7 +235,7 @@ INTERVIEW_PARAMETERS = {
 				YOUR RESPONSE: Please provide the most suitable next transition question in the interview, without any other discussion, context, or remarks.
 			""",
 			"temperature": 0.7,
-			"model": "gpt-5.2",
+			"model": "gpt-5.5",
 			"max_tokens": 300
 		},
 		"probe": {  # for the probing agent
@@ -268,7 +269,7 @@ INTERVIEW_PARAMETERS = {
 				YOUR RESPONSE: Please provide the most suitable next probing question in the interview, without any other discussion, context, or remarks.
 			""",
 			"temperature": 0.7,
-			"model": "gpt-5.2",
+			"model": "gpt-5.5",
 			"max_tokens": 300
 		},
 		"moderator": {  # for the moderator agent
@@ -283,7 +284,7 @@ INTERVIEW_PARAMETERS = {
 
 				TASK: Does the interviewee's response fit into the context of an interview? Importantly, please answer only with a single 'yes' or 'no'. 
 			""",
-			"model": "gpt-5.2",
+			"model": "gpt-5.5",
 			"max_tokens": 64
 		}
 	},
@@ -354,7 +355,7 @@ INTERVIEW_PARAMETERS = {
 				SVAR: Gi en kortfattet, men dekkende oppsummering av intervjuet så langt på norsk.
 			""",
 			"max_tokens": 1000,
-			"model": "gpt-5.2"
+			"model": "gpt-5.5"
 		},
 		"transition": {
 			"prompt": """
@@ -382,7 +383,7 @@ INTERVIEW_PARAMETERS = {
 				SVAR: Gi bare neste overgangsspørsmål på norsk.
 			""",
 			"temperature": 0.7,
-			"model": "gpt-5.2",
+			"model": "gpt-5.5",
 			"max_tokens": 300
 		},
 		"probe": {
@@ -418,7 +419,7 @@ INTERVIEW_PARAMETERS = {
 				SVAR: Gi bare neste oppfølgingsspørsmål på norsk.
 			""",
 			"temperature": 0.7,
-			"model": "gpt-5.2",
+			"model": "gpt-5.5",
 			"max_tokens": 300
 		},
 		"moderator": {
@@ -433,7 +434,7 @@ INTERVIEW_PARAMETERS = {
 
 				OPPGAVE: Passer deltakerens svar inn i konteksten av et intervju? Svar bare med ett enkelt ord: 'yes' eller 'no'.
 			""",
-			"model": "gpt-5.2",
+			"model": "gpt-5.5",
 			"max_tokens": 64
 		}
 	},
@@ -504,7 +505,7 @@ INTERVIEW_PARAMETERS = {
 				YOUR RESPONSE: Provide a succinct, comprehensive summary of the interview so far.
 			""",
 			"max_tokens": 1000,
-			"model": "gpt-5.2"
+			"model": "gpt-5.5"
 		},
 		"transition": {
 			"prompt": """
@@ -532,7 +533,7 @@ INTERVIEW_PARAMETERS = {
 				YOUR RESPONSE: Provide only the next transition question.
 			""",
 			"temperature": 0.7,
-			"model": "gpt-5.2",
+			"model": "gpt-5.5",
 			"max_tokens": 300
 		},
 		"probe": {
@@ -568,7 +569,7 @@ INTERVIEW_PARAMETERS = {
 				YOUR RESPONSE: Provide only the next probing question.
 			""",
 			"temperature": 0.7,
-			"model": "gpt-5.2",
+			"model": "gpt-5.5",
 			"max_tokens": 300
 		},
 		"moderator": {
@@ -583,7 +584,7 @@ INTERVIEW_PARAMETERS = {
 
 				TASK: Does the interviewee's response fit into the context of an interview? Importantly, please answer only with a single 'yes' or 'no'.
 			""",
-			"model": "gpt-5.2",
+			"model": "gpt-5.5",
 			"max_tokens": 64
 		}
 	},
@@ -624,23 +625,23 @@ INTERVIEW_PARAMETERS = {
 		"summary": {
 			"prompt": """your_prompt_here""",
 			"max_tokens": 1000,
-			"model": "gpt-5.2"
+			"model": "gpt-5.5"
 		},
 		"transition": {
 			"prompt": """your_prompt_here""",
 			"temperature": 0.7,
-			"model": "gpt-5.2",
+			"model": "gpt-5.5",
 			"max_tokens": 300
 		},
 		"probe": {
 			"prompt": """your_prompt_here""",
 			"temperature": 0.7,
-			"model": "gpt-5.2",
+			"model": "gpt-5.5",
 			"max_tokens": 300
 		},
 		"moderator": {
 			"prompt": """your_prompt_here""",
-			"model": "gpt-5.2",
+			"model": "gpt-5.5",
 			"max_tokens": 64
 		}
 	},

@@ -1,0 +1,26 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_2Cr0c7NpHQHgGBl.json
+User ID: R_2Cr0c7NpHQHgGBl
+Session ID: R_2Cr0c7NpHQHgGBl
+Conversation Start: 2026-07-01 11:58:42
+Conversation End: 2026-07-01 11:58:57
+Interview Duration: 00:00:15
+Total Messages: 3
+Questions: 2
+Answers: 1
+Flagged Messages: 2
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-07-01 11:58:42)
+Kan du beskrive de viktigste arbeidsoppgavene dine?
+
+Answer #2 (2026-07-01 11:58:56)
+Nei ass
+
+Question #3 (2026-07-01 11:58:57)
+Bruker du generativ KI i jobben din i det hele tatt, eller er det noe du helst ikke vil snakke om?

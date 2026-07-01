@@ -1,0 +1,34 @@
+================================================================================
+Interview Transcript
+================================================================================
+
+Source File: R_8Tx6Hqf9MkWDU1b.json
+User ID: R_8Tx6Hqf9MkWDU1b
+Session ID: R_8Tx6Hqf9MkWDU1b
+Conversation Start: 2026-02-25 13:32:19
+Conversation End: 2026-02-25 13:34:23
+Interview Duration: 00:02:04
+Total Messages: 5
+Questions: 3
+Answers: 2
+Flagged Messages: 0
+Terminated: False
+
+--------------------------------------------------------------------------------
+
+Question #1 (2026-02-25 13:32:19)
+Can you describe the main types of tasks you do in your job?
+
+Answer #2 (2026-02-25 13:33:12)
+reading, writing, analyzing, teaching, coordinating
+
+Question #3 (2026-02-25 13:33:14)
+Of those tasks—reading, writing, analyzing, teaching, coordinating—which ones do you actually use
+generative AI for today, and can you walk me through one recent example?
+
+Answer #4 (2026-02-25 13:34:21)
+reading and writing e.g. using AI to polish language
+
+Question #5 (2026-02-25 13:34:23)
+When you use AI to “polish language,” what does that look like step-by-step on a real piece of
+writing you did recently—what did you give it, what did it change, and what did you keep or undo?
