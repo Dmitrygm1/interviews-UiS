@@ -32,6 +32,8 @@ data/
 data-VM/
 .aws-sam/
 
+AGENTS.md
+
 # Environment variables
 .env 
 .env.local

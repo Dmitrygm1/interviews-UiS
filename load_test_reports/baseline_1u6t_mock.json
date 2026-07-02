@@ -1,0 +1,302 @@
+{
+  "run_id": "20260701T172128Z",
+  "time": "2026-07-01T17:21:37.311480+00:00",
+  "args": {
+    "base_url": "http://127.0.0.1:8000",
+    "interview_id": "GENAI_WORKPLACE",
+    "users": 1,
+    "turns": 6,
+    "min_delay": 0.0,
+    "max_delay": 0.0,
+    "max_workers": null,
+    "timeout": 60.0,
+    "seed": 12345,
+    "session_prefix": "loadtest",
+    "start_jitter": 0.0,
+    "burst_turns": "none",
+    "barrier_timeout": 120.0,
+    "expect_mock_openai": true,
+    "allow_real_openai": false,
+    "expected_next_seconds": null,
+    "docker_container": "interviews-app-1",
+    "stats_interval": 2.0,
+    "json_output": "load_test_reports/baseline_1u6t_mock.json"
+  },
+  "wall_time": 8.32518059387803,
+  "requests": [
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 0,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.023901014123111963,
+      "start_offset": 0.001935906708240509,
+      "end_offset": 0.025838412810117006,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 0,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 1.397066397126764,
+      "start_offset": 0.025869200937449932,
+      "end_offset": 1.422936633694917,
+      "response_bytes": 128,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 0,
+      "turn": 1,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 1.3992652292363346,
+      "start_offset": 1.4229661268182099,
+      "end_offset": 2.8222323548980057,
+      "response_bytes": 128,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 0,
+      "turn": 2,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 1.4063003370538354,
+      "start_offset": 2.8222597469575703,
+      "end_offset": 4.228560768067837,
+      "response_bytes": 129,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 0,
+      "turn": 3,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 1.350985154043883,
+      "start_offset": 4.228580201976001,
+      "end_offset": 5.5795663758181036,
+      "response_bytes": 128,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 0,
+      "turn": 4,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 1.3962629800662398,
+      "start_offset": 5.57959662983194,
+      "end_offset": 6.97586154891178,
+      "response_bytes": 129,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 0,
+      "turn": 5,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 1.3487155279144645,
+      "start_offset": 6.9759390680119395,
+      "end_offset": 8.324655167758465,
+      "response_bytes": 128,
+      "ended": false
+    }
+  ],
+  "users": [
+    {
+      "session_id": "loadtest-20260701T172128Z-0000-AUa00Zt2x7mr",
+      "completed_turns": 6,
+      "failed": false
+    }
+  ],
+  "summaries": {
+    "all": {
+      "count": 7,
+      "ok": 7,
+      "failed": 0,
+      "p50": 1.3962629800662398,
+      "p90": 1.4020792723633348,
+      "p95": 1.4041898047085852,
+      "p99": 1.4058782305847852,
+      "max": 1.4063003370538354,
+      "status_counts": {
+        "200": 7
+      },
+      "error_counts": {}
+    },
+    "landing": {
+      "count": 1,
+      "ok": 1,
+      "failed": 0,
+      "p50": 0.023901014123111963,
+      "p90": 0.023901014123111963,
+      "p95": 0.023901014123111963,
+      "p99": 0.023901014123111963,
+      "max": 0.023901014123111963,
+      "status_counts": {
+        "200": 1
+      },
+      "error_counts": {}
+    },
+    "next": {
+      "count": 6,
+      "ok": 6,
+      "failed": 0,
+      "p50": 1.396664688596502,
+      "p90": 1.402782783145085,
+      "p95": 1.4045415600994602,
+      "p99": 1.4059485816629602,
+      "max": 1.4063003370538354,
+      "status_counts": {
+        "200": 6
+      },
+      "error_counts": {}
+    },
+    "next_by_turn": {
+      "0": {
+        "count": 1,
+        "ok": 1,
+        "failed": 0,
+        "p50": 1.397066397126764,
+        "p90": 1.397066397126764,
+        "p95": 1.397066397126764,
+        "p99": 1.397066397126764,
+        "max": 1.397066397126764,
+        "status_counts": {
+          "200": 1
+        },
+        "error_counts": {}
+      },
+      "1": {
+        "count": 1,
+        "ok": 1,
+        "failed": 0,
+        "p50": 1.3992652292363346,
+        "p90": 1.3992652292363346,
+        "p95": 1.3992652292363346,
+        "p99": 1.3992652292363346,
+        "max": 1.3992652292363346,
+        "status_counts": {
+          "200": 1
+        },
+        "error_counts": {}
+      },
+      "2": {
+        "count": 1,
+        "ok": 1,
+        "failed": 0,
+        "p50": 1.4063003370538354,
+        "p90": 1.4063003370538354,
+        "p95": 1.4063003370538354,
+        "p99": 1.4063003370538354,
+        "max": 1.4063003370538354,
+        "status_counts": {
+          "200": 1
+        },
+        "error_counts": {}
+      },
+      "3": {
+        "count": 1,
+        "ok": 1,
+        "failed": 0,
+        "p50": 1.350985154043883,
+        "p90": 1.350985154043883,
+        "p95": 1.350985154043883,
+        "p99": 1.350985154043883,
+        "max": 1.350985154043883,
+        "status_counts": {
+          "200": 1
+        },
+        "error_counts": {}
+      },
+      "4": {
+        "count": 1,
+        "ok": 1,
+        "failed": 0,
+        "p50": 1.3962629800662398,
+        "p90": 1.3962629800662398,
+        "p95": 1.3962629800662398,
+        "p99": 1.3962629800662398,
+        "max": 1.3962629800662398,
+        "status_counts": {
+          "200": 1
+        },
+        "error_counts": {}
+      },
+      "5": {
+        "count": 1,
+        "ok": 1,
+        "failed": 0,
+        "p50": 1.3487155279144645,
+        "p90": 1.3487155279144645,
+        "p95": 1.3487155279144645,
+        "p99": 1.3487155279144645,
+        "max": 1.3487155279144645,
+        "status_counts": {
+          "200": 1
+        },
+        "error_counts": {}
+      }
+    }
+  },
+  "peak_in_flight_next": 1,
+  "docker_stats": [
+    {
+      "BlockIO": "81.9kB / 905kB",
+      "CPUPerc": "1.59%",
+      "Container": "interviews-app-1",
+      "ID": "589cafd22c43",
+      "MemPerc": "1.24%",
+      "MemUsage": "98.3MiB / 7.755GiB",
+      "Name": "interviews-app-1",
+      "NetIO": "5.05kB / 16.6kB",
+      "PIDs": "15",
+      "time": 1782926490.0207577
+    },
+    {
+      "BlockIO": "81.9kB / 938kB",
+      "CPUPerc": "0.38%",
+      "Container": "interviews-app-1",
+      "ID": "589cafd22c43",
+      "MemPerc": "1.29%",
+      "MemUsage": "102.8MiB / 7.755GiB",
+      "Name": "interviews-app-1",
+      "NetIO": "6.27kB / 17.5kB",
+      "PIDs": "15",
+      "time": 1782926493.0518556
+    },
+    {
+      "BlockIO": "81.9kB / 995kB",
+      "CPUPerc": "1.41%",
+      "Container": "interviews-app-1",
+      "ID": "589cafd22c43",
+      "MemPerc": "1.30%",
+      "MemUsage": "103.2MiB / 7.755GiB",
+      "Name": "interviews-app-1",
+      "NetIO": "8.18kB / 19kB",
+      "PIDs": "15",
+      "time": 1782926496.0883415
+    }
+  ]
+}

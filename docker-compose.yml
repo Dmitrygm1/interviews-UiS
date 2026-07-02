@@ -11,5 +11,11 @@ services:
       - LOG_LEVEL=${LOG_LEVEL:-ERROR}   # Defaults to minimum logging at ERROR level
       - DATA_DIR=/app/data/json         # Save interview JSON files under data/json
       - USAGE_DIR=/app/data/usage       # Save OpenAI token usage logs under data/usage
+      - LOAD_TEST_MOCK_OPENAI=${LOAD_TEST_MOCK_OPENAI:-0}
+      - LOAD_TEST_MOCK_DELAY_SECONDS=${LOAD_TEST_MOCK_DELAY_SECONDS:-0}
+      - LOAD_TEST_MOCK_CHAT_DELAY_SECONDS=${LOAD_TEST_MOCK_CHAT_DELAY_SECONDS:-}
+      - LOAD_TEST_MOCK_MODERATION_DELAY_SECONDS=${LOAD_TEST_MOCK_MODERATION_DELAY_SECONDS:-}
+      - LOAD_TEST_MOCK_TRANSCRIBE_DELAY_SECONDS=${LOAD_TEST_MOCK_TRANSCRIBE_DELAY_SECONDS:-}
+      - LOAD_TEST_MOCK_JITTER_SECONDS=${LOAD_TEST_MOCK_JITTER_SECONDS:-0}
     volumes:
       - ./app:/app 

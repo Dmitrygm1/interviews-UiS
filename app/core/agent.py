@@ -1,5 +1,8 @@
 import inspect
 import logging
+import os
+import random
+import time
 from core.auxiliary import (
     execute_queries, 
     fill_prompt_with_interview, 
@@ -16,9 +19,31 @@ DEFAULT_REASONING_EFFORT = "none"
 class LLMAgent(object):
     """ Class to manage LLM-based agents. """
     def __init__(self, api_key, timeout:int=30, max_retries:int=3):
-        self.client = OpenAI(api_key=api_key, timeout=timeout, max_retries=max_retries)
-        self._chat_create_supports_reasoning_effort = self._supports_chat_create_parameter("reasoning_effort")
-        logging.info("OpenAI client instantiated. Should happen only once!")
+        self.mock_openai = os.getenv("LOAD_TEST_MOCK_OPENAI", "").lower() in {"1", "true", "yes"}
+        if self.mock_openai:
+            self.client = None
+            self._chat_create_supports_reasoning_effort = False
+            logging.warning("LOAD_TEST_MOCK_OPENAI is enabled. OpenAI calls will be faked.")
+        else:
+            self.client = OpenAI(api_key=api_key, timeout=timeout, max_retries=max_retries)
+            self._chat_create_supports_reasoning_effort = self._supports_chat_create_parameter("reasoning_effort")
+            logging.info("OpenAI client instantiated. Should happen only once!")
+
+    def _mock_delay(self, kind:str="chat") -> None:
+        """Sleep to simulate OpenAI latency during explicit load tests."""
+        default_delay = os.getenv("LOAD_TEST_MOCK_DELAY_SECONDS") or "0"
+        delay = float(os.getenv(f"LOAD_TEST_MOCK_{kind.upper()}_DELAY_SECONDS") or default_delay)
+        jitter = float(os.getenv("LOAD_TEST_MOCK_JITTER_SECONDS") or "0")
+        if jitter > 0:
+            delay += random.uniform(0, jitter)
+        if delay > 0:
+            time.sleep(delay)
+
+    def _mock_question(self, history:list, prefix:str) -> str:
+        state = history[-1] if history else {}
+        topic = state.get("topic_idx", "?")
+        question = state.get("question_idx", "?")
+        return f"{prefix} load-test question for topic {topic}, turn {question}?"
 
     def _supports_chat_create_parameter(self, parameter:str) -> bool:
         """Return whether the installed SDK exposes a Chat Completions parameter."""
@@ -41,6 +66,10 @@ class LLMAgent(object):
 
     def transcribe(self, audio) -> str:
         """ Transcribe audio file. """
+        if self.mock_openai:
+            self._mock_delay("transcribe")
+            return "Mock transcription for load testing."
+
         audio_file = BytesIO(b64decode(audio))
         audio_file.name = "audio.webm"
 
@@ -94,6 +123,10 @@ class LLMAgent(object):
 
     def review_answer(self, message:str, history:list) -> bool:
         """ Moderate answers: Are they on topic? """
+        if self.mock_openai:
+            self._mock_delay("chat")
+            return True
+
         response = execute_queries(
             self.client.chat.completions.create,
             self.construct_query(['moderator'], history, message),
@@ -103,6 +136,10 @@ class LLMAgent(object):
 
     def review_question(self, next_question:str) -> bool:
         """ Moderate questions: Are they flagged by the moderation endpoint? """
+        if self.mock_openai:
+            self._mock_delay("moderation")
+            return False
+
         response = self.client.moderations.create(
             model="omni-moderation-latest",
             input=next_question,
@@ -111,6 +148,10 @@ class LLMAgent(object):
         
     def probe_within_topic(self, history:list) -> str:
         """ Return next 'within-topic' probing question. """
+        if self.mock_openai:
+            self._mock_delay("chat")
+            return self._mock_question(history, "Mock follow-up")
+
         response = execute_queries(
             self.client.chat.completions.create,
             self.construct_query(['probe'], history),
@@ -124,6 +165,13 @@ class LLMAgent(object):
         cluster to the next. If have defined `summarize` model in parameters
         will also get summarization of interview thus far.
         """
+        if self.mock_openai:
+            self._mock_delay("chat")
+            return (
+                self._mock_question(history, "Mock transition"),
+                "Mock running summary generated during load testing.",
+            )
+
         summarize = self.parameters.get('summarize')
         tasks = ['summary','transition'] if summarize else ['transition']
         response = execute_queries(
