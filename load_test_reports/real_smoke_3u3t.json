@@ -1,0 +1,474 @@
+{
+  "run_id": "20260702T231342Z",
+  "time": "2026-07-02T23:14:02.496405+00:00",
+  "args": {
+    "base_url": "http://127.0.0.1:8000",
+    "interview_id": "GENAI_WORKPLACE",
+    "users": 3,
+    "turns": 3,
+    "min_delay": 1.0,
+    "max_delay": 2.0,
+    "initial_min_delay": 1.0,
+    "initial_max_delay": 2.0,
+    "max_workers": 3,
+    "timeout": 60.0,
+    "seed": 12345,
+    "session_prefix": "loadtest",
+    "start_jitter": 0.0,
+    "burst_turns": "none",
+    "barrier_timeout": 120.0,
+    "expect_mock_openai": false,
+    "allow_real_openai": true,
+    "expected_next_seconds": null,
+    "docker_container": "interviews-app-1",
+    "stats_interval": 2.0,
+    "json_output": "load_test_reports/real_smoke_3u3t.json",
+    "markdown_output": "load_test_reports/real_smoke_3u3t.md",
+    "usage_dir": "app/data/usage",
+    "skip_usage_summary": false
+  },
+  "wall_time": 19.821535901995958,
+  "requests": [
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 0,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.019123178004520014,
+      "start_offset": 0.001174615987110883,
+      "end_offset": 0.020298379997257143,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 1,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.016351854996173643,
+      "start_offset": 0.003331268992042169,
+      "end_offset": 0.019684377999510616,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 2,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.015617634009686299,
+      "start_offset": 0.004258302986272611,
+      "end_offset": 0.019876688995282166,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 1,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 3.397123772010673,
+      "start_offset": 1.3573353019892238,
+      "end_offset": 4.754459988995222,
+      "response_bytes": 203,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 0,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 2.5315751239977544,
+      "start_offset": 1.5864504689961905,
+      "end_offset": 4.118026992990053,
+      "response_bytes": 209,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 2,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 8.357798559009098,
+      "start_offset": 1.9665233939886093,
+      "end_offset": 10.324322713000583,
+      "response_bytes": 204,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 0,
+      "turn": 1,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 2.7917833359970246,
+      "start_offset": 5.279926276998594,
+      "end_offset": 8.071710412987159,
+      "response_bytes": 237,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 1,
+      "turn": 1,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 3.012999067999772,
+      "start_offset": 6.330530756997177,
+      "end_offset": 9.343530567988637,
+      "response_bytes": 191,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 0,
+      "turn": 2,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 3.5534046349930577,
+      "start_offset": 9.196090023993747,
+      "end_offset": 12.749495691998163,
+      "response_bytes": 213,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 1,
+      "turn": 2,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 3.71801398700336,
+      "start_offset": 10.78830255799403,
+      "end_offset": 14.506317320992821,
+      "response_bytes": 212,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 2,
+      "turn": 1,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 3.3802887740021106,
+      "start_offset": 11.790112001996022,
+      "end_offset": 15.17040154899587,
+      "response_bytes": 238,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 2,
+      "turn": 2,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 3.6229456949949963,
+      "start_offset": 16.198003470999538,
+      "end_offset": 19.82095004999428,
+      "response_bytes": 217,
+      "ended": false
+    }
+  ],
+  "users": [
+    {
+      "session_id": "loadtest-20260702T231342Z-0000-AUa00Zt2x7mr",
+      "completed_turns": 3,
+      "failed": false
+    },
+    {
+      "session_id": "loadtest-20260702T231342Z-0001-D7VCy4TeVpsq",
+      "completed_turns": 3,
+      "failed": false
+    },
+    {
+      "session_id": "loadtest-20260702T231342Z-0002-w0fF6vDs7Q9v",
+      "completed_turns": 3,
+      "failed": false
+    }
+  ],
+  "summaries": {
+    "all": {
+      "count": 12,
+      "ok": 12,
+      "failed": 0,
+      "p50": 3.196643921000941,
+      "p90": 3.708507157802524,
+      "p95": 5.805917044405939,
+      "p99": 7.847422256088469,
+      "max": 8.357798559009098,
+      "status_counts": {
+        "200": 12
+      },
+      "error_counts": {}
+    },
+    "landing": {
+      "count": 3,
+      "ok": 3,
+      "failed": 0,
+      "p50": 0.016351854996173643,
+      "p90": 0.01856891340285074,
+      "p95": 0.018846045703685376,
+      "p99": 0.019067751544353088,
+      "max": 0.019123178004520014,
+      "status_counts": {
+        "200": 3
+      },
+      "error_counts": {}
+    },
+    "next": {
+      "count": 9,
+      "ok": 9,
+      "failed": 0,
+      "p50": 3.397123772010673,
+      "p90": 4.6459709014045085,
+      "p95": 6.501884730206801,
+      "p99": 7.986615793248639,
+      "max": 8.357798559009098,
+      "status_counts": {
+        "200": 9
+      },
+      "error_counts": {}
+    },
+    "next_by_turn": {
+      "0": {
+        "count": 3,
+        "ok": 3,
+        "failed": 0,
+        "p50": 3.397123772010673,
+        "p90": 7.365663601609413,
+        "p95": 7.861731080309254,
+        "p99": 8.258585063269129,
+        "max": 8.357798559009098,
+        "status_counts": {
+          "200": 3
+        },
+        "error_counts": {}
+      },
+      "1": {
+        "count": 3,
+        "ok": 3,
+        "failed": 0,
+        "p50": 3.012999067999772,
+        "p90": 3.306830832801643,
+        "p95": 3.343559803401877,
+        "p99": 3.3729429798820636,
+        "max": 3.3802887740021106,
+        "status_counts": {
+          "200": 3
+        },
+        "error_counts": {}
+      },
+      "2": {
+        "count": 3,
+        "ok": 3,
+        "failed": 0,
+        "p50": 3.6229456949949963,
+        "p90": 3.699000328601687,
+        "p95": 3.7085071578025235,
+        "p99": 3.7161126211631927,
+        "max": 3.71801398700336,
+        "status_counts": {
+          "200": 3
+        },
+        "error_counts": {}
+      }
+    }
+  },
+  "peak_in_flight_next": 3,
+  "docker_stats": [
+    {
+      "BlockIO": "120MB / 14MB",
+      "CPUPerc": "0.01%",
+      "Container": "interviews-app-1",
+      "ID": "10c9245f9c03",
+      "MemPerc": "4.20%",
+      "MemUsage": "333.4MiB / 7.755GiB",
+      "Name": "interviews-app-1",
+      "NetIO": "2.92MB / 3.55MB",
+      "PIDs": "23",
+      "time": 1783034023.7065341
+    },
+    {
+      "BlockIO": "120MB / 14.1MB",
+      "CPUPerc": "2.06%",
+      "Container": "interviews-app-1",
+      "ID": "10c9245f9c03",
+      "MemPerc": "4.20%",
+      "MemUsage": "333.5MiB / 7.755GiB",
+      "Name": "interviews-app-1",
+      "NetIO": "2.95MB / 3.58MB",
+      "PIDs": "24",
+      "time": 1783034026.7286503
+    },
+    {
+      "BlockIO": "120MB / 14.1MB",
+      "CPUPerc": "3.55%",
+      "Container": "interviews-app-1",
+      "ID": "10c9245f9c03",
+      "MemPerc": "4.19%",
+      "MemUsage": "332.6MiB / 7.755GiB",
+      "Name": "interviews-app-1",
+      "NetIO": "2.96MB / 3.59MB",
+      "PIDs": "26",
+      "time": 1783034029.7492065
+    },
+    {
+      "BlockIO": "120MB / 14.2MB",
+      "CPUPerc": "4.70%",
+      "Container": "interviews-app-1",
+      "ID": "10c9245f9c03",
+      "MemPerc": "4.19%",
+      "MemUsage": "332.7MiB / 7.755GiB",
+      "Name": "interviews-app-1",
+      "NetIO": "2.98MB / 3.62MB",
+      "PIDs": "25",
+      "time": 1783034032.7703722
+    },
+    {
+      "BlockIO": "120MB / 14.2MB",
+      "CPUPerc": "1.52%",
+      "Container": "interviews-app-1",
+      "ID": "10c9245f9c03",
+      "MemPerc": "4.19%",
+      "MemUsage": "332.9MiB / 7.755GiB",
+      "Name": "interviews-app-1",
+      "NetIO": "3.01MB / 3.64MB",
+      "PIDs": "26",
+      "time": 1783034035.7913797
+    },
+    {
+      "BlockIO": "120MB / 14.3MB",
+      "CPUPerc": "0.24%",
+      "Container": "interviews-app-1",
+      "ID": "10c9245f9c03",
+      "MemPerc": "4.19%",
+      "MemUsage": "332.8MiB / 7.755GiB",
+      "Name": "interviews-app-1",
+      "NetIO": "3.02MB / 3.65MB",
+      "PIDs": "23",
+      "time": 1783034038.8142807
+    },
+    {
+      "BlockIO": "120MB / 14.3MB",
+      "CPUPerc": "0.23%",
+      "Container": "interviews-app-1",
+      "ID": "10c9245f9c03",
+      "MemPerc": "4.19%",
+      "MemUsage": "333.1MiB / 7.755GiB",
+      "Name": "interviews-app-1",
+      "NetIO": "3.04MB / 3.67MB",
+      "PIDs": "25",
+      "time": 1783034041.8356
+    }
+  ],
+  "usage_summary": {
+    "usage_dir": "app/data/usage",
+    "expected_sessions": 3,
+    "usage_files_found": 3,
+    "missing_usage_sessions": [],
+    "unreadable_usage_files": {},
+    "records": 21,
+    "prompt_tokens": 13710,
+    "cached_prompt_tokens": 0,
+    "billable_prompt_tokens": 13710,
+    "completion_tokens": 1304,
+    "total_tokens": 15014,
+    "estimated_cost": 0.06384825,
+    "by_model": {
+      "gpt-5.5-2026-04-23": {
+        "requests": 18,
+        "prompt_tokens": 9225,
+        "cached_prompt_tokens": 0,
+        "billable_prompt_tokens": 9225,
+        "completion_tokens": 333,
+        "total_tokens": 9558,
+        "estimated_cost": 0.056115
+      },
+      "gpt-5.4-mini-2026-03-17": {
+        "requests": 3,
+        "prompt_tokens": 4485,
+        "cached_prompt_tokens": 0,
+        "billable_prompt_tokens": 4485,
+        "completion_tokens": 971,
+        "total_tokens": 5456,
+        "estimated_cost": 0.0077332500000000005
+      }
+    },
+    "by_task": {
+      "moderator": {
+        "requests": 9,
+        "prompt_tokens": 2727,
+        "cached_prompt_tokens": 0,
+        "billable_prompt_tokens": 2727,
+        "completion_tokens": 36,
+        "total_tokens": 2763,
+        "estimated_cost": 0.014715
+      },
+      "probe": {
+        "requests": 6,
+        "prompt_tokens": 4335,
+        "cached_prompt_tokens": 0,
+        "billable_prompt_tokens": 4335,
+        "completion_tokens": 198,
+        "total_tokens": 4533,
+        "estimated_cost": 0.027615
+      },
+      "transition": {
+        "requests": 3,
+        "prompt_tokens": 2163,
+        "cached_prompt_tokens": 0,
+        "billable_prompt_tokens": 2163,
+        "completion_tokens": 99,
+        "total_tokens": 2262,
+        "estimated_cost": 0.013785000000000002
+      },
+      "summary": {
+        "requests": 3,
+        "prompt_tokens": 4485,
+        "cached_prompt_tokens": 0,
+        "billable_prompt_tokens": 4485,
+        "completion_tokens": 971,
+        "total_tokens": 5456,
+        "estimated_cost": 0.0077332500000000005
+      }
+    },
+    "priced_as": {
+      "gpt-5.5-2026-04-23": [
+        "gpt-5.5"
+      ],
+      "gpt-5.4-mini-2026-03-17": [
+        "gpt-5.4-mini"
+      ]
+    },
+    "unpriced_models": []
+  }
+}

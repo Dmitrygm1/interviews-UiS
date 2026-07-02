@@ -1,0 +1,115 @@
+{
+  "run_id": "20260702T222030Z",
+  "time": "2026-07-02T22:20:30.879098+00:00",
+  "args": {
+    "base_url": "http://127.0.0.1:8000",
+    "interview_id": "GENAI_WORKPLACE",
+    "users": 1,
+    "turns": 0,
+    "min_delay": 1.0,
+    "max_delay": 3.0,
+    "max_workers": null,
+    "timeout": 60.0,
+    "seed": 12345,
+    "session_prefix": "loadtest",
+    "start_jitter": 0.0,
+    "burst_turns": "none",
+    "barrier_timeout": 120.0,
+    "expect_mock_openai": false,
+    "allow_real_openai": true,
+    "expected_next_seconds": null,
+    "docker_container": null,
+    "stats_interval": 2.0,
+    "json_output": "load_test_reports/report_generation_smoke.json",
+    "markdown_output": "load_test_reports/report_generation_smoke.md",
+    "usage_dir": "app/data/usage",
+    "skip_usage_summary": false
+  },
+  "wall_time": 0.040885572001570836,
+  "requests": [
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 0,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.039766221001627855,
+      "start_offset": 0.0007331870001507923,
+      "end_offset": 0.0405003880005097,
+      "response_bytes": 14527,
+      "ended": false
+    }
+  ],
+  "users": [
+    {
+      "session_id": "loadtest-20260702T222030Z-0000-AUa00Zt2x7mr",
+      "completed_turns": 0,
+      "failed": false
+    }
+  ],
+  "summaries": {
+    "all": {
+      "count": 1,
+      "ok": 1,
+      "failed": 0,
+      "p50": 0.039766221001627855,
+      "p90": 0.039766221001627855,
+      "p95": 0.039766221001627855,
+      "p99": 0.039766221001627855,
+      "max": 0.039766221001627855,
+      "status_counts": {
+        "200": 1
+      },
+      "error_counts": {}
+    },
+    "landing": {
+      "count": 1,
+      "ok": 1,
+      "failed": 0,
+      "p50": 0.039766221001627855,
+      "p90": 0.039766221001627855,
+      "p95": 0.039766221001627855,
+      "p99": 0.039766221001627855,
+      "max": 0.039766221001627855,
+      "status_counts": {
+        "200": 1
+      },
+      "error_counts": {}
+    },
+    "next": {
+      "count": 0,
+      "ok": 0,
+      "failed": 0,
+      "p50": null,
+      "p90": null,
+      "p95": null,
+      "p99": null,
+      "max": null,
+      "status_counts": {},
+      "error_counts": {}
+    },
+    "next_by_turn": {}
+  },
+  "peak_in_flight_next": 0,
+  "docker_stats": [],
+  "usage_summary": {
+    "usage_dir": "app/data/usage",
+    "expected_sessions": 0,
+    "usage_files_found": 0,
+    "missing_usage_sessions": [],
+    "unreadable_usage_files": {},
+    "records": 0,
+    "prompt_tokens": 0,
+    "cached_prompt_tokens": 0,
+    "billable_prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "estimated_cost": 0.0,
+    "by_model": {},
+    "by_task": {},
+    "priced_as": {},
+    "unpriced_models": []
+  }
+}

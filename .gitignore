@@ -38,3 +38,7 @@ AGENTS.md
 .env 
 .env.local
 .env.*.local
+
+load_test_reports/raw_real_20260702
+load_test_reports/raw_mock_20260702_150u3t_sync
+load_test_reports/raw_real_20260702_before_3turn_rerun

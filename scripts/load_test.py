@@ -3,6 +3,7 @@ import concurrent.futures
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 import json
+from pathlib import Path
 import random
 import string
 import subprocess
@@ -11,6 +12,7 @@ import time
 from typing import Any
 
 import requests
+import usage_report
 
 
 REALISTIC_ANSWERS = [
@@ -205,6 +207,7 @@ def run_single_interview(
     global_start: float,
     records: list[dict[str, Any]],
     lock: threading.Lock,
+    landing_barrier: threading.Barrier | None,
     barrier: threading.Barrier | None,
 ) -> dict[str, Any]:
     rng = random.Random(args.seed + user_index)
@@ -230,9 +233,21 @@ def run_single_interview(
         records.append(rec)
     if not rec["ok"]:
         user_result["failed"] = True
+        if landing_barrier:
+            landing_barrier.abort()
         if barrier:
             barrier.abort()
         return user_result
+
+    if landing_barrier:
+        try:
+            landing_barrier.wait(timeout=args.barrier_timeout)
+        except threading.BrokenBarrierError:
+            user_result["failed"] = True
+            return user_result
+
+    if args.initial_max_delay > 0:
+        time.sleep(rng.uniform(args.initial_min_delay, args.initial_max_delay))
 
     next_url = f"{base_url}/next"
     for turn in range(args.turns):
@@ -351,6 +366,137 @@ def docker_stats_summary(records: list[dict[str, Any]]) -> dict[str, float | Non
     }
 
 
+def usage_bucket(data: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "requests": data["requests"],
+        "prompt_tokens": data["prompt_tokens"],
+        "cached_prompt_tokens": data["cached_prompt_tokens"],
+        "billable_prompt_tokens": data["billable_prompt_tokens"],
+        "completion_tokens": data["completion_tokens"],
+        "total_tokens": data["total_tokens"],
+        "estimated_cost": data["estimated_cost"],
+    }
+
+
+def collect_usage_summary(users: list[dict[str, Any]], usage_dir: Path) -> dict[str, Any]:
+    expected_sessions = [user["session_id"] for user in users if user["completed_turns"] > 0]
+    records = []
+    found_sessions = []
+    missing_sessions = []
+    unreadable_files = {}
+
+    for session_id in expected_sessions:
+        usage_path = usage_dir / f"{session_id}.jsonl"
+        if not usage_path.exists():
+            missing_sessions.append(session_id)
+            continue
+        try:
+            session_records = usage_report.read_usage_records(usage_path)
+        except Exception as exc:
+            unreadable_files[session_id] = str(exc)
+            continue
+        found_sessions.append(session_id)
+        records.extend(session_records)
+
+    summary = usage_report.summarize(records)
+    return {
+        "usage_dir": str(usage_dir),
+        "expected_sessions": len(expected_sessions),
+        "usage_files_found": len(found_sessions),
+        "missing_usage_sessions": missing_sessions,
+        "unreadable_usage_files": unreadable_files,
+        "records": len(records),
+        "prompt_tokens": summary["prompt_tokens"],
+        "cached_prompt_tokens": summary["cached_prompt_tokens"],
+        "billable_prompt_tokens": summary["billable_prompt_tokens"],
+        "completion_tokens": summary["completion_tokens"],
+        "total_tokens": summary["total_tokens"],
+        "estimated_cost": summary["estimated_cost"],
+        "by_model": {model: usage_bucket(data) for model, data in summary["by_model"].items()},
+        "by_task": {task: usage_bucket(data) for task, data in summary["by_task"].items()},
+        "priced_as": {model: sorted(priced_as) for model, priced_as in summary["priced_as"].items()},
+        "unpriced_models": sorted(summary["unpriced_models"]),
+    }
+
+
+def read_json_file(path: Path) -> Any:
+    with path.open(encoding="utf-8") as f:
+        return json.load(f)
+
+
+def find_session_files(session_id: str, data_dir: Path) -> list[Path]:
+    direct_path = data_dir / f"{session_id}.json"
+    if direct_path.exists():
+        return [direct_path]
+
+    matches = []
+    for path in data_dir.glob("*.json"):
+        try:
+            session = read_json_file(path)
+        except (json.JSONDecodeError, OSError):
+            continue
+        if session and any(row.get("session_id") == session_id for row in session):
+            matches.append(path)
+    return matches
+
+
+def collect_session_summary(users: list[dict[str, Any]], data_dir: Path) -> dict[str, Any]:
+    expected_sessions = [user for user in users if user["completed_turns"] > 0]
+    missing_sessions = []
+    duplicate_sessions = []
+    unreadable_sessions = {}
+    incomplete_sessions = []
+    answer_count_distribution = Counter()
+    question_count_distribution = Counter()
+    found_sessions = 0
+
+    for user in expected_sessions:
+        session_id = user["session_id"]
+        paths = find_session_files(session_id, data_dir)
+        if not paths:
+            missing_sessions.append(session_id)
+            continue
+        if len(paths) > 1:
+            duplicate_sessions.append({"session_id": session_id, "paths": [str(path) for path in paths]})
+
+        try:
+            session = read_json_file(paths[0])
+        except Exception as exc:
+            unreadable_sessions[session_id] = str(exc)
+            continue
+
+        found_sessions += 1
+        answer_count = sum(1 for row in session if row.get("type") == "answer")
+        question_count = sum(1 for row in session if row.get("type") == "question")
+        answer_count_distribution[answer_count] += 1
+        question_count_distribution[question_count] += 1
+
+        expected_answers = user["completed_turns"]
+        if answer_count < expected_answers:
+            incomplete_sessions.append(
+                {
+                    "session_id": session_id,
+                    "user_index": user.get("user_index"),
+                    "answers": answer_count,
+                    "expected_answers": expected_answers,
+                    "questions": question_count,
+                    "path": str(paths[0]),
+                }
+            )
+
+    return {
+        "data_dir": str(data_dir),
+        "expected_sessions": len(expected_sessions),
+        "session_files_found": found_sessions,
+        "missing_sessions": missing_sessions,
+        "duplicate_sessions": duplicate_sessions,
+        "unreadable_sessions": unreadable_sessions,
+        "incomplete_sessions": incomplete_sessions,
+        "answer_count_distribution": dict(sorted(answer_count_distribution.items())),
+        "question_count_distribution": dict(sorted(question_count_distribution.items())),
+    }
+
+
 def markdown_number(value: float | int | None, suffix: str = "") -> str:
     if value is None:
         return "n/a"
@@ -388,6 +534,9 @@ def build_markdown_report(report: dict[str, Any]) -> str:
         f"- Users: {args['users']}",
         f"- Turns per user: {args['turns']}",
         f"- Start jitter: {args['start_jitter']}s",
+        f"- Sync after landing: {args['sync_after_landing']}",
+        f"- Initial answer delay: {args['initial_min_delay']}-{args['initial_max_delay']}s",
+        f"- Between-turn delay: {args['min_delay']}-{args['max_delay']}s",
         f"- Burst mode: `{args['burst_turns']}`",
         f"- Timeout: {args['timeout']}s",
         f"- Expected `/next` service time: {markdown_number(expected, 's')}",
@@ -436,6 +585,92 @@ def build_markdown_report(report: dict[str, Any]) -> str:
             f"- CPU avg: {markdown_number(docker['cpu_avg'], '%')}",
             f"- Memory max: {markdown_number(docker['mem_max'], '%')}",
             f"- Memory avg: {markdown_number(docker['mem_avg'], '%')}",
+        ]
+    )
+
+    usage = report.get("usage_summary")
+    if usage:
+        lines.extend(
+            [
+                "",
+                "## Token Usage",
+                "",
+                f"- Usage directory: `{usage['usage_dir']}`",
+                f"- Expected usage files: {usage['expected_sessions']}",
+                f"- Usage files found: {usage['usage_files_found']}",
+                f"- Missing usage files: {len(usage['missing_usage_sessions'])}",
+                f"- Usage records: {usage['records']}",
+                f"- Prompt tokens: {usage['prompt_tokens']}",
+                f"- Cached prompt tokens: {usage['cached_prompt_tokens']}",
+                f"- Billable prompt tokens: {usage['billable_prompt_tokens']}",
+                f"- Completion tokens: {usage['completion_tokens']}",
+                f"- Total tokens: {usage['total_tokens']}",
+                f"- Estimated cost: ${usage['estimated_cost']:.6f}",
+            ]
+        )
+        if usage["unpriced_models"]:
+            lines.append(f"- Unpriced models: {', '.join(usage['unpriced_models'])}")
+        if usage["by_model"]:
+            lines.extend(
+                [
+                    "",
+                    "### Usage By Model",
+                    "",
+                    "| Model | Requests | Prompt | Cached | Completion | Total | Estimated Cost |",
+                    "| --- | ---: | ---: | ---: | ---: | ---: | ---: |",
+                ]
+            )
+            for model, data in sorted(usage["by_model"].items()):
+                lines.append(
+                    f"| {model} | {data['requests']} | {data['prompt_tokens']} | "
+                    f"{data['cached_prompt_tokens']} | {data['completion_tokens']} | "
+                    f"{data['total_tokens']} | ${data['estimated_cost']:.6f} |"
+                )
+        if usage["by_task"]:
+            lines.extend(
+                [
+                    "",
+                    "### Usage By Task",
+                    "",
+                    "| Task | Requests | Prompt | Cached | Completion | Total | Estimated Cost |",
+                    "| --- | ---: | ---: | ---: | ---: | ---: | ---: |",
+                ]
+            )
+            for task, data in sorted(usage["by_task"].items()):
+                lines.append(
+                    f"| {task} | {data['requests']} | {data['prompt_tokens']} | "
+                    f"{data['cached_prompt_tokens']} | {data['completion_tokens']} | "
+                    f"{data['total_tokens']} | ${data['estimated_cost']:.6f} |"
+                )
+
+    session_summary = report.get("session_summary")
+    if session_summary:
+        lines.extend(
+            [
+                "",
+                "## Session Integrity",
+                "",
+                f"- Data directory: `{session_summary['data_dir']}`",
+                f"- Expected session files: {session_summary['expected_sessions']}",
+                f"- Session files found: {session_summary['session_files_found']}",
+                f"- Missing session files: {len(session_summary['missing_sessions'])}",
+                f"- Duplicate session files: {len(session_summary['duplicate_sessions'])}",
+                f"- Unreadable session files: {len(session_summary['unreadable_sessions'])}",
+                f"- Incomplete sessions: {len(session_summary['incomplete_sessions'])}",
+                f"- Answer count distribution: `{session_summary['answer_count_distribution']}`",
+                f"- Question count distribution: `{session_summary['question_count_distribution']}`",
+            ]
+        )
+        if session_summary["incomplete_sessions"]:
+            lines.extend(["", "### Incomplete Sessions", ""])
+            for item in session_summary["incomplete_sessions"][:20]:
+                lines.append(
+                    f"- `{item['session_id']}`: {item['answers']}/"
+                    f"{item['expected_answers']} answers saved at `{item['path']}`"
+                )
+
+    lines.extend(
+        [
             "",
             "## OpenAI Safety Note",
             "",
@@ -474,11 +709,17 @@ def build_report(
     users: list[dict[str, Any]],
     docker_stats: list[dict[str, Any]],
     wall_time: float,
+    usage_summary: dict[str, Any] | None = None,
+    session_summary: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
+    report_args = {
+        key: str(value) if isinstance(value, Path) else value
+        for key, value in vars(args).items()
+    }
     return {
         "run_id": run_id,
         "time": datetime.now(timezone.utc).isoformat(),
-        "args": vars(args),
+        "args": report_args,
         "wall_time": wall_time,
         "requests": records,
         "users": users,
@@ -490,6 +731,8 @@ def build_report(
         },
         "peak_in_flight_next": max_in_flight(records, "/next"),
         "docker_stats": docker_stats,
+        "usage_summary": usage_summary,
+        "session_summary": session_summary,
     }
 
 
@@ -501,11 +744,14 @@ def main() -> None:
     parser.add_argument("--turns", type=int, default=3)
     parser.add_argument("--min-delay", type=float, default=1.0)
     parser.add_argument("--max-delay", type=float, default=3.0)
+    parser.add_argument("--initial-min-delay", type=float, default=0.0)
+    parser.add_argument("--initial-max-delay", type=float, default=0.0)
     parser.add_argument("--max-workers", type=int, default=None)
     parser.add_argument("--timeout", type=float, default=60.0)
     parser.add_argument("--seed", type=int, default=12345)
     parser.add_argument("--session-prefix", default="loadtest")
     parser.add_argument("--start-jitter", type=float, default=0.0)
+    parser.add_argument("--sync-after-landing", action="store_true")
     parser.add_argument("--burst-turns", choices=["none", "first", "all"], default="first")
     parser.add_argument("--barrier-timeout", type=float, default=120.0)
     parser.add_argument("--expect-mock-openai", action="store_true")
@@ -515,10 +761,16 @@ def main() -> None:
     parser.add_argument("--stats-interval", type=float, default=2.0)
     parser.add_argument("--json-output", default=None)
     parser.add_argument("--markdown-output", default=None)
+    parser.add_argument("--usage-dir", type=Path, default=Path("app/data/usage"))
+    parser.add_argument("--data-dir", type=Path, default=Path("app/data/json"))
+    parser.add_argument("--skip-usage-summary", action="store_true")
+    parser.add_argument("--skip-session-summary", action="store_true")
     args = parser.parse_args()
 
     if args.min_delay > args.max_delay:
         raise SystemExit("--min-delay cannot be greater than --max-delay")
+    if args.initial_min_delay > args.initial_max_delay:
+        raise SystemExit("--initial-min-delay cannot be greater than --initial-max-delay")
     if args.users < 1 or args.turns < 0:
         raise SystemExit("--users must be positive and --turns cannot be negative")
 
@@ -532,6 +784,7 @@ def main() -> None:
 
     records: list[dict[str, Any]] = []
     lock = threading.Lock()
+    landing_barrier = threading.Barrier(args.users) if args.users > 1 and args.sync_after_landing else None
     barrier = threading.Barrier(args.users) if args.users > 1 and args.burst_turns != "none" else None
     sampler = DockerStatsSampler(args.docker_container, args.stats_interval)
 
@@ -541,7 +794,17 @@ def main() -> None:
     try:
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
             futures = [
-                executor.submit(run_single_interview, args, user_index, run_id, global_start, records, lock, barrier)
+                executor.submit(
+                    run_single_interview,
+                    args,
+                    user_index,
+                    run_id,
+                    global_start,
+                    records,
+                    lock,
+                    landing_barrier,
+                    barrier,
+                )
                 for user_index in range(args.users)
             ]
             for future in concurrent.futures.as_completed(futures):
@@ -552,7 +815,13 @@ def main() -> None:
     wall_time = time.perf_counter() - global_start
     records.sort(key=lambda rec: rec["start_offset"])
     users.sort(key=lambda user: user["session_id"])
-    report = build_report(args, run_id, records, users, sampler.records, wall_time)
+    usage_summary = None
+    if not args.skip_usage_summary:
+        usage_summary = collect_usage_summary(users, args.usage_dir)
+    session_summary = None
+    if not args.skip_session_summary:
+        session_summary = collect_session_summary(users, args.data_dir)
+    report = build_report(args, run_id, records, users, sampler.records, wall_time, usage_summary, session_summary)
 
     total_requests = len(records)
     next_count = report["summaries"]["next"]["count"]
@@ -589,6 +858,28 @@ def main() -> None:
                 print(f"  Mem max={docker['mem_max']:.2f}% avg={docker['mem_avg']:.2f}%")
         else:
             print(f"\nDocker stats samples collected: {len(sampler.records)}")
+
+    if usage_summary:
+        print("\nToken usage:")
+        print(
+            f"  usage files {usage_summary['usage_files_found']}/{usage_summary['expected_sessions']}, "
+            f"records={usage_summary['records']}, total_tokens={usage_summary['total_tokens']}, "
+            f"estimated_cost=${usage_summary['estimated_cost']:.6f}"
+        )
+        if usage_summary["missing_usage_sessions"]:
+            print(f"  missing usage files: {len(usage_summary['missing_usage_sessions'])}")
+        if usage_summary["unpriced_models"]:
+            print(f"  unpriced models: {', '.join(usage_summary['unpriced_models'])}")
+
+    if session_summary:
+        print("\nSession integrity:")
+        print(
+            f"  session files {session_summary['session_files_found']}/"
+            f"{session_summary['expected_sessions']}, "
+            f"incomplete={len(session_summary['incomplete_sessions'])}, "
+            f"missing={len(session_summary['missing_sessions'])}, "
+            f"duplicates={len(session_summary['duplicate_sessions'])}"
+        )
 
     if args.json_output:
         with open(args.json_output, "w", encoding="utf-8") as f:

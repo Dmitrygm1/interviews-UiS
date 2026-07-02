@@ -1,0 +1,903 @@
+{
+  "run_id": "20260702T222105Z",
+  "time": "2026-07-02T22:21:28.013266+00:00",
+  "args": {
+    "base_url": "http://127.0.0.1:8000",
+    "interview_id": "GENAI_WORKPLACE",
+    "users": 20,
+    "turns": 1,
+    "min_delay": 0.0,
+    "max_delay": 0.0,
+    "max_workers": null,
+    "timeout": 60.0,
+    "seed": 12345,
+    "session_prefix": "loadtest",
+    "start_jitter": 20.0,
+    "burst_turns": "none",
+    "barrier_timeout": 120.0,
+    "expect_mock_openai": false,
+    "allow_real_openai": true,
+    "expected_next_seconds": 4.03,
+    "docker_container": "interviews-app-1",
+    "stats_interval": 2.0,
+    "json_output": "load_test_reports/real_ramp_20u1t_20s.json",
+    "markdown_output": "load_test_reports/real_ramp_20u1t_20s.md",
+    "usage_dir": "app/data/usage",
+    "skip_usage_summary": false
+  },
+  "wall_time": 22.341851370991208,
+  "requests": [
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 17,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.013293467010953464,
+      "start_offset": 1.3953471689892467,
+      "end_offset": 1.4086417279904708,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 17,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 3.1644237239961512,
+      "start_offset": 1.4086641350004356,
+      "end_offset": 4.573088680990622,
+      "response_bytes": 207,
+      "ended": false
+    },
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 7,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.013906740001402795,
+      "start_offset": 1.6902209620020585,
+      "end_offset": 1.7041286589956144,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 7,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 3.852706475998275,
+      "start_offset": 1.7041516390017932,
+      "end_offset": 5.556858989992179,
+      "response_bytes": 203,
+      "ended": false
+    },
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 13,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.02221371600171551,
+      "start_offset": 4.232809269989957,
+      "end_offset": 4.255024090001825,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 4,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.02391151500341948,
+      "start_offset": 4.238543836996541,
+      "end_offset": 4.262455973002943,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 13,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 3.7922337780037196,
+      "start_offset": 4.255043304990977,
+      "end_offset": 8.047277837002184,
+      "response_bytes": 209,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 4,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 3.817999055987457,
+      "start_offset": 4.262473041002522,
+      "end_offset": 8.080472777000978,
+      "response_bytes": 209,
+      "ended": false
+    },
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 11,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.02304545699735172,
+      "start_offset": 5.119243806999293,
+      "end_offset": 5.142290150994086,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 11,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 17.198022533993935,
+      "start_offset": 5.142312205003691,
+      "end_offset": 22.34033553500194,
+      "response_bytes": 204,
+      "ended": false
+    },
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 1,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.019572792007238604,
+      "start_offset": 6.752342167994357,
+      "end_offset": 6.771915669989539,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 1,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 3.84459610999329,
+      "start_offset": 6.7719352720014285,
+      "end_offset": 10.616532147992984,
+      "response_bytes": 204,
+      "ended": false
+    },
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 12,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.022251686998060904,
+      "start_offset": 8.642567645991221,
+      "end_offset": 8.664820138990763,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 12,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 2.3785790789988823,
+      "start_offset": 8.664840625002398,
+      "end_offset": 11.04342054699373,
+      "response_bytes": 207,
+      "ended": false
+    },
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 19,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.013467374999891035,
+      "start_offset": 8.665414092989522,
+      "end_offset": 8.678882164997049,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 19,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 2.263572857991676,
+      "start_offset": 8.67890080199868,
+      "end_offset": 10.942474476003554,
+      "response_bytes": 207,
+      "ended": false
+    },
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 15,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.019980465003754944,
+      "start_offset": 8.90490552999836,
+      "end_offset": 8.92488694799249,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 15,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 2.1801920069992775,
+      "start_offset": 8.924907483000425,
+      "end_offset": 11.105100247994415,
+      "response_bytes": 164,
+      "ended": false
+    },
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 8,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.020616748995962553,
+      "start_offset": 9.186587008996867,
+      "end_offset": 9.207204670994543,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 8,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 2.9444556569942506,
+      "start_offset": 9.207224201003555,
+      "end_offset": 12.151680745999329,
+      "response_bytes": 215,
+      "ended": false
+    },
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 0,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.01974564699048642,
+      "start_offset": 11.321754944001441,
+      "end_offset": 11.341502071998548,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 0,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 2.478108660012367,
+      "start_offset": 11.341531963989837,
+      "end_offset": 13.819641360998503,
+      "response_bytes": 203,
+      "ended": false
+    },
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 3,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.02061017300002277,
+      "start_offset": 12.399007479994907,
+      "end_offset": 12.419618685991736,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 3,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 2.3178262680012267,
+      "start_offset": 12.419639718995313,
+      "end_offset": 14.73746674299764,
+      "response_bytes": 207,
+      "ended": false
+    },
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 16,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.012844989003497176,
+      "start_offset": 12.838109528995119,
+      "end_offset": 12.850955191999674,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 16,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 2.5588026309997076,
+      "start_offset": 12.850975237990497,
+      "end_offset": 15.409778656990966,
+      "response_bytes": 204,
+      "ended": false
+    },
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 14,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.014409828989300877,
+      "start_offset": 13.062921449003625,
+      "end_offset": 13.077332241999102,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 14,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 2.541043853998417,
+      "start_offset": 13.077352398002404,
+      "end_offset": 15.61839697600226,
+      "response_bytes": 207,
+      "ended": false
+    },
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 5,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.012654828999075107,
+      "start_offset": 14.659256433995324,
+      "end_offset": 14.671912466001231,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 5,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 3.10750694500166,
+      "start_offset": 14.671936483995523,
+      "end_offset": 17.77944444899913,
+      "response_bytes": 220,
+      "ended": false
+    },
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 18,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.021785719000035897,
+      "start_offset": 15.601045770003111,
+      "end_offset": 15.622832212990033,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 18,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 2.6279631970101036,
+      "start_offset": 15.622850378989824,
+      "end_offset": 18.250814322993392,
+      "response_bytes": 203,
+      "ended": false
+    },
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 6,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.013529324001865461,
+      "start_offset": 16.33637252099288,
+      "end_offset": 16.34990277700126,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 6,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 2.1432917729980545,
+      "start_offset": 16.349923461995786,
+      "end_offset": 18.493216078990372,
+      "response_bytes": 203,
+      "ended": false
+    },
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 10,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.012665246002143249,
+      "start_offset": 17.039025651989505,
+      "end_offset": 17.051691725995624,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 10,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 2.3314920289994916,
+      "start_offset": 17.051712885993766,
+      "end_offset": 19.383206232989323,
+      "response_bytes": 204,
+      "ended": false
+    },
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 9,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.015225677998387255,
+      "start_offset": 17.569648421995225,
+      "end_offset": 17.584874988999218,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 9,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 2.9049609619978582,
+      "start_offset": 17.58489538700087,
+      "end_offset": 20.489857662993018,
+      "response_bytes": 220,
+      "ended": false
+    },
+    {
+      "endpoint": "landing",
+      "method": "GET",
+      "user_index": 2,
+      "turn": null,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 0.013920084005803801,
+      "start_offset": 18.932986746993265,
+      "end_offset": 18.946907770994585,
+      "response_bytes": 14527,
+      "ended": false
+    },
+    {
+      "endpoint": "/next",
+      "method": "POST",
+      "user_index": 2,
+      "turn": 0,
+      "status_code": 200,
+      "ok": true,
+      "error": null,
+      "latency": 2.4163970249937847,
+      "start_offset": 18.94692936100182,
+      "end_offset": 21.36332710699935,
+      "response_bytes": 204,
+      "ended": false
+    }
+  ],
+  "users": [
+    {
+      "session_id": "loadtest-20260702T222105Z-0000-AUa00Zt2x7mr",
+      "completed_turns": 1,
+      "failed": false
+    },
+    {
+      "session_id": "loadtest-20260702T222105Z-0001-D7VCy4TeVpsq",
+      "completed_turns": 1,
+      "failed": false
+    },
+    {
+      "session_id": "loadtest-20260702T222105Z-0002-w0fF6vDs7Q9v",
+      "completed_turns": 1,
+      "failed": false
+    },
+    {
+      "session_id": "loadtest-20260702T222105Z-0003-dPWlEqBsvQgc",
+      "completed_turns": 1,
+      "failed": false
+    },
+    {
+      "session_id": "loadtest-20260702T222105Z-0004-ddPbvW2fRXab",
+      "completed_turns": 1,
+      "failed": false
+    },
+    {
+      "session_id": "loadtest-20260702T222105Z-0005-mEOSNGXtEOSR",
+      "completed_turns": 1,
+      "failed": false
+    },
+    {
+      "session_id": "loadtest-20260702T222105Z-0006-xQKAJLokD97C",
+      "completed_turns": 1,
+      "failed": false
+    },
+    {
+      "session_id": "loadtest-20260702T222105Z-0007-wkhpL0Xut0Fd",
+      "completed_turns": 1,
+      "failed": false
+    },
+    {
+      "session_id": "loadtest-20260702T222105Z-0008-xYnNKRmGpLHw",
+      "completed_turns": 1,
+      "failed": false
+    },
+    {
+      "session_id": "loadtest-20260702T222105Z-0009-irowKR6fO5oX",
+      "completed_turns": 1,
+      "failed": false
+    },
+    {
+      "session_id": "loadtest-20260702T222105Z-0010-RxAJlp9qs6cK",
+      "completed_turns": 1,
+      "failed": false
+    },
+    {
+      "session_id": "loadtest-20260702T222105Z-0011-VngA128xp5L7",
+      "completed_turns": 1,
+      "failed": false
+    },
+    {
+      "session_id": "loadtest-20260702T222105Z-0012-HjV0gB8gOGjS",
+      "completed_turns": 1,
+      "failed": false
+    },
+    {
+      "session_id": "loadtest-20260702T222105Z-0013-QrnchSWvFGma",
+      "completed_turns": 1,
+      "failed": false
+    },
+    {
+      "session_id": "loadtest-20260702T222105Z-0014-qbjPairYEayf",
+      "completed_turns": 1,
+      "failed": false
+    },
+    {
+      "session_id": "loadtest-20260702T222105Z-0015-9mbgFnUrvv2Y",
+      "completed_turns": 1,
+      "failed": false
+    },
+    {
+      "session_id": "loadtest-20260702T222105Z-0016-x5uzdtob2Lmh",
+      "completed_turns": 1,
+      "failed": false
+    },
+    {
+      "session_id": "loadtest-20260702T222105Z-0017-wMEtrKXkEs3B",
+      "completed_turns": 1,
+      "failed": false
+    },
+    {
+      "session_id": "loadtest-20260702T222105Z-0018-RLBqAhTUCtrE",
+      "completed_turns": 1,
+      "failed": false
+    },
+    {
+      "session_id": "loadtest-20260702T222105Z-0019-aO8Y54hPSrmL",
+      "completed_turns": 1,
+      "failed": false
+    }
+  ],
+  "summaries": {
+    "all": {
+      "count": 40,
+      "ok": 40,
+      "failed": 0,
+      "p50": 1.083601644000737,
+      "p90": 3.7948103058020934,
+      "p95": 3.8450016282935398,
+      "p99": 11.993349271375621,
+      "max": 17.198022533993935,
+      "status_counts": {
+        "200": 40
+      },
+      "error_counts": {}
+    },
+    "landing": {
+      "count": 20,
+      "ok": 20,
+      "failed": 0,
+      "p50": 0.01739923500281293,
+      "p90": 0.022331063997989987,
+      "p95": 0.02308875989765511,
+      "p99": 0.023746963982266604,
+      "max": 0.02391151500341948,
+      "status_counts": {
+        "200": 20
+      },
+      "error_counts": {}
+    },
+    "next": {
+      "count": 20,
+      "ok": 20,
+      "failed": 0,
+      "p50": 2.5933829140049056,
+      "p90": 3.845407146593789,
+      "p95": 4.519972278898067,
+      "p99": 14.662412482974743,
+      "max": 17.198022533993935,
+      "status_counts": {
+        "200": 20
+      },
+      "error_counts": {}
+    },
+    "next_by_turn": {
+      "0": {
+        "count": 20,
+        "ok": 20,
+        "failed": 0,
+        "p50": 2.5933829140049056,
+        "p90": 3.845407146593789,
+        "p95": 4.519972278898067,
+        "p99": 14.662412482974743,
+        "max": 17.198022533993935,
+        "status_counts": {
+          "200": 20
+        },
+        "error_counts": {}
+      }
+    }
+  },
+  "peak_in_flight_next": 6,
+  "docker_stats": [
+    {
+      "BlockIO": "120MB / 2.3MB",
+      "CPUPerc": "0.02%",
+      "Container": "interviews-app-1",
+      "ID": "10c9245f9c03",
+      "MemPerc": "3.06%",
+      "MemUsage": "242.8MiB / 7.755GiB",
+      "Name": "interviews-app-1",
+      "NetIO": "347kB / 318kB",
+      "PIDs": "23",
+      "time": 1783030866.695251
+    },
+    {
+      "BlockIO": "120MB / 2.32MB",
+      "CPUPerc": "0.02%",
+      "Container": "interviews-app-1",
+      "ID": "10c9245f9c03",
+      "MemPerc": "3.15%",
+      "MemUsage": "250.4MiB / 7.755GiB",
+      "Name": "interviews-app-1",
+      "NetIO": "363kB / 344kB",
+      "PIDs": "25",
+      "time": 1783030869.7199726
+    },
+    {
+      "BlockIO": "120MB / 2.42MB",
+      "CPUPerc": "6.06%",
+      "Container": "interviews-app-1",
+      "ID": "10c9245f9c03",
+      "MemPerc": "3.52%",
+      "MemUsage": "279.2MiB / 7.755GiB",
+      "Name": "interviews-app-1",
+      "NetIO": "401kB / 394kB",
+      "PIDs": "25",
+      "time": 1783030872.740811
+    },
+    {
+      "BlockIO": "120MB / 2.47MB",
+      "CPUPerc": "8.02%",
+      "Container": "interviews-app-1",
+      "ID": "10c9245f9c03",
+      "MemPerc": "3.67%",
+      "MemUsage": "291.4MiB / 7.755GiB",
+      "Name": "interviews-app-1",
+      "NetIO": "428kB / 444kB",
+      "PIDs": "28",
+      "time": 1783030875.763202
+    },
+    {
+      "BlockIO": "120MB / 2.59MB",
+      "CPUPerc": "10.73%",
+      "Container": "interviews-app-1",
+      "ID": "10c9245f9c03",
+      "MemPerc": "3.85%",
+      "MemUsage": "306MiB / 7.755GiB",
+      "Name": "interviews-app-1",
+      "NetIO": "457kB / 488kB",
+      "PIDs": "28",
+      "time": 1783030878.7843628
+    },
+    {
+      "BlockIO": "120MB / 2.65MB",
+      "CPUPerc": "7.71%",
+      "Container": "interviews-app-1",
+      "ID": "10c9245f9c03",
+      "MemPerc": "3.92%",
+      "MemUsage": "311.3MiB / 7.755GiB",
+      "Name": "interviews-app-1",
+      "NetIO": "490kB / 531kB",
+      "PIDs": "26",
+      "time": 1783030881.8047378
+    },
+    {
+      "BlockIO": "120MB / 2.8MB",
+      "CPUPerc": "5.32%",
+      "Container": "interviews-app-1",
+      "ID": "10c9245f9c03",
+      "MemPerc": "3.94%",
+      "MemUsage": "312.5MiB / 7.755GiB",
+      "Name": "interviews-app-1",
+      "NetIO": "522kB / 584kB",
+      "PIDs": "27",
+      "time": 1783030884.8301833
+    },
+    {
+      "BlockIO": "120MB / 2.85MB",
+      "CPUPerc": "1.50%",
+      "Container": "interviews-app-1",
+      "ID": "10c9245f9c03",
+      "MemPerc": "3.96%",
+      "MemUsage": "314.8MiB / 7.755GiB",
+      "Name": "interviews-app-1",
+      "NetIO": "537kB / 599kB",
+      "PIDs": "23",
+      "time": 1783030887.8531663
+    }
+  ],
+  "usage_summary": {
+    "usage_dir": "app/data/usage",
+    "expected_sessions": 20,
+    "usage_files_found": 20,
+    "missing_usage_sessions": [],
+    "unreadable_usage_files": {},
+    "records": 40,
+    "prompt_tokens": 19220,
+    "cached_prompt_tokens": 0,
+    "billable_prompt_tokens": 19220,
+    "completion_tokens": 723,
+    "total_tokens": 19943,
+    "estimated_cost": 0.11779000000000003,
+    "by_model": {
+      "gpt-5.5-2026-04-23": {
+        "requests": 40,
+        "prompt_tokens": 19220,
+        "cached_prompt_tokens": 0,
+        "billable_prompt_tokens": 19220,
+        "completion_tokens": 723,
+        "total_tokens": 19943,
+        "estimated_cost": 0.11779000000000003
+      }
+    },
+    "by_task": {
+      "moderator": {
+        "requests": 20,
+        "prompt_tokens": 5760,
+        "cached_prompt_tokens": 0,
+        "billable_prompt_tokens": 5760,
+        "completion_tokens": 80,
+        "total_tokens": 5840,
+        "estimated_cost": 0.031199999999999995
+      },
+      "probe": {
+        "requests": 20,
+        "prompt_tokens": 13460,
+        "cached_prompt_tokens": 0,
+        "billable_prompt_tokens": 13460,
+        "completion_tokens": 643,
+        "total_tokens": 14103,
+        "estimated_cost": 0.08659
+      }
+    },
+    "priced_as": {
+      "gpt-5.5-2026-04-23": [
+        "gpt-5.5"
+      ]
+    },
+    "unpriced_models": []
+  }
+}
