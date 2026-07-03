@@ -1,1 +1,1 @@
-[{"order": 1, "session_id": "test-0502-2140", "topic_idx": 1, "question_idx": 1, "finish_idx": 1, "flagged_messages": 0, "terminated": false, "summary": "", "type": "question", "content": "Can you describe the main types of tasks you do in your job?", "time": "2026-06-25 09:15:54.022814"}]
+[{"order": 1, "session_id": "test-0502-2140", "topic_idx": 1, "question_idx": 1, "finish_idx": 1, "flagged_messages": 0, "terminated": false, "summary": "", "type": "question", "content": "Kan du beskrive de viktigste arbeidsoppgavene dine?", "time": "2026-07-03 02:02:51.827379"}]
