@@ -74,9 +74,14 @@ class LLMAgent(object):
         audio_file.name = "audio.webm"
 
         response = self.client.audio.transcriptions.create(
-          model="whisper-1", 
-          file=audio_file,
-          language="en" # English language input
+            model="whisper-1",
+            file=audio_file,
+            # language="no", #norwegian transcription
+            # prompt=(
+            #     "Dette er et forskningsintervju på norsk. "
+            #     "Transkriber talen på norsk slik den blir sagt. "
+            #     "Ikke oversett til engelsk."
+            # ),
         )
         return response.text
 

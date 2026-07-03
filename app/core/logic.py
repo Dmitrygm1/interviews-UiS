@@ -55,7 +55,7 @@ def retrieve_sessions(sessions:list=None) -> dict:
     return db.retrieve_sessions(sessions)
 
 def transcribe(audio:str) -> dict:
-    """ Return audio file transcription using OpenAI Whisper API """
+    """ Return source-language audio transcription using OpenAI Audio API. """
     logging.critical(f"Audio is: {type(audio)}...")
     transcription = agent.transcribe(audio)
     logging.info(f"Returning transcription text: '{transcription}'")
