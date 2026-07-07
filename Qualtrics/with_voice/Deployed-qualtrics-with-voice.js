@@ -159,7 +159,7 @@ Qualtrics.SurveyEngine.addOnload(function () {
         .catch(function (error) {
             console.error("Error getting first question:", error);
             appendChatbotMessage(
-                "There was a technical error. Please refresh or proceed in the survey.",
+                "Det oppstod en teknisk feil. Oppdater siden eller fortsett i undersøkelsen.",
                 chatArea,
                 "response"
             );
@@ -182,7 +182,7 @@ Qualtrics.SurveyEngine.addOnload(function () {
 
         submitButton.disabled = true;
         submitButton.style.backgroundColor = '#ccc';
-        submitButton.innerText = "Waiting for reply...";
+        submitButton.innerText = "Venter på svar...";
         recordButton.disabled = true;
 
         appendUserMessage(userMessage);
@@ -198,11 +198,11 @@ Qualtrics.SurveyEngine.addOnload(function () {
                     next_question = next_question.replace("---END---", "").trim();
 
                     submitButton.disabled = true;
-                    submitButton.innerText = "End of interview";
+                    submitButton.innerText = "Intervjuet er avsluttet";
                     recordButton.disabled = true;
                 } else {
                     submitButton.disabled = false;
-                    submitButton.innerText = "Submit response";
+                    submitButton.innerText = "Send svar";
                     submitButton.style.backgroundColor = '#007BFF';
                     recordButton.disabled = false;
                 }
@@ -213,14 +213,14 @@ Qualtrics.SurveyEngine.addOnload(function () {
                 console.error("Error submitting response:", error);
 
                 appendChatbotMessage(
-                    "There was a technical error. Please try again.",
+                    "Det oppstod en teknisk feil. Prøv igjen.",
                     chatArea,
                     "response"
                 );
 
                 submitButton.disabled = false;
                 submitButton.style.backgroundColor = '#007BFF';
-                submitButton.innerText = "Submit response";
+                submitButton.innerText = "Send svar";
                 recordButton.disabled = false;
             });
     });
@@ -233,14 +233,14 @@ Qualtrics.SurveyEngine.addOnload(function () {
     var stream;
 
     recordButton.addEventListener("click", async function () {
-        if (recordButton.textContent === "Record response") {
+        if (recordButton.textContent === "Ta opp svar") {
             try {
                 stream = await navigator.mediaDevices.getUserMedia({ audio: true });
 
                 mediaRecorder = new MediaRecorder(stream);
                 audioChunks = [];
 
-                recordButton.textContent = "Stop recording";
+                recordButton.textContent = "Stopp opptak";
                 submitButton.disabled = true;
 
                 mediaRecorder.start();
@@ -251,12 +251,12 @@ Qualtrics.SurveyEngine.addOnload(function () {
 
             } catch (err) {
                 console.error("Microphone error:", err);
-                alert("Error accessing microphone: " + err.message);
+                alert("Feil ved tilgang til mikrofon: " + err.message);
                 submitButton.disabled = false;
             }
 
-        } else if (recordButton.textContent === "Stop recording") {
-            recordButton.textContent = "Transcribing audio...";
+        } else if (recordButton.textContent === "Stopp opptak") {
+            recordButton.textContent = "Transkriberer lyd...";
             recordButton.disabled = true;
 
             mediaRecorder.stop();
@@ -287,12 +287,12 @@ Qualtrics.SurveyEngine.addOnload(function () {
                         return response.json();
                     })
                     .then(function (data) {
-                        var transcript = data.transcription || "Transcription failed. Please try again.";
+                        var transcript = data.transcription || "Transkriberingen mislyktes. Prøv igjen.";
                         inputField.value = transcript;
                     })
                     .catch(function (error) {
                         console.error("Transcription error:", error);
-                        alert("Something went wrong with the transcription. Please try again.");
+                        alert("Noe gikk galt med transkriberingen. Prøv igjen.");
                     })
                     .finally(function () {
                         audioChunks = [];
@@ -303,7 +303,7 @@ Qualtrics.SurveyEngine.addOnload(function () {
                             });
                         }
 
-                        recordButton.textContent = "Record response";
+                        recordButton.textContent = "Ta opp svar";
                         recordButton.disabled = false;
                         submitButton.disabled = false;
                     });
