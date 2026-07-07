@@ -588,6 +588,164 @@ INTERVIEW_PARAMETERS = {
 			"max_tokens": 64
 		}
 	},
+	"WHOLE_ENTREPRENEUR_PSYCH_CONFIG": {
+		"_name": "WHOLE_ENTREPRENEUR_PSYCH_CONFIG",
+		"_description": "English interview exploring psychological configurations underlying whole-entrepreneurship, including narcissistic tendencies, psychological well-being, and resilience.",
+		"moderate_answers": True,
+		"moderate_questions": True,
+		"summarize": True,
+		"max_flags_allowed": 5,
+		"first_question": "Can you tell me about your entrepreneurial journey and what becoming an entrepreneur has meant in your life?",
+		"interview_plan": [
+			{
+				"topic": "Prompt 1: Self-concept and identity. Explore how participants perceive themselves as individuals and as entrepreneurs. Ask about self-acceptance, personal identity, confidence, autonomy, and self-evaluation. Probe whether their sense of worth depends primarily on internal standards or external recognition. Explore how they respond to criticism, lack of recognition, or situations where their abilities are questioned. This prompt aims to uncover psychological dynamics related to self-concept, ego orientation, external validation, and identity stability.",
+				"length": 2
+			},
+			{
+				"topic": "Prompt 2: Meaning, purpose, and personal growth. Explore how participants make sense of their life trajectory and entrepreneurial path. Ask whether entrepreneurship contributes to their personal growth, learning, or self-development. Probe whether they perceive their life as purposeful and future-oriented or primarily focused on day-to-day demands. Explore how their goals have evolved over time and what gives deeper meaning to their work. This prompt examines dimensions related to purpose in life, personal growth, and existential orientation.",
+				"length": 2
+			},
+			{
+				"topic": "Prompt 3: Relationships and social orientation. Explore how participants relate to employees, clients, partners, family members, and other relevant stakeholders. Ask about trust, closeness, collaboration, and emotional connection in relationships. Probe how they respond to interpersonal conflict, disappointment, or betrayal. Explore whether they tend to rely on others, avoid dependence, or strategically influence people to achieve goals. This prompt seeks to identify relational patterns associated with empathy, trust, interpersonal maturity, and potential manipulative or defensive tendencies.",
+				"length": 2
+			},
+			{
+				"topic": "Prompt 4: Ambition, achievement, and success orientation. Explore how participants define entrepreneurial success and what they most strongly strive for. Ask about the importance of financial success, influence, recognition, achievement, status, or impact. Probe whether success is experienced primarily as personal accomplishment, social contribution, or a combination of both. Explore tensions between ambition and broader societal responsibility. This prompt investigates motivational drivers, achievement orientation, and grandiose expressions of the ego.",
+				"length": 2
+			},
+			{
+				"topic": "Prompt 5: Resilience and adversity. Explore how participants experience adversity, stress, failure, and setbacks in their entrepreneurial journey. Ask about significant difficult moments and how they recovered from them. Probe emotional responses to uncertainty, criticism, failure, or loss. Explore coping strategies, recovery processes, and whether adversity tends to strengthen or destabilize them psychologically. This prompt focuses on resilience, emotional recovery, adaptive functioning, and stress regulation.",
+				"length": 2
+			},
+			{
+				"topic": "Prompt 6: Wholeness, values, and transcendence. Explore whether participants integrate broader ethical, spiritual, environmental, or transcendent values into their entrepreneurial decisions. Ask how responsibility toward society, employees, communities, or the planet influences their leadership and business practices. Probe whether spirituality, faith, or deeper personal values shape long-term vision and decision-making. This prompt seeks to identify the presence of holistic integration associated with whole-entrepreneurship.",
+				"length": 2
+			}
+		],
+		"closing_questions": [
+			"Looking back at everything we discussed, what do you think has been most important in helping you remain strong through entrepreneurial challenges?",
+			"Is there anything else about who you are as an entrepreneur that we have not discussed but you believe is important?"
+		],
+		"termination_message": "The interview is over. Please proceed to next page.---END---",
+		"flagged_message": "Please note, too many of your messages have been identified as unusual input. Please proceed to the next page.---END---",
+		"off_topic_message": "I might have misunderstood your response, but it seems you may have provided too little context or moved away from the interview topic. Could you please try answering again with more detail, or let me know if you prefer not to answer?",
+		"end_of_interview_message": "Thank you for sharing your experiences and reflections today. Your insights are invaluable to our research. Please proceed to the next page.---END---",
+		"summary": {
+			"prompt": """
+				CONTEXT: You're an AI summarizing qualitative interviews about the psychological configurations underlying whole-entrepreneurship, with attention to narcissistic tendencies, psychological well-being, and resilience.
+
+				INPUTS:
+				A. Interview Plan:
+				{topics}
+
+				B. Previous Conversation Summary:
+				{summary}
+
+				C. Current Topic:
+				{current_topic}
+
+				D. Current Conversation:
+				{current_topic_history}
+
+				TASK: Maintain a rolling summary that captures key reflections, tensions, contradictions, and salient patterns across topics so another interviewer can continue without rereading the full transcript.
+
+				GUIDELINES:
+				1. Relevance: Prioritize information that sheds light on self-concept, identity, meaning, purpose, personal growth, relationships, ambition, achievement, success orientation, resilience, adversity, values, and transcendence.
+				2. Update the summary: Integrate the Current Conversation into the Previous Conversation Summary, keeping the chronology clear and avoiding redundancy.
+				3. Structure: Follow the interview flow, devoting space based on insightfulness rather than recency. Note concrete entrepreneurial experiences and examples.
+				4. Neutrality: Preserve the participant's own words and views without diagnosing, labeling, or adding interpretations.
+				5. Sensitivity: Flag notable emotional responses, discomfort, or privacy concerns for future interviewers.
+				6. Patterns: Note tensions or contradictions when they are visible in the participant's responses, such as ambition alongside prosocial values or confidence alongside insecurity.
+
+				YOUR RESPONSE: Provide a succinct, comprehensive summary of the interview so far.
+			""",
+			"max_tokens": 1000,
+			"model": "gpt-5.4-mini"
+		},
+		"transition": {
+			"prompt": """
+				CONTEXT: You're an AI interviewer guiding a qualitative interview about the participant's entrepreneurial journey, self-concept, well-being, relationships, ambition, resilience, and values.
+
+				INPUTS:
+				A. Previous Conversation Summary:
+				{summary}
+
+				B. Current Conversation:
+				{current_topic_history}
+
+				C. Next Interview Topic:
+				{next_interview_topic}
+
+				TASK: Introduce the Next Interview Topic with a single transition question.
+
+				GUIDELINES:
+				1. Sound human: Write the next thing a real interviewer would ask. Keep it conversational and avoid academic or diagnostic language.
+				2. Bridge naturally: When possible, tie the question to one concrete detail from the Current Conversation or Summary.
+				3. Don't copy the plan: Do not quote or paraphrase the Next Interview Topic verbatim; translate it into plain language.
+				4. One open-ended ask: Keep it to one clear question and avoid yes/no framing.
+				5. Respect privacy: Do not ask participants to name or identify specific employees, clients, partners, family members, or other people.
+				6. Keep it short: One question, max two short sentences, ending with "?".
+
+				YOUR RESPONSE: Provide only the next transition question.
+			""",
+			"temperature": 0.7,
+			"model": "gpt-5.5",
+			"max_tokens": 300
+		},
+		"probe": {
+			"prompt": """
+				CONTEXT: You're an AI interviewer conducting a qualitative interview about the psychological configurations underlying whole-entrepreneurship.
+
+				INPUTS:
+				A. Previous Conversation Summary:
+				{summary}
+
+				B. Current Interview Topic:
+				{current_topic}
+
+				C. Current Conversation:
+				{current_topic_history}
+
+				TASK: Formulate the next probing question aligned with the Current Interview Topic to deepen understanding of the participant's entrepreneurial experiences, self-understanding, well-being, relationships, ambition, resilience, and values.
+
+				GENERAL GUIDELINES:
+				1. Natural follow-up: Ask one question that would genuinely follow from what they just said, not a generic template.
+				2. Use their words: When possible, reuse a short phrase or detail the participant mentioned so the question feels responsive.
+				3. One clear move: Pick one intent, such as deepen, clarify, contrast, concrete example, feelings, tension, or coping strategy, and ask only that.
+				4. Plain + short: Use simple, conversational language. Avoid long setups, jargon, and repeated openers.
+				5. Neutral + respectful: Don't judge, lead, diagnose, label, or give advice; back off if they signal discomfort.
+				6. Stay on-topic: Keep it aligned with the Current Interview Topic, but don't copy or quote the topic text.
+				7. Respect privacy: Do not ask for names or identifying details about other people; generalized roles are enough.
+				8. Output format: Return a single question ending with "?".
+
+				PROBING GUIDELINES:
+				1. Depth: Follow up on themes that reveal motivations, self-perceptions, emotional responses, coping, relational patterns, values, and concrete entrepreneurial experiences.
+				2. Clarity: Seek clarification when statements are ambiguous, contradictory, or introduce new concepts.
+				3. Flexibility: Follow the participant's lead, but redirect gently if responses repeat or stay surface-level.
+				4. Patterns: When a tension or contradiction is salient, ask about it carefully and neutrally rather than presenting it as a conclusion.
+
+				YOUR RESPONSE: Provide only the next probing question.
+			""",
+			"temperature": 0.7,
+			"model": "gpt-5.5",
+			"max_tokens": 300
+		},
+		"moderator": {
+			"prompt": """
+				You are monitoring a conversation that is part of an in-depth interview. The interviewer asks questions and the interviewee replies. The interview should stay on topic. The interviewee should try to respond to the question of the interviewer (but it is not important to answer all questions that are asked), express a wish to move on, or decline to respond. The interviewee is also allowed to say that they don't know, do not understand the question, or express uncertainty. Responses can be very short, as long as they have some connection with the question. The interviewee's response might contain spelling and grammar mistakes. Here is the last part of the conversation.
+
+				Interviewer: '{question}'
+
+				Interviewee: '{answer}'
+
+				That is the end of the conversation.
+
+				TASK: Does the interviewee's response fit into the context of an interview? Importantly, please answer only with a single 'yes' or 'no'.
+			""",
+			"model": "gpt-5.5",
+			"max_tokens": 64
+		}
+	},
 	# TEMPLATE FOR ADDITIONAL INTERVIEW CONFIGURATIONS:
 	"SHORT_KEY_FOR_YOUR_INTERVIEW_CONFIGURATION": {
 		# META DATA (OPTIONAL):
