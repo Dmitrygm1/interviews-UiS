@@ -9,7 +9,19 @@ from typing import Any
 
 DEFAULT_USAGE_DIR = Path("app/data/usage")
 MODEL_PRICES_PER_1M = {
-    # Official OpenAI API model pages, checked 2026-07-01.
+    # Official OpenAI API model pages, checked 2026-07-14.
+    "gpt-5.6-terra": {
+        "input": 2.50,
+        "cached_input": 0.25,
+        "cache_write_input": 3.125,
+        "output": 15.00,
+    },
+    "gpt-5.6-luna": {
+        "input": 1.00,
+        "cached_input": 0.10,
+        "cache_write_input": 1.25,
+        "output": 6.00,
+    },
     "gpt-5.5": {"input": 5.00, "cached_input": 0.50, "output": 30.00},
     "gpt-5.4-mini": {"input": 0.75, "cached_input": 0.075, "output": 4.50},
 }
@@ -65,11 +77,18 @@ def record_tokens(record: dict[str, Any]) -> dict[str, int | str]:
         or nested_token_value(record, ("usage", "prompt_tokens_details", "cached_tokens"))
         or nested_token_value(record, ("usage", "input_tokens_details", "cached_tokens"))
     )
+    cache_write_prompt_tokens = (
+        token_value(record, "cache_write_prompt_tokens", "cache_write_prompt_tokens")
+        or nested_token_value(record, ("usage", "prompt_tokens_details", "cache_write_tokens"))
+        or nested_token_value(record, ("usage", "input_tokens_details", "cache_write_tokens"))
+    )
     total_tokens = token_value(record, "total_tokens", "total_tokens") or prompt_tokens + completion_tokens
     cached_prompt_tokens = min(cached_prompt_tokens, prompt_tokens)
+    cache_write_prompt_tokens = min(cache_write_prompt_tokens, prompt_tokens - cached_prompt_tokens)
     return {
         "prompt_tokens": prompt_tokens,
         "cached_prompt_tokens": cached_prompt_tokens,
+        "cache_write_prompt_tokens": cache_write_prompt_tokens,
         "billable_prompt_tokens": prompt_tokens - cached_prompt_tokens,
         "completion_tokens": completion_tokens,
         "total_tokens": total_tokens,
@@ -81,6 +100,7 @@ def empty_bucket() -> dict[str, Any]:
         "requests": 0,
         "prompt_tokens": 0,
         "cached_prompt_tokens": 0,
+        "cache_write_prompt_tokens": 0,
         "billable_prompt_tokens": 0,
         "completion_tokens": 0,
         "total_tokens": 0,
@@ -90,7 +110,14 @@ def empty_bucket() -> dict[str, Any]:
 
 def add_to_bucket(bucket: dict[str, Any], tokens: dict[str, int | str], cost: float | None) -> None:
     bucket["requests"] += 1
-    for key in ("prompt_tokens", "cached_prompt_tokens", "billable_prompt_tokens", "completion_tokens", "total_tokens"):
+    for key in (
+        "prompt_tokens",
+        "cached_prompt_tokens",
+        "cache_write_prompt_tokens",
+        "billable_prompt_tokens",
+        "completion_tokens",
+        "total_tokens",
+    ):
         bucket[key] += int(tokens[key])
     if cost is not None:
         bucket["estimated_cost"] += cost
@@ -112,10 +139,17 @@ def record_cost(
             "output": fallback_output_price,
         }
 
-    input_cost = int(tokens["billable_prompt_tokens"]) / 1_000_000 * prices["input"]
+    cache_write_prompt_tokens = int(tokens["cache_write_prompt_tokens"])
+    uncached_prompt_tokens = int(tokens["billable_prompt_tokens"]) - cache_write_prompt_tokens
+    input_cost = uncached_prompt_tokens / 1_000_000 * prices["input"]
+    cache_write_cost = (
+        cache_write_prompt_tokens
+        / 1_000_000
+        * prices.get("cache_write_input", prices["input"])
+    )
     cached_input_cost = int(tokens["cached_prompt_tokens"]) / 1_000_000 * prices["cached_input"]
     output_cost = int(tokens["completion_tokens"]) / 1_000_000 * prices["output"]
-    return input_cost + cached_input_cost + output_cost, priced_model
+    return input_cost + cache_write_cost + cached_input_cost + output_cost, priced_model
 
 
 def summarize(records: list[dict[str, Any]]) -> dict[str, Any]:
@@ -162,7 +196,8 @@ def print_bucket(title: str, buckets: dict[str, dict[str, Any]]) -> None:
         print(
             f"  {name}: {data['requests']} requests, "
             f"{data['prompt_tokens']} prompt "
-            f"({data['cached_prompt_tokens']} cached), "
+            f"({data['cached_prompt_tokens']} cached, "
+            f"{data['cache_write_prompt_tokens']} cache write), "
             f"{data['completion_tokens']} completion, "
             f"{data['total_tokens']} total, "
             f"${data['estimated_cost']:.6f}"
@@ -206,6 +241,9 @@ def main() -> None:
         "usage_path": str(usage_path),
         "requests": summary["requests"],
         "prompt_tokens": summary["prompt_tokens"],
+        "cached_prompt_tokens": summary["cached_prompt_tokens"],
+        "cache_write_prompt_tokens": summary["cache_write_prompt_tokens"],
+        "billable_prompt_tokens": summary["billable_prompt_tokens"],
         "completion_tokens": summary["completion_tokens"],
         "total_tokens": summary["total_tokens"],
         "by_model": dict(summary["by_model"]),
@@ -224,6 +262,7 @@ def main() -> None:
     print(f"Requests: {summary['requests']}")
     print(f"Prompt tokens: {summary['prompt_tokens']}")
     print(f"Cached prompt tokens: {summary['cached_prompt_tokens']}")
+    print(f"Cache write prompt tokens: {summary['cache_write_prompt_tokens']}")
     print(f"Billable prompt tokens: {summary['billable_prompt_tokens']}")
     print(f"Completion tokens: {summary['completion_tokens']}")
     print(f"Total tokens: {summary['total_tokens']}")

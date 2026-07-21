@@ -12,7 +12,7 @@ from io import BytesIO
 from base64 import b64decode
 from openai import OpenAI
 
-DEFAULT_MODEL = "gpt-5.5"
+DEFAULT_MODEL = "gpt-5.6-terra"
 DEFAULT_REASONING_EFFORT = "none"
 
 
@@ -88,7 +88,7 @@ class LLMAgent(object):
     def construct_query(self, tasks:list, history:list, user_message:str=None) -> dict:
         """ 
         Construct OpenAI API completions query, 
-        defaults to `gpt-5.5` model, `none` reasoning effort, 300 token answer limit,
+        defaults to `gpt-5.6-terra` model, `none` reasoning effort, 300 token answer limit,
         and temperature of 0.
         For details see https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create.
         """
@@ -96,6 +96,7 @@ class LLMAgent(object):
         for task in tasks:
             task_parameters = self.parameters[task]
             reasoning_effort = task_parameters.get("reasoning_effort", DEFAULT_REASONING_EFFORT)
+            model = task_parameters.get('model', DEFAULT_MODEL)
             query = {
                 "messages": [{
                     "role":"user", 
@@ -106,7 +107,7 @@ class LLMAgent(object):
                         user_message=user_message
                     )
                 }],
-                "model": task_parameters.get('model', DEFAULT_MODEL),
+                "model": model,
                 # Some models reject `max_tokens`; `max_completion_tokens` is the supported replacement.
                 "max_completion_tokens": task_parameters.get(
                     "max_completion_tokens",
@@ -115,11 +116,22 @@ class LLMAgent(object):
                 "temperature": task_parameters.get('temperature', 0)
             }
 
+            extra_body = dict(task_parameters.get("extra_body", {}))
+
+            # Interview prompts contain respondent-specific content before a reusable
+            # 1,024-token prefix. Disable billable GPT-5.6 implicit cache writes unless
+            # an interview configuration explicitly opts into another cache mode.
+            if str(model).startswith("gpt-5.6"):
+                prompt_cache_options = dict(extra_body.get("prompt_cache_options", {}))
+                prompt_cache_options.setdefault("mode", "explicit")
+                extra_body["prompt_cache_options"] = prompt_cache_options
+
             if self._chat_create_supports_reasoning_effort:
                 query["reasoning_effort"] = reasoning_effort
             else:
-                extra_body = dict(task_parameters.get("extra_body", {}))
                 extra_body["reasoning_effort"] = reasoning_effort
+
+            if extra_body:
                 query["extra_body"] = extra_body
 
             queries[task] = query

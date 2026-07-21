@@ -371,6 +371,7 @@ def usage_bucket(data: dict[str, Any]) -> dict[str, Any]:
         "requests": data["requests"],
         "prompt_tokens": data["prompt_tokens"],
         "cached_prompt_tokens": data["cached_prompt_tokens"],
+        "cache_write_prompt_tokens": data["cache_write_prompt_tokens"],
         "billable_prompt_tokens": data["billable_prompt_tokens"],
         "completion_tokens": data["completion_tokens"],
         "total_tokens": data["total_tokens"],
@@ -408,6 +409,7 @@ def collect_usage_summary(users: list[dict[str, Any]], usage_dir: Path) -> dict[
         "records": len(records),
         "prompt_tokens": summary["prompt_tokens"],
         "cached_prompt_tokens": summary["cached_prompt_tokens"],
+        "cache_write_prompt_tokens": summary["cache_write_prompt_tokens"],
         "billable_prompt_tokens": summary["billable_prompt_tokens"],
         "completion_tokens": summary["completion_tokens"],
         "total_tokens": summary["total_tokens"],
@@ -602,6 +604,7 @@ def build_markdown_report(report: dict[str, Any]) -> str:
                 f"- Usage records: {usage['records']}",
                 f"- Prompt tokens: {usage['prompt_tokens']}",
                 f"- Cached prompt tokens: {usage['cached_prompt_tokens']}",
+                f"- Cache write prompt tokens: {usage.get('cache_write_prompt_tokens', 0)}",
                 f"- Billable prompt tokens: {usage['billable_prompt_tokens']}",
                 f"- Completion tokens: {usage['completion_tokens']}",
                 f"- Total tokens: {usage['total_tokens']}",
@@ -616,14 +619,15 @@ def build_markdown_report(report: dict[str, Any]) -> str:
                     "",
                     "### Usage By Model",
                     "",
-                    "| Model | Requests | Prompt | Cached | Completion | Total | Estimated Cost |",
-                    "| --- | ---: | ---: | ---: | ---: | ---: | ---: |",
+                    "| Model | Requests | Prompt | Cached | Cache write | Completion | Total | Estimated Cost |",
+                    "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
                 ]
             )
             for model, data in sorted(usage["by_model"].items()):
                 lines.append(
                     f"| {model} | {data['requests']} | {data['prompt_tokens']} | "
-                    f"{data['cached_prompt_tokens']} | {data['completion_tokens']} | "
+                    f"{data['cached_prompt_tokens']} | {data.get('cache_write_prompt_tokens', 0)} | "
+                    f"{data['completion_tokens']} | "
                     f"{data['total_tokens']} | ${data['estimated_cost']:.6f} |"
                 )
         if usage["by_task"]:
@@ -632,14 +636,15 @@ def build_markdown_report(report: dict[str, Any]) -> str:
                     "",
                     "### Usage By Task",
                     "",
-                    "| Task | Requests | Prompt | Cached | Completion | Total | Estimated Cost |",
-                    "| --- | ---: | ---: | ---: | ---: | ---: | ---: |",
+                    "| Task | Requests | Prompt | Cached | Cache write | Completion | Total | Estimated Cost |",
+                    "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
                 ]
             )
             for task, data in sorted(usage["by_task"].items()):
                 lines.append(
                     f"| {task} | {data['requests']} | {data['prompt_tokens']} | "
-                    f"{data['cached_prompt_tokens']} | {data['completion_tokens']} | "
+                    f"{data['cached_prompt_tokens']} | {data.get('cache_write_prompt_tokens', 0)} | "
+                    f"{data['completion_tokens']} | "
                     f"{data['total_tokens']} | ${data['estimated_cost']:.6f} |"
                 )
 

@@ -216,7 +216,7 @@ The file `app/app.py` includes a detailed documentation of the API and how to ac
 python3 json_to_txt.py
 ```
 
-OpenAI token usage for future conversations is logged per session in `app/data/usage`. To summarize token consumption and automatically estimate cost for known models such as `gpt-5.5` and `gpt-5.4-mini`, run:
+OpenAI token usage for future conversations is logged per session in `app/data/usage`. To summarize token consumption and automatically estimate cost for known models such as `gpt-5.6-terra` and `gpt-5.6-luna`, run:
 
 ```bash
 python3 scripts/usage_report.py SESSION_ID
